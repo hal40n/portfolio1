@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "destyle.css": "^4.0.0"
+  },
+  "devDependencies": {
+    "sass": "^1.62.1"
+  }
+}
