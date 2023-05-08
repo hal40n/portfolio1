@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! destyle.css v4.0.0 | MIT License | https://github.com/nicolas-cusan/destyle.css */
 /* Reset box-model and set borders */
 /* ============================================ */
@@ -371,6 +372,91 @@ th {
 th {
   text-align: left;
   font-weight: bold;
+}
+
+.l-header {
+  height: 100vh;
+  width: 100%;
+  background-color: blue;
+  position: relative;
+}
+.l-header__toggle {
+  width: 48px;
+  top: 25px;
+  right: 25px;
+  background-color: transparent;
+  border-color: transparent;
+  z-index: 9999;
+}
+.l-header__toggle--box {
+  position: relative;
+  width: 36px;
+  height: 32px;
+  cursor: pointer;
+}
+.l-header__toggle--bar {
+  display: block;
+  transition: ease 0.4s;
+  width: 100%;
+  height: 1px;
+  left: 0;
+  background-color: #ffffff;
+  position: absolute;
+}
+.l-header__toggle--bar:nth-of-type(1) {
+  top: 0;
+}
+.l-header__toggle--bar:nth-of-type(2) {
+  margin: 8px 0;
+}
+.l-header__toggle--bar:nth-of-type(3) {
+  top: 0;
+}
+.l-header__menu {
+  width: 100%;
+  height: 100vh;
+  background-color: #1b2f5b;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5rem;
+  margin: 0 auto;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  transform: translateX(100%);
+}
+.l-header__menu--title h2 {
+  font-family: "ヒラギノ明朝 ProN";
+  font-size: 2rem;
+}
+.l-header__menu--content {
+  margin-top: 50px;
+}
+.l-header__menu--content:first-child {
+  margin-top: 0;
+}
+.l-header__menu--reserve {
+  margin-top: 50px;
+}
+.l-header__menu--sns {
+  margin-top: 50px;
+}
+.l-header__menu--contact h3 {
+  margin-top: 50px;
+}
+.l-header__title {
+  padding-top: 3rem;
+  text-align: center;
+}
+.l-header__title h1 {
+  font-family: "ヒラギノ明朝 ProN";
+  font-size: 2rem;
+}
+.l-header__title, .l-header__title p, .l-header__title h1 {
+  color: #ffffff;
 }
 
 .c-flex {
