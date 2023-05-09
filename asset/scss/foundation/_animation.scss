@@ -1,0 +1,35 @@
+
+/* ハンバーガーメニュークリック「×」マークにアニメーション */
+.is-open .l-header__toggle {
+
+  &__bar {
+    background: #ffffff;
+
+    &:nth-child(1) {
+      top: 50%;
+      transform: rotate(45deg) translateY(-50%);
+    }
+
+    &:nth-child(2) {
+      width: 0;
+    }
+
+    &:nth-child(3) {
+      top: 50%;
+      transform: rotate(-45deg) translateY(-50%);
+    }
+
+  }
+}
+
+/* メニュ―表示 */
+
+.is-open  {
+  overflow: hidden;
+
+  & .l-header__menu {
+    z-index: 999;
+    visibility: visible;
+    opacity: 1;
+  }
+}

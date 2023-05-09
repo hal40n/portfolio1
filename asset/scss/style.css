@@ -1,4 +1,30 @@
 @charset "UTF-8";
+/* ハンバーガーメニュークリック「×」マークにアニメーション */
+.is-open .l-header__toggle__bar {
+  background: #ffffff;
+}
+.is-open .l-header__toggle__bar:nth-child(1) {
+  top: 50%;
+  transform: rotate(45deg) translateY(-50%);
+}
+.is-open .l-header__toggle__bar:nth-child(2) {
+  width: 0;
+}
+.is-open .l-header__toggle__bar:nth-child(3) {
+  top: 50%;
+  transform: rotate(-45deg) translateY(-50%);
+}
+
+/* メニュ―表示 */
+.is-open {
+  overflow: hidden;
+}
+.is-open .l-header__menu {
+  z-index: 999;
+  visibility: visible;
+  opacity: 1;
+}
+
 /*! destyle.css v4.0.0 | MIT License | https://github.com/nicolas-cusan/destyle.css */
 /* Reset box-model and set borders */
 /* ============================================ */
@@ -375,18 +401,16 @@ th {
 }
 
 .l-header {
-  height: 100vh;
-  width: 100%;
-  background-color: blue;
   position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: blue;
 }
 .l-header__toggle {
-  width: 48px;
+  position: absolute;
   top: 25px;
   right: 25px;
-  background-color: transparent;
-  border-color: transparent;
-  z-index: 9999;
+  z-index: 1000;
 }
 .l-header__toggle--box {
   position: relative;
@@ -396,41 +420,51 @@ th {
 }
 .l-header__toggle--bar {
   display: block;
-  transition: ease 0.4s;
+  position: absolute;
+  left: 0;
   width: 100%;
   height: 1px;
-  left: 0;
   background-color: #ffffff;
-  position: absolute;
+  transition: ease 0.4s;
 }
-.l-header__toggle--bar:nth-of-type(1) {
+.l-header__toggle--bar:nth-child(1) {
   top: 0;
 }
-.l-header__toggle--bar:nth-of-type(2) {
-  margin: 8px 0;
+.l-header__toggle--bar:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%);
 }
-.l-header__toggle--bar:nth-of-type(3) {
-  top: 0;
+.l-header__toggle--bar:nth-child(3) {
+  bottom: 0;
 }
 .l-header__menu {
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 900;
+  transform: translateX(-100%);
   width: 100%;
   height: 100vh;
   background-color: #1b2f5b;
+  text-align: center;
+  transition: ease 0.4s;
   color: #ffffff;
   display: flex;
   justify-content: space-between;
-  padding: 0 5rem;
-  margin: 0 auto;
   align-items: center;
-  position: absolute;
-  right: 0;
-  left: 0;
-  top: 0;
-  transform: translateX(100%);
+  margin: 0 auto;
+  padding: 0 20%;
+}
+.l-header__menu--title {
+  z-index: 990;
 }
 .l-header__menu--title h2 {
   font-family: "ヒラギノ明朝 ProN";
   font-size: 2rem;
+}
+.l-header__menu--contents {
+  text-align: left;
 }
 .l-header__menu--content {
   margin-top: 50px;
@@ -448,8 +482,8 @@ th {
   margin-top: 50px;
 }
 .l-header__title {
-  padding-top: 3rem;
   text-align: center;
+  padding-top: 3rem;
 }
 .l-header__title h1 {
   font-family: "ヒラギノ明朝 ProN";
