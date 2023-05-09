@@ -1,0 +1,101 @@
+{
+  "sort-order": [
+  [
+    "display",
+    "list-style",
+    "list-style-type",
+    "list-style-image",
+    "list-style-position",
+    "overflow",
+    "clip",
+    "visibility",
+    "opacity"
+  ],
+
+  [
+    "position",
+    "top",
+    "right",
+    "bottom",
+    "left",
+    "float",
+    "clear",
+    "z-index",
+    "transform"
+  ],
+
+  [
+    "width",
+    "height",
+    "margin",
+    "padding",
+    "border",
+    "border-width",
+    "border-color",
+    "border-style",
+    "border-radius",
+    "border-image",
+    "box-sizing",
+    "box-shadow"
+
+  ],
+
+  [
+    "background",
+    "background-color",
+    "background-image",
+    "background-repeat",
+    "background-attachment",
+    "background-position",
+    "background-clip",
+    "background-origin",
+    "background-size"
+  ],
+
+  [
+    "color",
+    "font",
+    "font-family",
+    "font-style",
+    "font-variant",
+    "font-weight",
+    "font-size",
+    "line-height",
+    "text-decoration",
+    "text-align",
+    "vertical-align",
+    "letter-spacing",
+    "word-spacing",
+    "text-transform",
+    "white-space",
+    "text-shadow"
+  ],
+
+  [
+    "content",
+    "quotes",
+    "counter-reset",
+    "counter-increment",
+    "cursor",
+    "resize"
+  ],
+
+  [
+    "transition",
+    "transition-property",
+    "transition-duration",
+    "transition-timing-function",
+    "transition-delay",
+    "animation",
+    "animation-name",
+    "animation-duration",
+    "animation-timing-function",
+    "animation-iteration-count",
+    "animation-direction",
+    "animation-play-state",
+    "animation-delay",
+    "animation-fill-mode"
+  ]
+
+]
+}
