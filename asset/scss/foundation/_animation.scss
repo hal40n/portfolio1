@@ -1,8 +1,8 @@
 
 /* ハンバーガーメニュークリック「×」マークにアニメーション */
-.is-open .l-header__toggle {
+.l-header__toggle--box.active {
 
-  &__bar {
+  & span {
     background: #ffffff;
 
     &:nth-child(1) {
@@ -11,7 +11,7 @@
     }
 
     &:nth-child(2) {
-      width: 0;
+      opacity: 0;
     }
 
     &:nth-child(3) {
@@ -24,12 +24,13 @@
 
 /* メニュ―表示 */
 
-.is-open  {
+.open  {
   overflow: hidden;
+}
 
-  & .l-header__menu {
-    z-index: 999;
-    visibility: visible;
-    opacity: 1;
-  }
+.l-header__menu.open {
+  z-index: 999;
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(0);
 }
