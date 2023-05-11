@@ -14,6 +14,12 @@
   top: 50%;
   transform: rotate(-45deg) translateY(-50%);
 }
+.l-header__toggle--box.active::after {
+  position: absolute;
+  top: 150%;
+  color: #fff !important;
+  content: "close";
+}
 
 /* メニュ―表示 */
 .open {
@@ -21,9 +27,9 @@
 }
 
 .l-header__menu.open {
-  z-index: 999;
   visibility: visible;
   opacity: 1;
+  z-index: 999;
   transform: translateX(0);
 }
 
@@ -402,6 +408,61 @@ th {
   font-weight: bold;
 }
 
+.l-footer {
+  width: 100%;
+  margin: 0 auto;
+  background-color: #1b2f5b;
+  color: #ffffff;
+}
+.l-footer__contents {
+  width: 40rem;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 5rem;
+  padding-bottom: 9rem;
+}
+.l-footer__contents--title {
+  font-family: "ヒラギノ明朝 ProN";
+}
+.l-footer__contents--title h2 {
+  font-size: 2rem;
+}
+.l-footer__contents--nav {
+  margin-top: 5rem;
+}
+.l-footer__contents--navList li {
+  margin: 0 auto;
+}
+.l-footer__contents--reserve {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 3rem auto 0 auto;
+  padding: 1rem;
+  border: 1px solid #ffffff;
+  text-align: center;
+}
+.l-footer__contents--tel {
+  margin-top: 3rem;
+}
+.l-footer__contents--tel span {
+  font-size: 1rem;
+}
+.l-footer__contents--tel p {
+  font-size: 1.5rem;
+}
+.l-footer__contents--sns {
+  width: 5rem;
+  margin: 3rem auto 0 auto;
+  justify-content: space-between;
+}
+.l-footer__cr {
+  margin: 0 auto;
+  background-color: #0a1a3c;
+  text-align: center;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+}
+
 .l-header {
   position: relative;
   width: 100%;
@@ -416,15 +477,28 @@ th {
 }
 .l-header__toggle--box {
   position: relative;
-  width: 36px;
+  width: 4rem;
   height: 32px;
+  text-align: center;
   cursor: pointer;
+}
+.l-header__toggle--box::after {
+  display: block;
+  position: absolute;
+  top: 150%;
+  width: 3rem;
+  margin: 0 auto;
+  color: #ffffff;
+  font-family: "Caveat", sans-serif;
+  font-size: 1rem;
+  text-align: center;
+  content: "menu";
 }
 .l-header__toggle--bar {
   display: block;
   position: absolute;
   left: 0;
-  width: 100%;
+  width: 3rem;
   height: 1px;
   background-color: #ffffff;
   transition: ease 0.4s;
@@ -442,6 +516,7 @@ th {
 .l-header__menu {
   display: flex;
   overflow: auto;
+  opacity: 0;
   position: fixed;
   top: 0;
   left: 0;
@@ -457,7 +532,6 @@ th {
   transition: ease 0.4s;
   justify-content: space-between;
   align-items: center;
-  opacity: 0;
 }
 .l-header__menu--title {
   z-index: 990;

@@ -1,0 +1,73 @@
+.l-footer {
+  width: 100%;
+  margin: 0 auto;
+
+  background-color: #1b2f5b;
+
+  color: #ffffff;
+
+  &__contents {
+    width: 40rem;
+    margin: 0 auto;
+
+    text-align: center;
+
+    padding-top: 5rem;
+    padding-bottom: 9rem;
+
+    &--title {
+      font-family: "ヒラギノ明朝 ProN";
+
+      & h2 {
+        font-size: 2rem;
+      }
+
+    }
+
+    &--nav {
+      margin-top: 5rem;
+
+      &List li {
+        margin: 0 auto;
+      }
+    }
+
+    &--reserve {
+      width: fit-content;
+      margin: 3rem auto 0 auto;
+      padding: 1rem;
+      border: 1px solid #ffffff;
+
+      text-align: center;
+    }
+
+    &--tel {
+      margin-top: 3rem;
+
+      & span {
+        font-size: 1rem;
+      }
+
+      & p {
+        font-size: 1.5rem;
+      }
+    }
+
+    &--sns {
+      width: 5rem;
+      margin: 3rem auto 0 auto;
+      justify-content: space-between;
+    }
+  }
+
+  &__cr {
+    margin: 0 auto;
+
+    background-color: #0a1a3c;
+
+    text-align: center;
+
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+  }
+}
