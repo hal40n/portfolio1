@@ -415,7 +415,7 @@ th {
   color: #ffffff;
 }
 .l-footer__contents {
-  width: 40rem;
+  width: 100%;
   margin: 0 auto;
   text-align: center;
   padding-top: 5rem;
@@ -451,9 +451,15 @@ th {
   font-size: 1.5rem;
 }
 .l-footer__contents--sns {
-  width: 5rem;
+  width: 10rem;
   margin: 3rem auto 0 auto;
   justify-content: space-between;
+}
+.l-footer__contents--sns ul {
+  justify-content: space-between;
+}
+.l-footer__contents--sns li:nth-child(3) {
+  margin-right: 0;
 }
 .l-footer__cr {
   margin: 0 auto;
@@ -572,4 +578,14 @@ th {
 
 .c-flex {
   display: flex;
+}
+
+.c-icon {
+  background-color: #ffffff;
+  color: rgb(30, 48, 80);
+  border-radius: 20px;
+  margin-right: 1rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  padding-top: 3.5px;
 }/*# sourceMappingURL=style.css.map */
