@@ -1,10 +1,12 @@
+@use "../global" as *;
+
 .l-footer {
   width: 100%;
   margin: 0 auto;
 
-  background-color: #1b2f5b;
+  background-color: map-get($colors, "c-navy");
 
-  color: #ffffff;
+  color: map-get($colors, "c-white");
 
   &__contents {
     width: 100%;
@@ -36,7 +38,7 @@
       width: fit-content;
       margin: 3rem auto 0 auto;
       padding: 1rem;
-      border: 1px solid #ffffff;
+      border: 1px solid map-get($colors, "c-white");
 
       text-align: center;
     }

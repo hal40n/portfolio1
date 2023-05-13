@@ -1,1 +1,12 @@
+.c-font {
 
+  &__contTtl {
+    font-size: 1.75rem;
+    letter-spacing: .25rem;
+  }
+
+  &__contTxt {
+    margin-top: 3rem;
+    line-height: 2rem;
+  }
+}

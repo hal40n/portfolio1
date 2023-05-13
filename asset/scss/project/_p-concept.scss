@@ -1,0 +1,77 @@
+@use "../global" as *;
+
+.p-concept {
+
+  width: 85%;
+  max-width: 1400px;
+  margin: 0 auto;
+
+  &__section1 {
+
+
+    &--title {
+
+      transform: rotate(90deg);
+      transform-origin: bottom left;
+      text-align: center;
+      //justify-content: space-between;
+
+      & h1 {
+        font-size: 3rem;
+        color: map-get($colors, "c-navy");
+      }
+
+      & p {
+        margin-left: 1rem;
+        text-align: center;
+        color: $sub-title;
+      }
+    }
+
+    &--contents {
+      justify-content: space-between;
+      align-items: flex-end;
+      padding-left:7rem;
+
+      &Pic {
+        width: 440px;
+        height: 575px;
+        background-color: map-get($colors, "c-black");
+      }
+
+      &Txt {
+        width: 50%;
+        padding-left: 6%;
+      }
+    }
+  }
+
+  &__section2 {
+
+    margin-right: 0;
+
+    &--contents {
+
+      justify-content: space-between;
+    }
+
+    &--txt {
+      width: 50%;
+    }
+
+    &--pic {
+      width: 45%;
+      height: auto;
+      background-color: map-get($colors, "c-black");
+
+    }
+  }
+
+  &__section3 {
+    text-align: center;
+
+    &--detail {
+      margin-top: 3rem;
+    }
+  }
+}
