@@ -1,0 +1,66 @@
+@use "../global" as *;
+
+.p-news {
+
+  &__ttl {
+
+    justify-content: space-between;
+
+    &--notice {
+      padding-left: 3rem;
+      line-height: 61px;
+      border-left: 1px solid rgb(154, 159, 167, 0.3);
+
+      & p::after {
+        padding: 0.25rem;
+        border-radius: 1.2rem;
+
+        background-color: $default-color;
+
+        color: map-get($colors, "c-white");
+        font-size: .05rem;
+
+        content: "▶";
+
+        margin-left: 3rem;
+      }
+    }
+  }
+
+  &__txt {
+    font-size: 0.9rem;
+  }
+
+  &__conts {
+    justify-content: space-between;
+    gap: 5rem;
+  }
+
+  &__cont {
+    width: 100%;
+    background-clip: padding-box;
+    border-bottom: 1px solid rgb(154, 159, 167, 0.3);
+
+    &--img {
+      width: 250px;
+      height: 175px;
+      background-color: map-get($colors, "c-black");
+    }
+
+    &--hd {
+      color: $default-color;
+    }
+
+    &--txt {
+      letter-spacing: 1.5px;
+      line-height: 2.5rem;
+      font-size: 1.3rem;
+    }
+
+    &--date {
+      font-size: 1.2rem;
+      color: $sub-title;
+      padding-bottom: 3rem;
+    }
+  }
+}
