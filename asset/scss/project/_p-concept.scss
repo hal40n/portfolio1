@@ -1,34 +1,27 @@
 @use "../global" as *;
 
 .p-concept {
-
   width: 85%;
-  max-width: 1400px;
   margin: 0 auto;
 
-  &__section1 {
+  max-width: 1400px;
+
+  &__sec1 {
 
 
     &--title {
-
       transform: rotate(90deg);
-      transform-origin: bottom left;
-      text-align: center;
-      //justify-content: space-between;
 
-      & h1 {
-        font-size: 3rem;
-        color: map-get($colors, "c-navy");
-      }
+      text-align: center;
+
+      transform-origin: bottom left;
 
       & p {
         margin-left: 1rem;
-        text-align: center;
-        color: $sub-title;
       }
     }
 
-    &--contents {
+    &--cont {
       justify-content: space-between;
       align-items: flex-end;
       padding-left:7rem;
@@ -36,42 +29,90 @@
       &Pic {
         width: 440px;
         height: 575px;
+
         background-color: map-get($colors, "c-black");
       }
 
       &Txt {
         width: 50%;
+
         padding-left: 6%;
       }
     }
   }
 
-  &__section2 {
-
+  &__sec2 {
     margin-right: 0;
 
-    &--contents {
+    &--cont {
 
-      justify-content: space-between;
-    }
+      &Top {
+        justify-content: space-between;
+      }
 
-    &--txt {
-      width: 50%;
-    }
+      &Txt {
+        width: 50%;
+      }
 
-    &--pic {
-      width: 45%;
-      height: auto;
-      background-color: map-get($colors, "c-black");
+      &Pic {
+        position: relative;
 
+        padding-left: 5rem;
+
+        &1 {
+          position: relative;
+
+          width: 450px;
+          height: 300px;
+
+          background-color: map-get($colors, "c-black");
+        }
+
+        &2 {
+          position: absolute;
+          top: 15rem;
+          left: 10rem;
+
+          width: 300px;
+          height: 460px;
+
+          background-color: map-get($colors, "c-gray");
+        }
+      }
+
+      &Btm {
+        width: 50%;
+
+        margin-top: 20rem;
+      }
+
+      &Photo {
+        height: 360px;
+
+        background-color: map-get($colors, "c-black");
+      }
     }
   }
 
-  &__section3 {
+  &__sec3 {
     text-align: center;
 
     &--detail {
       margin-top: 3rem;
+
+      & p::after {
+        padding: .25rem;
+        border-radius: 1.5rem;
+
+        background-color: $default-color;
+
+        color: map-get($colors, "c-white");
+        font-size: .05rem;
+
+        content: "▶";
+
+        margin-left: 1.5rem;
+      }
     }
   }
 }

@@ -1,12 +1,32 @@
+@use "../global" as *;
+
 .c-font {
 
-  &__contTtl {
-    font-size: 1.75rem;
-    letter-spacing: .25rem;
+  &__sec {
+
+    &Ttl {
+
+      color: map-get($colors, "c-navy");
+      font-size: 3rem;
+
+    }
+
+    &Txt {
+      color: $sub-title;
+      margin-top: 1rem;
+    }
   }
 
-  &__contTxt {
-    margin-top: 3rem;
-    line-height: 2rem;
+  &__cont {
+
+    &Ttl {
+      font-size: 1.75rem;
+      letter-spacing: .25rem;
+    }
+
+    &Txt {
+      margin-top: 3rem;
+      line-height: 2rem;
+    }
   }
 }

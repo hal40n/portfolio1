@@ -3,13 +3,16 @@ $colors:(
   "c-navy": #1b2f5b,
   "c-white": #ffffff,
   "c-black": #000000,
-  "c-gray": #9a9fa7
+  "c-base": #333333,
+  "c-gray": rgb(154, 159, 167, 0.75),
+  "c-link": #0066c0
 );
 
 // 変数定義 //
 $default-color:map-get($colors,"c-navy");
 $sub-title:map-get($colors, "c-gray");
-
+$base-color:map-get($colors, "c-base");
+$link-color:map-get($colors, "c-link");
 
 // 関数定義 //
 @function colors($key) {
