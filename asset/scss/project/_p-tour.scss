@@ -1,0 +1,49 @@
+@use "../global" as *;
+
+.p-tour {
+
+  background-color: $bg-color;
+  padding: 15rem;
+
+  &__ttl {
+    text-align: center;
+  }
+
+  &__txt {
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  &__slides {
+    justify-content: space-between;
+    gap: 5rem;
+  }
+
+  &__slide {
+    background-color: map-get($colors, "c-white");
+    padding: 10px;
+
+    &--img {
+      width: 280px;
+      height: 193px;
+      background-color: map-get($colors, "c-black");
+    }
+
+    &--hd {
+      color: $default-color;
+    }
+
+    &--txt {
+      letter-spacing: 1.5px;
+      line-height: 2.5rem;
+      font-size: 1.3rem;
+    }
+
+    &--date {
+      font-size: 1.2rem;
+      color: $sub-title;
+      padding-bottom: 3rem;
+    }
+  }
+
+}
