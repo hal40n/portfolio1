@@ -793,6 +793,44 @@ th {
   padding-bottom: 3rem;
 }
 
+.p-tour {
+  background-color: #f4f7f8;
+  padding: 15rem;
+}
+.p-tour__ttl {
+  text-align: center;
+}
+.p-tour__txt {
+  text-align: center;
+  font-size: 1rem;
+}
+.p-tour__slides {
+  justify-content: space-between;
+  gap: 5rem;
+}
+.p-tour__slide {
+  background-color: #ffffff;
+  padding: 10px;
+}
+.p-tour__slide--img {
+  width: 280px;
+  height: 193px;
+  background-color: #000000;
+}
+.p-tour__slide--hd {
+  color: #1b2f5b;
+}
+.p-tour__slide--txt {
+  letter-spacing: 1.5px;
+  line-height: 2.5rem;
+  font-size: 1.3rem;
+}
+.p-tour__slide--date {
+  font-size: 1.2rem;
+  color: rgba(154, 159, 167, 0.75);
+  padding-bottom: 3rem;
+}
+
 .u-margin__top10 {
   margin-top: 10rem;
 }
