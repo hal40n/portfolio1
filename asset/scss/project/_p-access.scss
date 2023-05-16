@@ -1,0 +1,66 @@
+@use "../global" as *;
+
+.p-access {
+
+  &__conts {
+    justify-content: space-between;
+  }
+
+  &__ttl {
+    width: 30%;
+  }
+
+  &__cont {
+      width: 70%;
+
+      &--txt {
+      line-height: 2.5rem;
+      font-size: 1.25rem;
+    }
+
+    &Contact {
+      justify-content: flex-start;
+    }
+
+    &Addr {
+      padding-left: 1rem;
+
+      &--hd {
+        color: $default-color;
+      }
+
+      &--txt {
+        margin-top: 1rem;
+        font-size: 1.5rem;
+      }
+    }
+
+    &Tel {
+      padding-left: 1rem;
+      margin-left: 7rem;
+
+      &--hd {
+        color: $default-color;
+      }
+
+      &--txt {
+        margin-top: .5rem;
+        font-size: 1.5rem;
+      }
+    }
+
+    &List {
+      padding-left: 1rem;
+      color: $sub-title;
+      font-size: 1.2rem;
+      text-indent: -1rem;
+      line-height: 1.5;
+
+      & span {
+        font-size: 2rem;
+        vertical-align: -0.1rem;
+        color: $base-color;
+      }
+    }
+  }
+}
