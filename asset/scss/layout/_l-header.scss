@@ -1,3 +1,5 @@
+@use "../global" as *;
+
 .l-header {
   position: relative;
 
@@ -97,7 +99,9 @@
 
     &--title {
       z-index: 990;
+
       width: 32rem;
+
       max-width: 32rem;
 
       & h2 {
@@ -148,6 +152,44 @@
 
     & ,p, h1 {
       color: #ffffff;
+    }
+  }
+
+  &__copy {
+    position: absolute;
+    top: 60%;
+    left: 3rem;
+    z-index: 9;
+    transform: rotate(-90deg);
+
+    color: #ffffff;
+    font-size: 2rem;
+
+    transform-origin: left;
+  }
+
+  &__scroll {
+    position: absolute;
+    right: -5rem;
+    bottom: 8rem;
+    z-index: 4;
+    transform: rotate(90deg);
+
+    color: #ffffff;
+
+    padding-right: 10rem;
+
+    &::before {
+      position: absolute;
+      top: 1rem;
+      right: 2rem;
+
+      width: 5rem;
+      height: 1px;
+
+      background-color: #ffffff;
+
+      content: "";
     }
   }
 }
