@@ -625,6 +625,34 @@ th {
 .l-header__title, .l-header__title p, .l-header__title h1 {
   color: #ffffff;
 }
+.l-header__copy {
+  position: absolute;
+  top: 60%;
+  left: 3rem;
+  z-index: 9;
+  transform: rotate(-90deg);
+  color: #ffffff;
+  font-size: 2rem;
+  transform-origin: left;
+}
+.l-header__scroll {
+  position: absolute;
+  right: -5rem;
+  bottom: 8rem;
+  z-index: 4;
+  transform: rotate(90deg);
+  color: #ffffff;
+  padding-right: 10rem;
+}
+.l-header__scroll::before {
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  width: 5rem;
+  height: 1px;
+  background-color: #ffffff;
+  content: "";
+}
 
 .l-main {
   margin-top: 12.5rem;
