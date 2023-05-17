@@ -16,7 +16,7 @@
 }
 .l-header__toggle--box.active::after {
   position: absolute;
-  top: 150%;
+  top: 115%;
   color: #fff !important;
   content: "close";
 }
@@ -52,7 +52,7 @@ html {
 body {
   color: #333333;
   font-size: 1.6rem;
-  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  font-family: "FOT-筑紫Aオールド明朝 Pr6 D", TsukuAOldMinPr6-D, serif;
   min-width: 350px;
   width: 100%;
   overflow-x: hidden;
@@ -539,12 +539,12 @@ th {
 .l-header__toggle--box::after {
   display: block;
   position: absolute;
-  top: 150%;
+  top: 115%;
   width: 3rem;
   margin: 0 auto;
   color: #ffffff;
-  font-family: "Caveat", sans-serif;
-  font-size: 1rem;
+  font-family: "Caveat", cursive;
+  font-size: 1.5rem;
   text-align: center;
   content: "menu";
 }
@@ -579,7 +579,7 @@ th {
   width: 100%;
   height: 100vh;
   margin: 0 auto;
-  padding: 0 5%;
+  padding: 0 25%;
   background-color: #1b2f5b;
   color: #ffffff;
   text-align: center;
@@ -587,12 +587,12 @@ th {
   justify-content: space-between;
   align-items: center;
 }
-.l-header__menu--title {
+.l-header__menu--ttl {
   z-index: 990;
   width: 32rem;
   max-width: 32rem;
 }
-.l-header__menu--title h2 {
+.l-header__menu--ttl h2 {
   font-family: "ヒラギノ明朝 ProN";
   font-size: 2rem;
 }
@@ -614,15 +614,20 @@ th {
 .l-header__menu--contact h3 {
   margin-top: 50px;
 }
-.l-header__title {
+.l-header__ttl {
   text-align: center;
-  padding-top: 3rem;
+  line-height: 5rem;
+  padding-top: 5rem;
 }
-.l-header__title h1 {
+.l-header__ttl--txt {
+  font-size: 2.5rem;
   font-family: "ヒラギノ明朝 ProN";
-  font-size: 2rem;
 }
-.l-header__title, .l-header__title p, .l-header__title h1 {
+.l-header__ttl--hd {
+  font-family: Times;
+  font-size: 4.5rem;
+}
+.l-header__ttl, .l-header__ttl p, .l-header__ttl h1 {
   color: #ffffff;
 }
 .l-header__copy {
@@ -633,6 +638,7 @@ th {
   transform: rotate(-90deg);
   color: #ffffff;
   font-size: 2rem;
+  font-family: "Caveat", cursive;
   transform-origin: left;
 }
 .l-header__scroll {
@@ -642,6 +648,7 @@ th {
   z-index: 4;
   transform: rotate(90deg);
   color: #ffffff;
+  font-family: "Caveat", cursive;
   padding-right: 10rem;
 }
 .l-header__scroll::before {
@@ -675,8 +682,9 @@ th {
   margin-top: 1rem;
 }
 .c-font__contTtl {
-  font-size: 1.75rem;
+  font-size: 2.25rem;
   letter-spacing: 0.25rem;
+  color: #1b2f5b;
 }
 .c-font__contTxt {
   margin-top: 3rem;
@@ -744,7 +752,7 @@ th {
   line-height: 1.5;
 }
 .p-access__contList span {
-  font-size: 2rem;
+  font-size: 1.5rem;
   vertical-align: -0.1rem;
   color: #333333;
 }
@@ -754,12 +762,12 @@ th {
   margin: 0 auto;
   max-width: 1400px;
 }
-.p-concept__sec1--title {
+.p-concept__sec1--ttl {
   transform: rotate(90deg);
   text-align: center;
   transform-origin: bottom left;
 }
-.p-concept__sec1--title p {
+.p-concept__sec1--ttl p {
   margin-left: 1rem;
 }
 .p-concept__sec1--cont {
@@ -771,6 +779,15 @@ th {
   width: 440px;
   height: 575px;
   background-color: #000000;
+}
+.p-concept__sec1--contPic::after {
+  position: absolute;
+  bottom: -76rem;
+  left: 16rem;
+  display: block;
+  font-size: 1.5rem;
+  font-family: "Caveat", cursive;
+  content: "Play and laugh a lot in the great nature of the Miura Peninsula";
 }
 .p-concept__sec1--contTxt {
   width: 50%;
