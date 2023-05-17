@@ -9,7 +9,7 @@
   &__sec1 {
 
 
-    &--title {
+    &--ttl {
       transform: rotate(90deg);
 
       text-align: center;
@@ -31,6 +31,16 @@
         height: 575px;
 
         background-color: map-get($colors, "c-black");
+
+        &::after {
+          position: absolute;
+          bottom: -76rem;
+          left: 16rem;
+          display: block;
+          font-size: 1.5rem;
+          font-family: $font-family__caveat;
+          content: "Play and laugh a lot in the great nature of the Miura Peninsula";
+        }
       }
 
       &Txt {

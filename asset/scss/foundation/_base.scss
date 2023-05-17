@@ -22,8 +22,7 @@ html {
 body {
   color: $base-color;
   font-size: 1.6rem;
-  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN",
-  "Hiragino Sans", Meiryo, sans-serif;
+  font-family: $font-family__tsuku;
   min-width: 350px;
   width: 100%;
   overflow-x: hidden;
