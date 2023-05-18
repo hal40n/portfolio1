@@ -33,6 +33,11 @@
   transform: translateX(0);
 }
 
+/* scroll */
+.is-visible {
+  opacity: 1;
+}
+
 /* base */
 *,
 *:before,
@@ -522,6 +527,45 @@ th {
   width: 100%;
   height: 100vh;
   background-color: blue;
+  overflow: hidden;
+}
+.l-header__siteTtl {
+  opacity: 0;
+  position: absolute;
+  width: 24rem;
+  top: 3rem;
+  left: 3rem;
+}
+.l-header__siteTtl--hd {
+  color: #1b2f5b;
+  transition: all 0.5s ease;
+}
+.l-header__reserve {
+  opacity: 0;
+  position: absolute;
+  top: calc(50vh - 8rem);
+  right: -89.5rem;
+  z-index: 1000;
+}
+.l-header__reserve a {
+  width: 5rem;
+  height: 18rem;
+  display: flex;
+  justify-content: center;
+  color: #ffffff;
+  background-color: #1b2f5b;
+  align-items: center;
+  writing-mode: vertical-rl;
+  font-family: "FOT-筑紫Aオールド明朝 Pr6 D", TsukuAOldMinPr6-D, serif;
+}
+.l-header__reserve a::after {
+  padding: 0.25rem;
+  border-radius: 1.2rem;
+  background-color: #ffffff;
+  color: #1b2f5b;
+  font-size: 0.05rem;
+  content: "▶";
+  margin-left: 3rem;
 }
 .l-header__toggle {
   position: absolute;
@@ -783,17 +827,24 @@ th {
 .p-concept__sec1--contPic::after {
   position: absolute;
   bottom: -76rem;
-  left: 16rem;
+  left: 18rem;
   display: block;
+  color: #1b2f5b;
   font-size: 1.5rem;
   font-family: "Caveat", cursive;
   content: "Play and laugh a lot in the great nature of the Miura Peninsula";
 }
 .p-concept__sec1--contTxt {
   width: 50%;
+  line-height: 3.5rem;
   padding-left: 6%;
 }
+.p-concept__sec1--contTxt p {
+  line-height: 3rem;
+  font-size: 1.35rem;
+}
 .p-concept__sec2 {
+  margin-top: 25rem;
   margin-right: 0;
 }
 .p-concept__sec2--contTop {
@@ -801,6 +852,11 @@ th {
 }
 .p-concept__sec2--contTxt {
   width: 50%;
+  line-height: 3.5rem;
+}
+.p-concept__sec2--contTxt p {
+  font-size: 1.35rem;
+  line-height: 3rem;
 }
 .p-concept__sec2--contPic {
   position: relative;
@@ -820,6 +876,21 @@ th {
   height: 460px;
   background-color: rgba(154, 159, 167, 0.75);
 }
+.p-concept__sec2--contPic2::after {
+  content: "Feel the sea while you sleep\a and eat a delicious breakfast.";
+  position: absolute;
+  top: 5rem;
+  right: -7rem;
+  font-family: "Caveat", cursive;
+  margin-top: 90%;
+  transform-origin: top right;
+  display: block;
+  transform: rotate(90deg);
+  font-size: 1.5rem;
+  color: #1b2f5b;
+  white-space: pre;
+  line-height: 1.3;
+}
 .p-concept__sec2--contBtm {
   width: 50%;
   margin-top: 20rem;
@@ -830,18 +901,32 @@ th {
 }
 .p-concept__sec3 {
   text-align: center;
+  margin-top: 20rem;
+}
+.p-concept__sec3--ttl {
+  font-size: 2.5rem;
+  color: #000000;
+}
+.p-concept__sec3--txt {
+  font-size: 1.25rem;
+  line-height: 2;
 }
 .p-concept__sec3--detail {
   margin-top: 3rem;
+  font-size: 1.5rem;
+  position: relative;
 }
 .p-concept__sec3--detail p::after {
+  position: absolute;
+  top: 10%;
+  right: 45rem;
   padding: 0.25rem;
-  border-radius: 1.5rem;
+  border-radius: 1.2rem;
   background-color: #1b2f5b;
   color: #ffffff;
   font-size: 0.05rem;
   content: "▶";
-  margin-left: 1.5rem;
+  margin-left: 3rem;
 }
 
 .p-news__ttl {
@@ -861,7 +946,7 @@ th {
   margin-left: 3rem;
 }
 .p-news__txt {
-  font-size: 0.9rem;
+  font-size: 1.25rem;
 }
 .p-news__conts {
   justify-content: space-between;
@@ -900,7 +985,7 @@ th {
 }
 .p-tour__txt {
   text-align: center;
-  font-size: 1rem;
+  font-size: 1.35rem;
 }
 .p-tour__slides {
   justify-content: space-between;
