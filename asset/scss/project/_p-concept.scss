@@ -35,7 +35,7 @@
         &::after {
           position: absolute;
           bottom: -76rem;
-          left: 16rem;
+          left: 18rem;
           display: block;
           color: $default-color;
           font-size: 1.5rem;
@@ -151,24 +151,21 @@
     &--detail {
       margin-top: 3rem;
       font-size: 1.5rem;
+      position: relative;
 
       & p {
-        position: relative;
 
         &::after {
           position: absolute;
-          top: 40%;
-          right: 40rem;
-          border-radius: 1.5rem;
-
-          background-color: $default-color;
-
-          color: map-get($colors, "c-white");
-          font-size: 1rem;
-
+          top: 10%;
+          right: 45rem;
+          padding: 0.25rem;
+          border-radius: 1.2rem;
+          background-color: #1b2f5b;
+          color: #ffffff;
+          font-size: 0.05rem;
           content: "▶";
-
-          margin-left: 1.5rem;
+          margin-left: 3rem;
         }
       }
     }

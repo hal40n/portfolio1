@@ -33,6 +33,11 @@
   transform: translateX(0);
 }
 
+/* scroll */
+.is-visible {
+  opacity: 1;
+}
+
 /* base */
 *,
 *:before,
@@ -522,6 +527,45 @@ th {
   width: 100%;
   height: 100vh;
   background-color: blue;
+  overflow: hidden;
+}
+.l-header__siteTtl {
+  opacity: 0;
+  position: absolute;
+  width: 24rem;
+  top: 3rem;
+  left: 3rem;
+}
+.l-header__siteTtl--hd {
+  color: #1b2f5b;
+  transition: all 0.5s ease;
+}
+.l-header__reserve {
+  opacity: 0;
+  position: absolute;
+  top: calc(50vh - 8rem);
+  right: -89.5rem;
+  z-index: 1000;
+}
+.l-header__reserve a {
+  width: 5rem;
+  height: 18rem;
+  display: flex;
+  justify-content: center;
+  color: #ffffff;
+  background-color: #1b2f5b;
+  align-items: center;
+  writing-mode: vertical-rl;
+  font-family: "FOT-筑紫Aオールド明朝 Pr6 D", TsukuAOldMinPr6-D, serif;
+}
+.l-header__reserve a::after {
+  padding: 0.25rem;
+  border-radius: 1.2rem;
+  background-color: #ffffff;
+  color: #1b2f5b;
+  font-size: 0.05rem;
+  content: "▶";
+  margin-left: 3rem;
 }
 .l-header__toggle {
   position: absolute;
@@ -783,7 +827,7 @@ th {
 .p-concept__sec1--contPic::after {
   position: absolute;
   bottom: -76rem;
-  left: 16rem;
+  left: 18rem;
   display: block;
   color: #1b2f5b;
   font-size: 1.5rem;
@@ -870,20 +914,19 @@ th {
 .p-concept__sec3--detail {
   margin-top: 3rem;
   font-size: 1.5rem;
-}
-.p-concept__sec3--detail p {
   position: relative;
 }
 .p-concept__sec3--detail p::after {
   position: absolute;
-  top: 40%;
-  right: 40rem;
-  border-radius: 1.5rem;
+  top: 10%;
+  right: 45rem;
+  padding: 0.25rem;
+  border-radius: 1.2rem;
   background-color: #1b2f5b;
   color: #ffffff;
-  font-size: 1rem;
+  font-size: 0.05rem;
   content: "▶";
-  margin-left: 1.5rem;
+  margin-left: 3rem;
 }
 
 .p-news__ttl {
@@ -903,7 +946,7 @@ th {
   margin-left: 3rem;
 }
 .p-news__txt {
-  font-size: 0.9rem;
+  font-size: 1.25rem;
 }
 .p-news__conts {
   justify-content: space-between;
@@ -942,7 +985,7 @@ th {
 }
 .p-tour__txt {
   text-align: center;
-  font-size: 1rem;
+  font-size: 1.35rem;
 }
 .p-tour__slides {
   justify-content: space-between;

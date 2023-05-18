@@ -8,6 +8,56 @@
 
   background-color: blue;
 
+  overflow: hidden;
+
+  &__siteTtl {
+    opacity: 0;
+    position: absolute;
+    width: 24rem;
+    top: 3rem;
+    left: 3rem;
+
+    &--hd {
+      color: $default-color;
+      transition: all 0.5s ease;
+    }
+  }
+
+  &__reserve {
+    opacity: 0;
+    position: absolute;
+    top: calc(50vh - 8rem);
+    right: -89.5rem;
+    z-index: 1000;
+
+    & a {
+      width: 5rem;
+      height: 18rem;
+      display: flex;
+      justify-content: center;
+      color: #ffffff;
+      background-color: $default-color;
+
+      align-items: center;
+      writing-mode: vertical-rl;
+      font-family: $font-family__tsuku;
+
+      &::after {
+        padding: 0.25rem;
+        border-radius: 1.2rem;
+
+        background-color: map-get($colors, "c-white");
+
+        color: $default-color;
+        font-size: .05rem;
+
+        content: "▶";
+
+        margin-left: 3rem;
+      }
+    }
+  }
+
   &__toggle {
     position: absolute;
     top: 25px;
