@@ -33,11 +33,6 @@
   transform: translateX(0);
 }
 
-/* scroll */
-.is-visible {
-  opacity: 1;
-}
-
 /* base */
 *,
 *:before,
@@ -84,6 +79,10 @@ a:hover img {
   text-decoration: none;
   opacity: 0.8;
   transition: all 0.3s;
+}
+
+#top {
+  position: relative;
 }
 
 /*! destyle.css v4.0.0 | MIT License | https://github.com/nicolas-cusan/destyle.css */
@@ -523,40 +522,51 @@ th {
 }
 
 .l-header {
+  overflow: hidden;
   position: relative;
+  z-index: 1;
   width: 100%;
   height: 100vh;
-  background-color: blue;
-  overflow: hidden;
 }
 .l-header__siteTtl {
   opacity: 0;
-  position: absolute;
-  width: 24rem;
-  top: 3rem;
-  left: 3rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  transition: all 0.5s;
 }
 .l-header__siteTtl--hd {
+  position: absolute;
+  top: 3rem;
+  left: 3rem;
+  width: 50rem;
   color: #1b2f5b;
   transition: all 0.5s ease;
 }
+.l-header__siteTtl--hd p {
+  font-size: 1.2rem;
+}
+.l-header__siteTtl--hd h1 {
+  font-size: 2.8rem;
+}
 .l-header__reserve {
-  opacity: 0;
-  position: absolute;
+  position: fixed;
   top: calc(50vh - 8rem);
-  right: -89.5rem;
+  right: 0;
   z-index: 1000;
 }
 .l-header__reserve a {
+  display: flex;
   width: 5rem;
   height: 18rem;
-  display: flex;
-  justify-content: center;
-  color: #ffffff;
   background-color: #1b2f5b;
+  color: #ffffff;
+  font-family: "FOT-筑紫Aオールド明朝 Pr6 D", TsukuAOldMinPr6-D, serif;
+  transition: all 0.5s;
+  justify-content: center;
   align-items: center;
   writing-mode: vertical-rl;
-  font-family: "FOT-筑紫Aオールド明朝 Pr6 D", TsukuAOldMinPr6-D, serif;
 }
 .l-header__reserve a::after {
   padding: 0.25rem;
@@ -565,7 +575,7 @@ th {
   color: #1b2f5b;
   font-size: 0.05rem;
   content: "▶";
-  margin-left: 3rem;
+  margin-top: 2rem;
 }
 .l-header__toggle {
   position: absolute;
@@ -623,11 +633,11 @@ th {
   width: 100%;
   height: 100vh;
   margin: 0 auto;
-  padding: 0 25%;
+  padding: 0 20%;
   background-color: #1b2f5b;
   color: #ffffff;
   text-align: center;
-  transition: ease 0.4s;
+  transition: ease 0.5s;
   justify-content: space-between;
   align-items: center;
 }
@@ -659,13 +669,18 @@ th {
   margin-top: 50px;
 }
 .l-header__ttl {
-  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
   line-height: 5rem;
+  text-align: center;
   padding-top: 5rem;
+  z-index: 4;
 }
 .l-header__ttl--txt {
-  font-size: 2.5rem;
   font-family: "ヒラギノ明朝 ProN";
+  font-size: 2.5rem;
 }
 .l-header__ttl--hd {
   font-family: Times;
@@ -674,6 +689,14 @@ th {
 .l-header__ttl, .l-header__ttl p, .l-header__ttl h1 {
   color: #ffffff;
 }
+.l-header__slider {
+  position: absolute;
+  top: 0;
+}
+.l-header__slider--img {
+  width: 100%;
+  height: 100vh;
+}
 .l-header__copy {
   position: absolute;
   top: 60%;
@@ -681,8 +704,8 @@ th {
   z-index: 9;
   transform: rotate(-90deg);
   color: #ffffff;
-  font-size: 2rem;
   font-family: "Caveat", cursive;
+  font-size: 2rem;
   transform-origin: left;
 }
 .l-header__scroll {
@@ -703,6 +726,11 @@ th {
   height: 1px;
   background-color: #ffffff;
   content: "";
+}
+
+/* scroll */
+.is-visible {
+  opacity: 1;
 }
 
 .l-main {
@@ -822,12 +850,11 @@ th {
 .p-concept__sec1--contPic {
   width: 440px;
   height: 575px;
-  background-color: #000000;
+  position: relative;
 }
 .p-concept__sec1--contPic::after {
   position: absolute;
-  bottom: -76rem;
-  left: 18rem;
+  bottom: -3rem;
   display: block;
   color: #1b2f5b;
   font-size: 1.5rem;
@@ -866,20 +893,18 @@ th {
   position: relative;
   width: 450px;
   height: 300px;
-  background-color: #000000;
 }
 .p-concept__sec2--contPic2 {
   position: absolute;
-  top: 15rem;
+  top: 25rem;
   left: 12.5rem;
   width: 300px;
   height: 460px;
-  background-color: rgba(154, 159, 167, 0.75);
 }
 .p-concept__sec2--contPic2::after {
   content: "Feel the sea while you sleep\a and eat a delicious breakfast.";
   position: absolute;
-  top: 5rem;
+  top: -5rem;
   right: -7rem;
   font-family: "Caveat", cursive;
   margin-top: 90%;
@@ -904,11 +929,11 @@ th {
   margin-top: 20rem;
 }
 .p-concept__sec3--ttl {
-  font-size: 2.5rem;
+  font-size: 3rem;
   color: #000000;
 }
 .p-concept__sec3--txt {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   line-height: 2;
 }
 .p-concept__sec3--detail {
@@ -918,13 +943,11 @@ th {
 }
 .p-concept__sec3--detail p::after {
   position: absolute;
-  top: 10%;
-  right: 45rem;
   padding: 0.25rem;
-  border-radius: 1.2rem;
+  border-radius: 1rem;
   background-color: #1b2f5b;
   color: #ffffff;
-  font-size: 0.05rem;
+  font-size: 0.25rem;
   content: "▶";
   margin-left: 3rem;
 }
@@ -934,7 +957,10 @@ th {
 }
 .p-news__ttl--notice {
   padding-left: 3rem;
-  line-height: 61px;
+  line-height: 60px;
+}
+.p-news__ttl--notice p {
+  height: 3rem;
 }
 .p-news__ttl--notice p::after {
   padding: 0.25rem;

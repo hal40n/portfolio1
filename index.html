@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="./asset/scss/style.css">
   <title>Portfolio1</title>
 </head>
-  <body>
+  <body id="top">
     <header class="l-header">
       <div class="l-header__siteTtl">
         <div class="l-header__siteTtl--hd">
@@ -18,7 +18,7 @@
           <h1>bed&breakfast ichi</h1>
         </div><!-- l-header__ttl--hd -->
         <div class="l-header__reserve">
-          <a>ご予約はこちら</a>
+          <a><span>ご予約はこちら</span></a>
         </div>
       </div><!-- l-header__show -->
       <div class="l-header__toggle">
@@ -67,6 +67,11 @@
         <p class="l-header__ttl--txt">夫婦で営む手づくりのお宿</p>
         <h1 class="l-header__ttl--hd">bed&breakfast ichi</h1>
       </div><!-- l-header__title -->
+      <div class="l-header__slider">
+        <div id="slide" class="l-header__slider--img sliderShow">
+          <img src="asset/img/l-header__slide--img1.jpg" id="slide--img" class="l-header__slider--img">
+        </div>
+      </div>
       <div class="l-header__copy">
         <p>A comfortable sleep & Tasty breakfast</p>
       </div><!-- l-header__copy -->
@@ -74,15 +79,17 @@
         <p>Scroll down</p>
       </div>
     </header><!-- l-header -->
-    <main class="l-main">
-      <div class="p-concept elm">
+    <main class="l-main elm">
+      <div class="p-concept">
         <div class="p-concept__sec1">
           <div class ="p-concept__sec1--ttl c-flex">
             <h1 class="c-font__secTtl">CONCEPT</h1>
             <p class="c-font__secTxt">コンセプト</p>
           </div><!-- p-concept__sec1--title -->
           <div class="p-concept__sec1--cont c-flex">
-            <div class="p-concept__sec1--contPic"></div><!-- imgに置換する -->
+            <div class="p-concept__sec1--contPic">
+              <img src="asset/img/p-concept__img1.jpg">
+            </div><!-- p-concept__sec1--conPic -->
             <div class="p-concept__sec1--contTxt">
               <h1 class="c-font__contTtl">
                 三浦半島の大自然の中で<br>
@@ -106,16 +113,19 @@
               </p>
             </div><!-- p-concept__sec2--contTxt -->
             <div class="p-concept__sec2--contPic">
-              <!-- imgに置換 -->
-              <div class="p-concept__sec2--contPic1"></div>
-              <div class="p-concept__sec2--contPic2"></div>
-              <!-- imgに置換 -->
+              <div class="p-concept__sec2--contPic1">
+                <img src="asset/img/p-concept__img2.jpg">
+              </div><!-- p-concept__sec2--contPic1 -->
+              <div class="p-concept__sec2--contPic2">
+                <img src="asset/img/p-concept__img3.jpg">
+              </div><!-- p-concept__sec2--contPic2 -->
             </div><!-- p-concept__sec2--contPic -->
           </div><!-- p-concept__sec2--contTop -->
           <div class="p-concept__sec2--contBtm">
             <!-- imgに置換 -->
-            <div class="p-concept__sec2--contPhoto"></div>
-            <!-- imgに置換 -->
+            <div class="p-concept__sec2--contPhoto">
+              <img src="asset/img/p-concept__img4.jpg">
+            </div><!-- p-concept__sec2--contPhoto -->
           </div><!-- p-concept__sec2--contBtm -->
         </div><!-- p-concept__sec2 -->
         <div class="p-concept__sec3">
