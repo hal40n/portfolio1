@@ -1,46 +1,67 @@
 @use "../global" as *;
 
 .l-header {
+  overflow: hidden;
+
   position: relative;
+  z-index: 1;
 
   width: 100%;
   height: 100vh;
 
-  background-color: blue;
-
-  overflow: hidden;
-
   &__siteTtl {
     opacity: 0;
-    position: absolute;
-    width: 24rem;
-    top: 3rem;
-    left: 3rem;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
+    transition: all 0.5s;
 
     &--hd {
+      position: absolute;
+      top: 3rem;
+      left: 3rem;
+
+      width: 50rem;
+
       color: $default-color;
+
       transition: all 0.5s ease;
+
+      & p {
+        font-size: 1.2rem;
+      }
+
+      & h1 {
+        font-size: 2.8rem;
+      }
     }
   }
 
   &__reserve {
-    opacity: 0;
-    position: absolute;
+    position: fixed;
     top: calc(50vh - 8rem);
-    right: -89.5rem;
+    right: 0;
     z-index: 1000;
 
     & a {
+      display: flex;
+
       width: 5rem;
       height: 18rem;
-      display: flex;
-      justify-content: center;
-      color: #ffffff;
+
       background-color: $default-color;
 
+      color: #ffffff;
+      font-family: $font-family__tsuku;
+
+      transition: all 0.5s;
+
+      justify-content: center;
       align-items: center;
       writing-mode: vertical-rl;
-      font-family: $font-family__tsuku;
 
       &::after {
         padding: 0.25rem;
@@ -53,7 +74,8 @@
 
         content: "▶";
 
-        margin-left: 3rem;
+        margin-top: 2rem;
+
       }
     }
   }
@@ -134,14 +156,14 @@
     width: 100%;
     height: 100vh;
     margin: 0 auto;
-    padding: 0 25%;
+    padding: 0 20%;
 
     background-color: #1b2f5b;
 
     color: #ffffff;
     text-align: center;
 
-    transition: ease .4s;
+    transition: ease .5s;
 
     justify-content: space-between;
     align-items: center;
@@ -190,13 +212,20 @@
   }
 
   &__ttl {
-    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
     line-height: 5rem;
+    text-align: center;
+
     padding-top: 5rem;
 
+    z-index: 4;
+
     &--txt {
-      font-size: 2.5rem;
       font-family: $font-family__hiragino--proN;
+      font-size: 2.5rem;
     }
 
     &--hd {
@@ -209,6 +238,16 @@
     }
   }
 
+  &__slider {
+    position: absolute;
+    top: 0;
+
+    &--img {
+      width: 100%;
+      height: 100vh;
+    }
+  }
+
   &__copy {
     position: absolute;
     top: 60%;
@@ -217,8 +256,8 @@
     transform: rotate(-90deg);
 
     color: #ffffff;
-    font-size: 2rem;
     font-family: $font-family__caveat;
+    font-size: 2rem;
 
     transform-origin: left;
   }
@@ -248,4 +287,10 @@
       content: "";
     }
   }
+}
+
+/* scroll */
+
+.is-visible {
+  opacity: 1;
 }

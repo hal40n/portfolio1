@@ -8,20 +8,25 @@
 
     &--notice {
       padding-left: 3rem;
-      line-height: 61px;
+      line-height: 60px;
 
-      & p::after {
-        padding: 0.25rem;
-        border-radius: 1.2rem;
+      & p {
 
-        background-color: $default-color;
+        height: 3rem;
 
-        color: map-get($colors, "c-white");
-        font-size: .05rem;
+        &::after {
+          padding: 0.25rem;
+          border-radius: 1.2rem;
 
-        content: "▶";
+          background-color: $default-color;
 
-        margin-left: 3rem;
+          color: map-get($colors, "c-white");
+          font-size: .05rem;
+
+          content: "▶";
+
+          margin-left: 3rem;
+        }
       }
     }
   }
