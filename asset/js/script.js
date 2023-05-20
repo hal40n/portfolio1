@@ -2,21 +2,42 @@
 const slideImages = [
   '../../asset/img/l-header__slide--img1.jpg',
   '../../asset/img/l-header__slide--img2.jpg',
-  '../../asset/img/l-header__slide--img3.jpg'
-]
+  '../../asset/img/l-header__slide--img3.jpg',
+  '../../asset/img/l-header__slide--img4.jpg'
+];
 
-let num = -1;
-function slideTime() {
-  if(num === 2) {
-    num = 0;
+let nowCnt = -1;
+let flg = 0;
+
+function changeImg() {
+  nowCnt = (nowCnt < slideImages.length - 1) ? nowCnt + 1 : 0;
+  flg = (flg === 0) ? 1 : 0;
+
+  const slideImg1 = document.getElementById('slide--img1');
+  const slideImg2 = document.getElementById('slide--img2');
+  const paginationCircles = document.querySelectorAll('.l-header__pagination--circle');
+
+  if (flg === 0) {
+    slideImg1.src = slideImages[nowCnt];
+    slideImg1.classList.add('fade-in');
+    slideImg1.classList.remove('fade-out');
+    slideImg2.classList.add('fade-out');
+    slideImg2.classList.remove('fade-in');
   } else {
-    num ++;
+    slideImg2.src = slideImages[nowCnt];
+    slideImg2.classList.add('fade-in');
+    slideImg2.classList.remove('fade-out');
+    slideImg1.classList.add('fade-out');
+    slideImg1.classList.remove('fade-in');
   }
-  document.getElementById('slide--img').src = slideImages[num];
+
+  /* Updating of pagination */
+  paginationCircles.forEach((circle, index) => {
+    circle.classList.toggle('target', index === nowCnt);
+  });
 }
 
-setInterval(slideTime, 20000);
-
+setInterval(changeImg, 10000);
 
 /* When scrolling, the reservation button will appear. */
 window.addEventListener('scroll', function() {
