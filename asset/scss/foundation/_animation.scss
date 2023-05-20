@@ -43,3 +43,16 @@
   z-index: 999;
   transform: translateX(0);
 }
+
+/* fadeIn and fadeOut */
+.fade-out {
+  opacity: 0;
+  transition: 3s ease-in-out;
+  -webkit-transition: 3s ease-in-out;
+}
+
+.fade-in {
+  opacity: 1;
+  transition: 3s ease-in-out;
+  -webkit-transition: 3s ease-in-out;
+}
