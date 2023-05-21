@@ -14,19 +14,35 @@
     font-size: 1.35rem;
   }
 
+  &__slider-container {
+    position: relative;
+    overflow: hidden;
+  }
+
   &__slides {
     justify-content: space-between;
-    gap: 5rem;
   }
 
   &__slide {
     background-color: map-get($colors, "c-white");
     padding: 10px;
+    display: block;
+    width: 30%;
 
     &--img {
-      width: 280px;
+      overflow: hidden;
+      width: 100%;
       height: 193px;
-      background-color: map-get($colors, "c-black");
+
+      & img {
+        width: 100%;
+        height: 100%;
+        transition: .5s;
+      }
+    }
+
+    &:hover img {
+      transform: scale(1.1);
     }
 
     &--hd {
@@ -46,4 +62,57 @@
     }
   }
 
+  &__select--contents {
+    justify-content: space-between;
+  }
+
+  &__selects {
+    justify-content: left;
+    align-items: center;
+    margin-top: 1.5rem;
+
+    &--prev {
+      font-size: 2rem;
+      cursor: pointer;
+      margin-right: 3rem;
+    }
+
+    &--next {
+      font-size: 2rem;
+      cursor: pointer;
+    }
+  }
+
+  &__select {
+    background-color: #808080;
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    border: none;
+    margin: 0 0.5rem;
+    cursor: pointer;
+  }
+
+  &__pagination {
+    width: 7.5%;
+    margin-top: 2rem;
+    justify-content: space-between;
+
+    &--circle {
+      width: 0.75rem;
+      height: 0.75rem;
+      border-radius: 50%;
+      background-color: $sub-title;
+      margin: 0 0.25rem;
+
+      &.target::before {
+        content: "";
+        width: .75rem;
+        height: .75rem;
+        border-radius: 50%;
+        display: block;
+        background-color: $default-color;
+
+      }
+    }
+  }
 }
