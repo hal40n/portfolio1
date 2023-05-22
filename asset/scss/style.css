@@ -1131,8 +1131,8 @@ th {
 .p-tour__slide {
   background-color: #ffffff;
   padding: 10px;
+  margin: 0 20px;
   display: block;
-  width: 30%;
 }
 .p-tour__slide--img {
   overflow: hidden;
@@ -1161,6 +1161,7 @@ th {
   padding-bottom: 3rem;
 }
 .p-tour__select--contents {
+  margin: 0 20px;
   justify-content: space-between;
 }
 .p-tour__selects {

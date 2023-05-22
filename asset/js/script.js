@@ -68,12 +68,15 @@ $(function() {
 
 
 /* slider of tour contents */
+
 $('.autoplay').slick({
   slidesToShow: 3,
   slidesToScroll: 1,
   autoplay: true,
+  pauseOnHover: true,
   arrows: false,
   autoplaySpeed: 10000,
+  infinite: true,
   responsive: [
     {
     breakpoint: 769,//モニターの横幅が769px以下の見せ方
@@ -91,3 +94,69 @@ $('.autoplay').slick({
   }
 ]
 });
+
+
+/*
+$(function(){
+  let slideWidth = $('.p-tour__slide').outerWidth(true);
+  let slideLength = $('p-tour__slide').length;
+  let slideArea = slideWidth * slideLength;
+  $('p-tour__slides').css('width', slideArea);
+
+  let slideCurrent = 0;
+  let slideLast = $('p-tour__slide').length - 1;
+
+  function changeSlide(){
+    $('.p-tour__slides').stop().animate({
+      left: slideCurrent * -slideWidth
+    });
+
+    let pagiNation = slideCurrent + 1;
+    $('.p-tour__pagination--circle').removeClass('target');
+    $('.p-tour__pagination--circle:nth-of-type(' + pagiNation + ')').addClass('target');
+  };
+
+  let Timer;
+
+  function startTimer(){
+    Timer = setInterval(function(){
+      if(slideCurrent === slideLast) {
+        slideCurrent = 0;
+        changeSlide();
+      } else {
+        slideCurrent++;
+        changeSlide();
+      };
+    }, 10000);
+  }
+
+  function stopTimer(){
+    clearInterval(Timer);
+  }
+  startTimer();
+
+  $('.prev').on('click', function(){
+    stopTimer();
+    startTimer();
+    if(slideCurrent === 0){
+      slideCurrent = slideLast;
+      changeSlide();
+    } else {
+      slideCurrent--;
+      changeSlide();
+    };
+  });
+
+  $('.next').on('click', function(){
+    stopTimer();
+    startTimer();
+    if(slideCurrent === slideLast){
+      slideCurrent = 0;
+      changeSlide();
+    } else {
+      slideCurrent ++;
+      changeSlide();
+    };
+  });
+})
+*/
