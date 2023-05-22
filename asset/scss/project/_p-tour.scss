@@ -26,8 +26,8 @@
   &__slide {
     background-color: map-get($colors, "c-white");
     padding: 10px;
+    margin: 0 20px;
     display: block;
-    width: 30%;
 
     &--img {
       overflow: hidden;
@@ -63,6 +63,7 @@
   }
 
   &__select--contents {
+    margin: 0 20px;
     justify-content: space-between;
   }
 
