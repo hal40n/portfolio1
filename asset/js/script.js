@@ -100,67 +100,66 @@ $('.autoplay').slick({
 ]
 });
 
-/*
-$(function(){
-  let slideWidth = $('.p-tour__slide').outerWidth(true);
-  let slideLength = $('p-tour__slide').length;
-  let slideArea = slideWidth * slideLength;
-  $('p-tour__slides').css('width', slideArea);
+/* fade-in */
 
-  let slideCurrent = 0;
-  let slideLast = $('p-tour__slide').length - 1;
 
-  function changeSlide(){
-    $('.p-tour__slides').stop().animate({
-      left: slideCurrent * -slideWidth
-    });
 
-    let pagiNation = slideCurrent + 1;
-    $('.p-tour__pagination--circle').removeClass('target');
-    $('.p-tour__pagination--circle:nth-of-type(' + pagiNation + ')').addClass('target');
-  };
+function fadeAnime(){
+  let time = 0.5;
+  let value = time;
 
-  let Timer;
+  $('.fadeUpTrigger').each(function(){
+    let parent = this;
+    let elemPos = $(this).offset().top - 30;
+    let scroll = $(window).scrollTop();
+    let itemHeight = $(window).height();
+    let childs = $(this).children();
 
-  function startTimer(){
-    Timer = setInterval(function(){
-      if(slideCurrent === slideLast) {
-        slideCurrent = 0;
-        changeSlide();
+    if(scroll >= elemPos - itemHeight && !$(parent).hasClass("play")) {
+      $(childs).each(function() {
+        if(!$(this).hasClass("fadeUp")) {
+          $(parent).addClass("play");
+          $(this).css("animation-delay", value + "s");
+          $(this).addClass("fadeUp");
+          value = value + time;
+
+          let index = $(childs).index(this);
+          if((childs.length - 1) == index){
+            $(parent).removeClass("play");
+          }
+        }
+      })
+    }
+
+    /* single fade-in */
+    $('.fadeAllTrigger').each(function(){
+      let elemPos = $(this).offset().top-30;
+      let scroll = $(window).scrollTop();
+      let itemHeight = $(window).height();
+      if(scroll >= elemPos - itemHeight) {
+        $(this).addClass('fadeUp');
       } else {
-        slideCurrent++;
-        changeSlide();
-      };
-    }, 10000);
-  }
-
-  function stopTimer(){
-    clearInterval(Timer);
-  }
-  startTimer();
-
-  $('.prev').on('click', function(){
-    stopTimer();
-    startTimer();
-    if(slideCurrent === 0){
-      slideCurrent = slideLast;
-      changeSlide();
-    } else {
-      slideCurrent--;
-      changeSlide();
-    };
+        $(this).removeClass('fadeUp');
+      }
+    });
   });
 
-  $('.next').on('click', function(){
-    stopTimer();
-    startTimer();
-    if(slideCurrent === slideLast){
-      slideCurrent = 0;
-      changeSlide();
+  /*$('.fadeDownTrigger').each(function(){
+    let elemPos = $(this).offset().top-50;
+    let scroll = $(window).scrollTop();
+    let itemHeight = $(window).height;
+    if(scroll >= elemPos - itemHeight){
+      $(this).addClass('fade-down');
     } else {
-      slideCurrent ++;
-      changeSlide();
-    };
-  });
-})
-*/
+      $(this).removeClass('fade-down');
+    }
+  }) */
+}
+
+$(window).on('scroll', function(){
+  fadeAnime();
+});
+
+$(window).on('load', function(){
+  fadeAnime();
+});

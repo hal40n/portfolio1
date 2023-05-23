@@ -1,7 +1,7 @@
 @use "../global" as *;
 
 .p-concept {
-  width: 85%;
+  width: 82.5%;
   margin: 0 auto;
 
   max-width: 1400px;
@@ -10,30 +10,42 @@
 
 
     &--ttl {
-      transform: rotate(90deg);
+      position: relative;
 
-      text-align: center;
+      &Cont {
+        transform: rotate(90deg);
 
-      transform-origin: bottom left;
+        text-align: center;
+  
+        transform-origin: bottom left;
 
-      & p {
+        align-items: center;
+        position: absolute;
+        top: -6rem;
+        left: 0;
+      }
+
+      & span {
         margin-left: 1rem;
+
+        &:first-child {
+          margin-left: 0;
+        }
       }
     }
 
     &--cont {
       justify-content: space-between;
       align-items: flex-end;
-      padding-left:7rem;
+      padding-left: 11rem;
 
       &Pic {
         width: 440px;
-        height: 575px;
         position: relative;
 
         &::after {
           position: absolute;
-          bottom: -3rem;
+
           display: block;
           color: $default-color;
           font-size: 1.5rem;
@@ -43,14 +55,9 @@
       }
 
       &Txt {
-        width: 50%;
-        line-height: 3.5rem;
+        width: 70%;
         padding-left: 6%;
-
-        & p {
-          line-height: 3rem;
-          font-size: 1.35rem;
-        }
+        position: relative;
       }
     }
   }

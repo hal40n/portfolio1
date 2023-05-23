@@ -4,7 +4,7 @@
   width: 100%;
   margin: 0 auto;
 
-  background-color: map-get($colors, "c-navy");
+  background-color: $default-color;
 
   color: map-get($colors, "c-white");
 
@@ -14,30 +14,37 @@
 
     text-align: center;
 
-    padding-top: 5rem;
+    padding-top: 10rem;
     padding-bottom: 9rem;
 
     &--title {
-      font-family: "ヒラギノ明朝 ProN";
+      font-family: $font-family__tsuku;
 
       & h2 {
-        font-size: 2rem;
+        margin-top: 0.5rem;
+        font-size: 3.75rem;
       }
 
     }
 
     &--nav {
-      margin-top: 5rem;
+      text-align: center;
 
-      &List li {
-        margin: 0 auto;
+      & li {
+        display: inline-block;
+        font-size: 1.35rem;
+        letter-spacing: .35rem;
+
+        &+li {
+          margin-left: 3.5rem;
+        }
       }
     }
 
     &--reserve {
       width: fit-content;
-      margin: 3rem auto 0 auto;
-      padding: 1rem;
+      margin: 3.5rem auto 0 auto;
+      padding: 1rem 2rem;
       border: 1px solid map-get($colors, "c-white");
 
       text-align: center;
@@ -45,27 +52,23 @@
 
     &--tel {
       margin-top: 3rem;
+      font-size: 1.3rem;
 
-      & span {
-        font-size: 1rem;
-      }
-
-      & p {
-        font-size: 1.5rem;
+      & a {
+        font-size: 1.8rem;
+        text-decoration: none;
+        letter-spacing: 0.08rem;
       }
     }
 
     &--sns {
       width: 10rem;
-      margin: 3rem auto 0 auto;
-      justify-content: space-between;
+      margin: 4rem auto 0 auto;
 
-      & ul {
+      & li {
         justify-content: space-between;
-      }
-
-      & li:nth-child(3) {
-        margin-right: 0;
+        width: 3rem;
+        height: 2.2rem;
       }
     }
   }

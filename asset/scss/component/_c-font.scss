@@ -7,7 +7,7 @@
     &Ttl {
 
       color: map-get($colors, "c-navy");
-      font-size: 3rem;
+      font-size: 5rem;
 
     }
 
@@ -20,14 +20,16 @@
   &__cont {
 
     &Ttl {
-      font-size: 2.25rem;
+      font-size: 3rem;
+      line-height: 1.5;
       letter-spacing: .25rem;
       color: $default-color;
     }
 
     &Txt {
       margin-top: 3rem;
-      line-height: 2rem;
+      line-height: 2;
+      font-size: 1.5rem;
     }
   }
 }
