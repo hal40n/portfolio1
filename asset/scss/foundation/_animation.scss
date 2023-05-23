@@ -56,3 +56,41 @@
   transition: 3s ease-in-out;
   -webkit-transition: 3s ease-in-out;
 }
+
+/* fadeUp */
+.fadeUp {
+  animation-name: fadeUpAnime;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes fadeUpAnime {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* fade all */
+.fadeAll {
+  animation-name:fadeAll;
+  animation-duration: 5s;
+  animation-fill-mode:forwards;
+  opacity:0;
+}
+
+@keyframes fadeAll{
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

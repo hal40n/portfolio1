@@ -46,6 +46,42 @@
   -webkit-transition: 3s ease-in-out;
 }
 
+/* fadeUp */
+.fadeUp {
+  animation-name: fadeUpAnime;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes fadeUpAnime {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* fade all */
+.fadeAll {
+  animation-name: fadeAll;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes fadeAll {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 /* base */
 *,
 *:before,
@@ -483,48 +519,52 @@ th {
   width: 100%;
   margin: 0 auto;
   text-align: center;
-  padding-top: 5rem;
+  padding-top: 10rem;
   padding-bottom: 9rem;
 }
 .l-footer__contents--title {
-  font-family: "ヒラギノ明朝 ProN";
+  font-family: "FOT-筑紫Aオールド明朝 Pr6 D", TsukuAOldMinPr6-D, serif;
 }
 .l-footer__contents--title h2 {
-  font-size: 2rem;
+  margin-top: 0.5rem;
+  font-size: 3.75rem;
 }
 .l-footer__contents--nav {
-  margin-top: 5rem;
+  text-align: center;
 }
-.l-footer__contents--navList li {
-  margin: 0 auto;
+.l-footer__contents--nav li {
+  display: inline-block;
+  font-size: 1.35rem;
+  letter-spacing: 0.35rem;
+}
+.l-footer__contents--nav li + li {
+  margin-left: 3.5rem;
 }
 .l-footer__contents--reserve {
   width: -moz-fit-content;
   width: fit-content;
-  margin: 3rem auto 0 auto;
-  padding: 1rem;
+  margin: 3.5rem auto 0 auto;
+  padding: 1rem 2rem;
   border: 1px solid #ffffff;
   text-align: center;
 }
 .l-footer__contents--tel {
   margin-top: 3rem;
+  font-size: 1.3rem;
 }
-.l-footer__contents--tel span {
-  font-size: 1rem;
-}
-.l-footer__contents--tel p {
-  font-size: 1.5rem;
+.l-footer__contents--tel a {
+  font-size: 1.8rem;
+  text-decoration: none;
+  letter-spacing: 0.08rem;
 }
 .l-footer__contents--sns {
   width: 10rem;
-  margin: 3rem auto 0 auto;
-  justify-content: space-between;
+  margin: 4rem auto 0 auto;
 }
-.l-footer__contents--sns ul {
+.l-footer__contents--sns li {
   justify-content: space-between;
-}
-.l-footer__contents--sns li:nth-child(3) {
-  margin-right: 0;
+  width: 3rem;
+  height: 2.2rem;
 }
 .l-footer__cr {
   margin: 0 auto;
@@ -833,20 +873,22 @@ th {
 
 .c-font__secTtl {
   color: #1b2f5b;
-  font-size: 3rem;
+  font-size: 5rem;
 }
 .c-font__secTxt {
   color: rgba(154, 159, 167, 0.75);
   margin-top: 1rem;
 }
 .c-font__contTtl {
-  font-size: 2.25rem;
+  font-size: 3rem;
+  line-height: 1.5;
   letter-spacing: 0.25rem;
   color: #1b2f5b;
 }
 .c-font__contTxt {
   margin-top: 3rem;
-  line-height: 2rem;
+  line-height: 2;
+  font-size: 1.5rem;
 }
 
 .c-icon {
@@ -910,37 +952,45 @@ th {
   line-height: 1.5;
 }
 .p-access__contList span {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   vertical-align: -0.1rem;
   color: #333333;
 }
 
 .p-concept {
-  width: 85%;
+  width: 82.5%;
   margin: 0 auto;
   max-width: 1400px;
 }
 .p-concept__sec1--ttl {
+  position: relative;
+}
+.p-concept__sec1--ttlCont {
   transform: rotate(90deg);
   text-align: center;
   transform-origin: bottom left;
+  align-items: center;
+  position: absolute;
+  top: -6rem;
+  left: 0;
 }
-.p-concept__sec1--ttl p {
+.p-concept__sec1--ttl span {
   margin-left: 1rem;
+}
+.p-concept__sec1--ttl span:first-child {
+  margin-left: 0;
 }
 .p-concept__sec1--cont {
   justify-content: space-between;
   align-items: flex-end;
-  padding-left: 7rem;
+  padding-left: 11rem;
 }
 .p-concept__sec1--contPic {
   width: 440px;
-  height: 575px;
   position: relative;
 }
 .p-concept__sec1--contPic::after {
   position: absolute;
-  bottom: -3rem;
   display: block;
   color: #1b2f5b;
   font-size: 1.5rem;
@@ -948,13 +998,9 @@ th {
   content: "Play and laugh a lot in the great nature of the Miura Peninsula";
 }
 .p-concept__sec1--contTxt {
-  width: 50%;
-  line-height: 3.5rem;
+  width: 70%;
   padding-left: 6%;
-}
-.p-concept__sec1--contTxt p {
-  line-height: 3rem;
-  font-size: 1.35rem;
+  position: relative;
 }
 .p-concept__sec2 {
   margin-top: 25rem;
