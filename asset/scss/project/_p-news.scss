@@ -8,11 +8,11 @@
 
     &--notice {
       padding-left: 3rem;
-      line-height: 60px;
+      line-height: 1.4;
 
       & p {
 
-        height: 3rem;
+        padding-top: 3rem;
 
         &::after {
           padding: 0.25rem;

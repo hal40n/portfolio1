@@ -230,7 +230,7 @@
 
     &--hd {
       font-family: $font-family__times;
-      font-size: 4.5rem;
+      font-size: 6.5rem;
     }
 
     & ,p, h1 {
@@ -281,7 +281,7 @@
 
   &__copy {
     position: absolute;
-    top: 60%;
+    top: 70%;
     left: 3rem;
     z-index: 9;
     transform: rotate(-90deg);
@@ -291,16 +291,20 @@
     font-size: 2rem;
 
     transform-origin: left;
+
+    letter-spacing: 0.1rem;
   }
 
   &__scroll {
 
     &--down {
       position: absolute;
-      right: -5rem;
-      bottom: 5rem;
+      right: -4rem;
+      bottom: 6rem;
       z-index: 4;
       transform: rotate(90deg);
+      letter-spacing: 0.2rem;
+      overflow: hidden;
 
       color: #ffffff;
       font-family: $font-family__caveat;
@@ -310,7 +314,7 @@
       &::before {
         position: absolute;
         top: 1rem;
-        right: 3rem;
+        right: 0.5rem;
 
         width: 5rem;
         height: 1px;
@@ -319,11 +323,8 @@
 
         content: "";
 
-        animation: borderLong 1.5s ease infinite;
-      }
-
-      &::after {
-        animation: borderShort 1.5s ease infinite;
+        animation: borderLong 3s ease 0s infinite normal;
+        animation: borderShort 3s ease 0s infinite normal;
       }
     }
   }
@@ -341,15 +342,38 @@
 
 /* keyframes */
 @keyframes borderShort {
-  0%{width: 0;opacity: 0}
-  20%{width: 0;opacity: 1}
-  80%{width: 100%;opacity: 0}
-  100%{width: 100%;opacity: 0}
+  0%  {
+    right: 0
+  }
+  100%  {
+    right: -30rem
+  }
 }
 
 @keyframes borderLong {
-  0% { left: 0; opacity: 0}
-  20% { left: 0; opacity: 0}
-  80% { left: calc(70% - 1rem); opacity: 1}
-  100% { left: calc(70% - 1rem); opacity: 1}
+  0%  {
+    right: 0
+  }
+  100%  {
+    right: -30rem
+  }
+}
+
+#loading {
+  width: 100vw;
+  height: 100wh;
+
+  &.loaded {
+    animation: loading 3s forwards;
+  }
+}
+
+@keyframes loading {
+  from {
+    opacity: 1;
+  } to {
+    display: none;
+    opacity: 0;
+    z-index: -1;
+  }
 }

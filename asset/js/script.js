@@ -1,3 +1,19 @@
+/* on load */
+$(function(){
+  $(window).on('load', function() {
+    $('#animation-onLoad').addClass('loaded');
+  }).queue(function() {
+    $('.l-header__ttl').hide().fadeIn(2000);
+  })
+})
+
+// const loading = document.querySelector('#loading');
+// window.addEventListener('load', function() {
+//   this.setTimeout(function() {
+//     loading.classList.add('hide');
+//   }, 1000);
+// });
+
 /* A slideshow where photos automatically switch at regular intervals. */
 const slideImages = [
   '../../asset/img/l-header__slide--img1.jpg',
@@ -102,8 +118,6 @@ $('.autoplay').slick({
 
 /* fade-in */
 
-
-
 function fadeAnime(){
   let time = 0.5;
   let value = time;
@@ -113,18 +127,18 @@ function fadeAnime(){
     let elemPos = $(this).offset().top - 30;
     let scroll = $(window).scrollTop();
     let itemHeight = $(window).height();
-    let childs = $(this).children();
+    let child = $(this).children();
 
     if(scroll >= elemPos - itemHeight && !$(parent).hasClass("play")) {
-      $(childs).each(function() {
+      $(child).each(function() {
         if(!$(this).hasClass("fadeUp")) {
           $(parent).addClass("play");
           $(this).css("animation-delay", value + "s");
           $(this).addClass("fadeUp");
           value = value + time;
 
-          let index = $(childs).index(this);
-          if((childs.length - 1) == index){
+          let index = $(child).index(this);
+          if((child.length - 1) == index){
             $(parent).removeClass("play");
           }
         }

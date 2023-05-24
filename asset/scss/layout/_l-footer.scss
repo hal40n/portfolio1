@@ -21,8 +21,9 @@
       font-family: $font-family__tsuku;
 
       & h2 {
-        margin-top: 0.5rem;
         font-size: 3.75rem;
+
+        margin-top: 0.5rem;
       }
 
     }
@@ -32,6 +33,7 @@
 
       & li {
         display: inline-block;
+
         font-size: 1.35rem;
         letter-spacing: .35rem;
 
@@ -51,8 +53,9 @@
     }
 
     &--tel {
-      margin-top: 3rem;
       font-size: 1.3rem;
+
+      margin-top: 3rem;
 
       & a {
         font-size: 1.8rem;
@@ -66,9 +69,10 @@
       margin: 4rem auto 0 auto;
 
       & li {
-        justify-content: space-between;
         width: 3rem;
         height: 2.2rem;
+
+        justify-content: space-between;
       }
     }
   }
