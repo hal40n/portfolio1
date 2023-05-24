@@ -1,4 +1,52 @@
 
+@use "../global" as *;
+
+/* on load */
+
+#animation-onLoad {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+  background-color: #fff;
+
+  &.loaded {
+    animation: loading 1s forwards;
+  }
+}
+
+.loading {
+
+  &-wrap {
+    position: relative;
+    height: 100%;
+  }
+
+  &__siteTtl {
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+
+    & p {
+      font-family: $font-family__tsuku;
+      font-size: 1.5rem;
+    }
+
+    & h1 {
+      font-family: $font-family__times;
+      font-size: 3.75rem;
+    }
+  }
+}
+
+.fadeOnLoad {
+  display:none;
+}
+
+
+
 /* ハンバーガーメニュークリック「×」マークにアニメーション */
 .l-header__toggle--box.active {
 
@@ -47,50 +95,61 @@
 /* fadeIn and fadeOut */
 .fade-out {
   opacity: 0;
+
   transition: 3s ease-in-out;
+
   -webkit-transition: 3s ease-in-out;
 }
 
 .fade-in {
   opacity: 1;
+
   transition: 3s ease-in-out;
+
   -webkit-transition: 3s ease-in-out;
 }
 
 /* fadeUp */
 .fadeUp {
+  opacity: 0;
+
   animation-name: fadeUpAnime;
   animation-duration: 1s;
   animation-fill-mode: forwards;
-  opacity: 0;
 }
 
 @keyframes fadeUpAnime {
   from {
     opacity: 0;
+
     transform: translateY(100px);
   }
   to {
     opacity: 1;
+
     transform: translateY(0);
   }
 }
 
 /* fade all */
 .fadeAll {
+  opacity:0;
+
   animation-name:fadeAll;
   animation-duration: 5s;
   animation-fill-mode:forwards;
-  opacity:0;
 }
 
 @keyframes fadeAll{
   from {
     opacity: 0;
+
     transform: translateY(100px);
   }
   to {
     opacity: 1;
+
     transform: translateY(0);
   }
 }
+
