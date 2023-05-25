@@ -1,7 +1,7 @@
 
 @use "../global" as *;
 
-/* on load */
+/* Load view */
 
 #animation-onLoad {
   position: fixed;
@@ -36,14 +36,31 @@
 
     & h1 {
       font-family: $font-family__times;
-      font-size: 3.75rem;
+      font-size: 3.5rem;
     }
   }
 }
 
-.fadeOnLoad {
-  display:none;
+.fadeDownOnLoad {
+  opacity: 0;
+  animation-name:fadeDown;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
 }
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+
+    transform: translateY(-5rem);
+  }
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+
 
 
 
@@ -92,7 +109,7 @@
   transform: translateX(0);
 }
 
-/* fadeIn and fadeOut */
+/* fadeIn and fadeOut for fv */
 .fade-out {
   opacity: 0;
 
@@ -109,7 +126,7 @@
   -webkit-transition: 3s ease-in-out;
 }
 
-/* fadeUp */
+/* when you scroll, contents fade-up */
 .fadeUp {
   opacity: 0;
 
@@ -131,7 +148,7 @@
   }
 }
 
-/* fade all */
+/* when you scroll, all contents fade-up */
 .fadeAll {
   opacity:0;
 

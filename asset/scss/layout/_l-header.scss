@@ -215,11 +215,11 @@
     position: absolute;
     top: 0;
     left: 50%;
-    transform: translateX(-50%);
     line-height: 5rem;
     text-align: center;
 
     padding-top: 5rem;
+    margin-left: -25rem;
 
     z-index: 4;
 
@@ -282,17 +282,17 @@
   &__copy {
     position: absolute;
     top: 70%;
-    left: 3rem;
+    left: 3.5rem;
     z-index: 9;
     transform: rotate(-90deg);
 
     color: #ffffff;
     font-family: $font-family__caveat;
-    font-size: 2rem;
+    font-size: 2.5rem;
 
     transform-origin: left;
 
-    letter-spacing: 0.1rem;
+    letter-spacing: 0.08rem;
   }
 
   &__scroll {

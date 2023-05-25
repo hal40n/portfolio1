@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/* on load */
+/* Load view */
 #animation-onLoad {
   position: fixed;
   width: 100vw;
@@ -27,13 +27,26 @@
 }
 .loading__siteTtl h1 {
   font-family: Times;
-  font-size: 3.75rem;
+  font-size: 3.5rem;
 }
 
-.fadeOnLoad {
-  display: none;
+.fadeDownOnLoad {
+  opacity: 0;
+  animation-name: fadeDown;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
 }
 
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-5rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 /* ハンバーガーメニュークリック「×」マークにアニメーション */
 .l-header__toggle--box.active span {
   background: #ffffff;
@@ -68,7 +81,7 @@
   transform: translateX(0);
 }
 
-/* fadeIn and fadeOut */
+/* fadeIn and fadeOut for fv */
 .fade-out {
   opacity: 0;
   transition: 3s ease-in-out;
@@ -81,7 +94,7 @@
   -webkit-transition: 3s ease-in-out;
 }
 
-/* fadeUp */
+/* when you scroll, contents fade-up */
 .fadeUp {
   opacity: 0;
   animation-name: fadeUpAnime;
@@ -99,7 +112,7 @@
     transform: translateY(0);
   }
 }
-/* fade all */
+/* when you scroll, all contents fade-up */
 .fadeAll {
   opacity: 0;
   animation-name: fadeAll;
@@ -550,6 +563,42 @@ th {
   background-color: #1b2f5b;
   color: #ffffff;
 }
+.l-footer__pageTop {
+  position: fixed;
+  right: 0;
+  bottom: 5rem;
+  z-index: 99;
+  opacity: 0;
+}
+.l-footer__pageTop--link {
+  display: block;
+  transform: rotate(90deg);
+  transition: all 0.5s;
+  padding: 1rem;
+  color: #000000;
+}
+.l-footer__pageTop--link span {
+  font-family: "Caveat", cursive;
+  font-size: 1.6rem;
+  width: -moz-min-content;
+  width: min-content;
+  position: relative;
+  display: block;
+  line-height: 1.2rem;
+  white-space: nowrap;
+}
+.l-footer__pageTop--link span::before {
+  position: absolute;
+  top: 50%;
+  left: -2.5rem;
+  display: block;
+  width: 1.5rem;
+  height: 1px;
+  transition: all 0.5s;
+  background-color: #000000;
+  content: "";
+  transform: rotate(180deg);
+}
 .l-footer__contents {
   width: 100%;
   margin: 0 auto;
@@ -760,10 +809,10 @@ th {
   position: absolute;
   top: 0;
   left: 50%;
-  transform: translateX(-50%);
   line-height: 5rem;
   text-align: center;
   padding-top: 5rem;
+  margin-left: -25rem;
   z-index: 4;
 }
 .l-header__ttl--txt {
@@ -816,14 +865,14 @@ th {
 .l-header__copy {
   position: absolute;
   top: 70%;
-  left: 3rem;
+  left: 3.5rem;
   z-index: 9;
   transform: rotate(-90deg);
   color: #ffffff;
   font-family: "Caveat", cursive;
-  font-size: 2rem;
+  font-size: 2.5rem;
   transform-origin: left;
-  letter-spacing: 0.1rem;
+  letter-spacing: 0.08rem;
 }
 .l-header__scroll--down {
   position: absolute;
@@ -1088,7 +1137,6 @@ th {
 }
 .p-concept__sec2--contPhoto {
   height: 360px;
-  background-color: #000000;
 }
 .p-concept__sec3 {
   text-align: center;

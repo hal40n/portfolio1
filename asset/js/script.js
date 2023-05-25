@@ -2,17 +2,12 @@
 $(function(){
   $(window).on('load', function() {
     $('#animation-onLoad').addClass('loaded');
-  }).queue(function() {
-    $('.l-header__ttl').hide().fadeIn(2000);
-  })
-})
+  }).queue(function(){
+    $('.fadeDown_onLoad').addClass('fadeDownOnLoad');
+  });
+});
 
-// const loading = document.querySelector('#loading');
-// window.addEventListener('load', function() {
-//   this.setTimeout(function() {
-//     loading.classList.add('hide');
-//   }, 1000);
-// });
+
 
 /* A slideshow where photos automatically switch at regular intervals. */
 const slideImages = [
@@ -62,14 +57,17 @@ window.addEventListener('scroll', function() {
 
   let elmElements = document.querySelectorAll('.elm');
   let reserveElement = document.querySelector('.l-header__siteTtl');
+  let linkElement = document.querySelector('.l-footer__pageTop')
 
   elmElements.forEach(function(elm) {
     let elementOffset = elm.offsetTop;
 
     if(elementOffset - windowHeight + 200 < scrollPosition) {
       reserveElement.classList.add('is-visible');
+      linkElement.classList.add('is-visible');
     } else {
       reserveElement.classList.remove('is-visible');
+      linkElement.classList.remove('is-visible');
     }
   });
 });
