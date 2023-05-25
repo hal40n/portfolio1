@@ -8,6 +8,45 @@
 
   color: map-get($colors, "c-white");
 
+  &__pageTop {
+    position: fixed;
+    right: 0;
+    bottom: 5rem;
+    z-index: 99;
+    opacity: 0;
+
+    &--link {
+      display: block;
+      transform: rotate(90deg);
+      transition: all 0.5s;
+      padding: 1rem;
+      color: map-get($colors, "c-black");
+
+      & span {
+        font-family: $font-family__caveat;
+        font-size: 1.6rem;
+        width: min-content;
+        position: relative;
+        display: block;
+        line-height: 1.2rem;
+        white-space: nowrap;
+
+        &::before {
+          position: absolute;
+          top: 50%;
+          left: -2.5rem;
+          display: block;
+          width: 1.5rem;
+          height: 1px;
+          transition: all 0.5s;
+          background-color: map-get($colors, "c-black");
+          content: "";
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+
   &__contents {
     width: 100%;
     margin: 0 auto;
