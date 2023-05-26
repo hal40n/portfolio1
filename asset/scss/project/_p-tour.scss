@@ -2,8 +2,14 @@
 
 .p-tour {
 
-  background-color: $bg-color;
-  padding: 15rem;
+  &__bg {
+    width: 100%;
+    background: #f4f7f8;
+    padding: 4rem 0 32rem;
+    margin: 30rem 0 7rem;
+    box-sizing: border-box;
+    position: relative;
+  }
 
   &__ttl {
     text-align: center;
@@ -16,7 +22,7 @@
 
   &__slider-container {
     position: relative;
-    overflow: hidden;
+    overflow: hidden
   }
 
   &__slides {
@@ -46,7 +52,9 @@
     }
 
     &--hd {
-      color: $default-color;
+      color: map-get($colors, "c-black");
+      font-weight: inherit;
+
     }
 
     &--txt {

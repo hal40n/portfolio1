@@ -2,6 +2,11 @@
 
 .p-access {
 
+  &__map {
+    width: 100%;
+    height: 50rem;
+  }
+
   &__conts {
     justify-content: space-between;
   }
