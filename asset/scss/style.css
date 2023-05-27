@@ -154,6 +154,13 @@ body {
   width: 100%;
   overflow-x: hidden;
 }
+@media screen and (max-width: 767px) {
+  body {
+    font-size: 1.35rem;
+    line-height: 1.8;
+    letter-spacing: 0.1rem;
+  }
+}
 
 img,
 video,
@@ -720,12 +727,32 @@ th {
   right: 25px;
   z-index: 1000;
 }
+@media screen and (max-width: 999px) {
+  .l-header__toggle {
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+@media screen and (max-width: 767px) {
+  .l-header__toggle {
+    width: 7rem;
+    height: 7rem;
+  }
+}
 .l-header__toggle--box {
   position: relative;
   width: 4rem;
   height: 32px;
   text-align: center;
   cursor: pointer;
+}
+@media screen and (max-width: 767px) {
+  .l-header__toggle--box {
+    width: 3rem;
+  }
 }
 .l-header__toggle--box::after {
   display: block;
@@ -735,9 +762,14 @@ th {
   margin: 0 auto;
   color: #ffffff;
   font-family: "Caveat", cursive;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   text-align: center;
   content: "menu";
+}
+@media screen and (max-width: 767px) {
+  .l-header__toggle--box::after {
+    font-size: 1.5rem;
+  }
 }
 .l-header__toggle--bar {
   display: block;
@@ -778,6 +810,11 @@ th {
   justify-content: space-between;
   align-items: center;
 }
+@media screen and (max-width: 767px) {
+  .l-header__menu {
+    height: auto;
+  }
+}
 .l-header__menu--ttl {
   z-index: 990;
   width: 32rem;
@@ -789,6 +826,16 @@ th {
 }
 .l-header__menu--contents {
   text-align: left;
+}
+@media screen and (max-width: 767px) {
+  .l-header__menu--contents {
+    min-width: 100%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .l-header__menu--nav {
+    padding-top: 2rem;
+  }
 }
 .l-header__menu--content {
   margin-top: 50px;
@@ -826,6 +873,12 @@ th {
 .l-header__ttl, .l-header__ttl p, .l-header__ttl h1 {
   color: #ffffff;
 }
+@media screen and (max-width: 767px) {
+  .l-header__ttl {
+    font-size: 1rem;
+    opacity: 1;
+  }
+}
 .l-header__slider {
   position: absolute;
   top: 0;
@@ -833,6 +886,13 @@ th {
 .l-header__slider--img {
   width: 100vw;
   height: 100vh;
+}
+@media screen and (max-width: 767px) {
+  .l-header__slider--img {
+    height: 100vh;
+    max-height: 66.7rem;
+    width: 100%;
+  }
 }
 .l-header__pagination {
   width: 100px;
