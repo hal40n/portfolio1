@@ -26,6 +26,12 @@ body {
   min-width: 350px;
   width: 100%;
   overflow-x: hidden;
+
+  @include mq-down(){
+    font-size: 1.35rem;
+    line-height: 1.8;
+    letter-spacing: .1rem;
+  }
 }
 
 img,

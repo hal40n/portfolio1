@@ -86,6 +86,19 @@
     right: 25px;
     z-index: 1000;
 
+    @include mq-down(lg) {
+      top: 0;
+      right: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    @include mq-down(){
+      width: 7rem;
+      height: 7rem;
+    }
+
     &--box {
       position: relative;
 
@@ -95,6 +108,10 @@
       text-align: center;
 
       cursor: pointer;
+
+      @include mq-down() {
+        width: 3rem;
+      }
 
       &::after  {
         display: block;
@@ -107,10 +124,14 @@
 
         color: #ffffff;
         font-family: $font-family__caveat;
-        font-size: 1.5rem;
+        font-size: 1.8rem;
         text-align: center;
 
         content: "menu";
+
+        @include mq-down() {
+          font-size: 1.5rem;
+        }
       }
     }
 
@@ -168,6 +189,10 @@
     justify-content: space-between;
     align-items: center;
 
+    @include mq-down() {
+      height: auto;
+    }
+
 
     &--ttl {
       z-index: 990;
@@ -185,6 +210,16 @@
 
     &--contents {
       text-align: left;
+
+      @include mq-down() {
+        min-width: 100%;
+      }
+    }
+
+    &--nav {
+      @include mq-down() {
+        padding-top: 2rem;
+      }
     }
 
     &--content {
@@ -236,6 +271,11 @@
     & ,p, h1 {
       color: #ffffff;
     }
+
+    @include mq-down() {
+      font-size: 1rem;
+      opacity: 1;
+    }
   }
 
   &__slider {
@@ -245,6 +285,12 @@
     &--img {
       width: 100vw;
       height: 100vh;
+
+      @include mq-down() {
+        height: 100vh;
+        max-height: 66.7rem;
+        width: 100%;
+      }
     }
   }
 
@@ -377,3 +423,4 @@
     z-index: -1;
   }
 }
+
