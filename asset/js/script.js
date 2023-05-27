@@ -11,10 +11,10 @@ $(function(){
 
 /* A slideshow where photos automatically switch at regular intervals. */
 const slideImages = [
-  '../../asset/img/l-header__slide--img1.jpg',
-  '../../asset/img/l-header__slide--img2.jpg',
-  '../../asset/img/l-header__slide--img3.jpg',
-  '../../asset/img/l-header__slide--img4.jpg'
+  '../../asset/img/fv1.jpg',
+  '../../asset/img/fv2.jpg',
+  '../../asset/img/fv3.jpg',
+  '../../asset/img/fv4.jpg'
 ];
 
 let nowCnt = -1;
@@ -26,6 +26,8 @@ function changeImg() {
 
   const slideImg1 = document.getElementById('slide--img1');
   const slideImg2 = document.getElementById('slide--img2');
+  const slideImg3 = document.getElementById('slide--img3');
+  const slideImg4 = document.getElementById('slide--img4');
   const paginationCircles = document.querySelectorAll('.l-header__pagination--circle');
 
   if (flg === 0) {
@@ -34,12 +36,20 @@ function changeImg() {
     slideImg1.classList.remove('fade-out');
     slideImg2.classList.add('fade-out');
     slideImg2.classList.remove('fade-in');
+    slideImg3.classList.add('fade-out');
+    slideImg3.classList.remove('fade-in');
+    slideImg4.classList.add('fade-out');
+    slideImg4.classList.remove('fade-in');
   } else {
     slideImg2.src = slideImages[nowCnt];
     slideImg2.classList.add('fade-in');
     slideImg2.classList.remove('fade-out');
     slideImg1.classList.add('fade-out');
     slideImg1.classList.remove('fade-in');
+    slideImg3.classList.add('fade-out');
+    slideImg3.classList.remove('fade-in');
+    slideImg4.classList.add('fade-out');
+    slideImg4.classList.remove('fade-in');
   }
 
   /* Updating of pagination */
@@ -48,7 +58,7 @@ function changeImg() {
   });
 }
 
-setInterval(changeImg, 10000);
+setInterval(changeImg, 5000);
 
 /* When scrolling, the reservation button will appear. */
 window.addEventListener('scroll', function() {
@@ -175,3 +185,4 @@ $(window).on('scroll', function(){
 $(window).on('load', function(){
   fadeAnime();
 });
+
