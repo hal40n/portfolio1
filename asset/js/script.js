@@ -66,8 +66,13 @@ window.addEventListener('scroll', function() {
   let scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
 
   let elmElements = document.querySelectorAll('.elm');
-  let reserveElement = document.querySelector('.l-header__siteTtl');
-  let linkElement = document.querySelector('.l-footer__pageTop')
+  const reserveElement = document.querySelector('.l-header__siteTtl');
+  const linkElement = document.querySelector('.l-footer__pageTop');
+  const hdTtl = document.querySelector('.l-header__ttl');
+  const tglMenu = document.querySelector('.l-header__toggle--box');
+  const tgl1 = document.querySelector('.l-header__toggle--bar');
+  const tgl2 = document.querySelector('.l-header__toggle--bar:nth-child(2)');
+  const tgl3 = document.querySelector('.l-header__toggle--bar:nth-child(3)');
 
   elmElements.forEach(function(elm) {
     let elementOffset = elm.offsetTop;
@@ -75,9 +80,19 @@ window.addEventListener('scroll', function() {
     if(elementOffset - windowHeight + 200 < scrollPosition) {
       reserveElement.classList.add('is-visible');
       linkElement.classList.add('is-visible');
+      hdTtl.classList.add('initial');
+      tgl1.classList.add('changeColor');
+      tgl2.classList.add('changeColor');
+      tgl3.classList.add('changeColor');
+      tglMenu.classList.add('changeFntColor');
     } else {
       reserveElement.classList.remove('is-visible');
       linkElement.classList.remove('is-visible');
+      hdTtl.classList.remove('initial');
+      tgl1.classList.remove('changeColor');
+      tgl2.classList.remove('changeColor');
+      tgl3.classList.remove('changeColor');
+      tglMenu.classList.remove('changeFntColor');
     }
   });
 });
