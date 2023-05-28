@@ -39,6 +39,7 @@
         top: 2rem;
         left: 2rem;
         line-height: 4.5rem;
+        font-size: 3.5rem;
       }
 
       & p {
@@ -53,7 +54,7 @@
         font-size: 2.8rem;
 
         @include mq-down() {
-          font-size: 4rem;
+          font-size: 3.5rem;
         }
       }
     }
@@ -265,6 +266,22 @@
     }
 
 
+    &--contents {
+      text-align: left;
+      width: 100%;
+      height: 100%;
+      max-width: calc(98rem + 12%);
+      align-items: center;
+      justify-content: space-between;
+      margin: 0 auto;
+
+      @include mq-down() {
+        min-width: 100%;
+        padding: 10rem 0 10rem 5%;
+        height: auto;
+      }
+    }
+
     &--ttl {
       z-index: 990;
 
@@ -273,10 +290,13 @@
       max-width: 32rem;
 
       @include mq-down() {
-        position: fixed;
+        display: none;
       }
 
       & p {
+
+        font-size: 2.5rem;
+
         @include mq-down() {
           font-size: 2rem;
         }
@@ -284,7 +304,7 @@
 
       & h2 {
         font-family: $font-family__hiragino--proN;
-        font-size: 2rem;
+        font-size: 3.5rem;
 
         @include mq-down() {
           width: 100vw;
@@ -293,26 +313,27 @@
       }
     }
 
-    &--contents {
-      text-align: left;
-
-      @include mq-down() {
-        min-width: 100%;
-        padding: 10rem 0 10rem 5%;
-      }
-    }
-
     &--nav {
       @include mq-down() {
         padding-top: 2rem;
+        height: auto;
       }
     }
 
     &--content {
-      margin-top: 50px;
+      width: 100%;
+      margin-top: 5rem;
+      display: inline-block;
 
       @include mq-down() {
         font-size: 3.5rem;
+      }
+
+      & a {
+
+        @include mq-down() {
+          font-size: 3.5rem;
+        }
       }
 
       &:first-child {
@@ -322,23 +343,45 @@
           margin-top: 5rem;
         }
       }
-    }
 
-    &--reserve {
-      margin-top: 50px;
-    }
-
-    &--sns {
-      margin-top: 50px;
-    }
-
-    &--contact {
-
-      & h3 {
-        margin-top: 50px;
+      &.reserve {
+        width: 100%;
+        border: 1px solid #fff;
+        padding: 1rem;
+        text-align: center;
       }
     }
   }
+
+  &__sns {
+    margin-top: 5rem;
+
+    @include mq-down() {
+      margin-top: 10rem;
+    }
+
+
+    & li {
+    width: 3rem;
+    height: 3rem;
+
+      &:before {
+        display: inline-block;
+        padding-left: 0.5rem;
+        width: 3rem;
+        height: 3rem;
+        font-size: 2rem;
+      }
+    }
+  }
+
+  &__contact {
+
+    & h3 {
+      margin-top: 50px;
+    }
+  }
+
 
   &__ttl {
     position: absolute;
@@ -515,7 +558,19 @@
   }
 }
 
+// #reserve {
+//   margin-top: 0.5rerm;
+
+//   @include mq-down() {
+//     margin-top: 5rem;
+//     font-size: 3.5rem;
+//     margin: 0 auto;
+//   }
+// }
+
 /* scroll */
+
+
 
 .is-visible {
   opacity: 1;

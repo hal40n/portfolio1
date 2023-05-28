@@ -705,6 +705,7 @@ th {
     top: 2rem;
     left: 2rem;
     line-height: 4.5rem;
+    font-size: 3.5rem;
   }
 }
 .l-header__siteTtl--hd p {
@@ -720,7 +721,7 @@ th {
 }
 @media screen and (max-width: 767px) {
   .l-header__siteTtl--hd h1 {
-    font-size: 4rem;
+    font-size: 3.5rem;
   }
 }
 .l-header__reserve {
@@ -902,6 +903,22 @@ th {
     padding-top: 5rem;
   }
 }
+.l-header__menu--contents {
+  text-align: left;
+  width: 100%;
+  height: 100%;
+  max-width: calc(98rem + 12%);
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+@media screen and (max-width: 767px) {
+  .l-header__menu--contents {
+    min-width: 100%;
+    padding: 10rem 0 10rem 5%;
+    height: auto;
+  }
+}
 .l-header__menu--ttl {
   z-index: 990;
   width: 32rem;
@@ -909,8 +926,11 @@ th {
 }
 @media screen and (max-width: 767px) {
   .l-header__menu--ttl {
-    position: fixed;
+    display: none;
   }
+}
+.l-header__menu--ttl p {
+  font-size: 2.5rem;
 }
 @media screen and (max-width: 767px) {
   .l-header__menu--ttl p {
@@ -919,7 +939,7 @@ th {
 }
 .l-header__menu--ttl h2 {
   font-family: "ヒラギノ明朝 ProN";
-  font-size: 2rem;
+  font-size: 3.5rem;
 }
 @media screen and (max-width: 767px) {
   .l-header__menu--ttl h2 {
@@ -927,25 +947,24 @@ th {
     font-size: 4.5rem;
   }
 }
-.l-header__menu--contents {
-  text-align: left;
-}
-@media screen and (max-width: 767px) {
-  .l-header__menu--contents {
-    min-width: 100%;
-    padding: 10rem 0 10rem 5%;
-  }
-}
 @media screen and (max-width: 767px) {
   .l-header__menu--nav {
     padding-top: 2rem;
+    height: auto;
   }
 }
 .l-header__menu--content {
-  margin-top: 50px;
+  width: 100%;
+  margin-top: 5rem;
+  display: inline-block;
 }
 @media screen and (max-width: 767px) {
   .l-header__menu--content {
+    font-size: 3.5rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .l-header__menu--content a {
     font-size: 3.5rem;
   }
 }
@@ -957,13 +976,32 @@ th {
     margin-top: 5rem;
   }
 }
-.l-header__menu--reserve {
-  margin-top: 50px;
+.l-header__menu--content.reserve {
+  width: 100%;
+  border: 1px solid #fff;
+  padding: 1rem;
+  text-align: center;
 }
-.l-header__menu--sns {
-  margin-top: 50px;
+.l-header__sns {
+  margin-top: 5rem;
 }
-.l-header__menu--contact h3 {
+@media screen and (max-width: 767px) {
+  .l-header__sns {
+    margin-top: 10rem;
+  }
+}
+.l-header__sns li {
+  width: 3rem;
+  height: 3rem;
+}
+.l-header__sns li:before {
+  display: inline-block;
+  padding-left: 0.5rem;
+  width: 3rem;
+  height: 3rem;
+  font-size: 2rem;
+}
+.l-header__contact h3 {
   margin-top: 50px;
 }
 .l-header__ttl {
