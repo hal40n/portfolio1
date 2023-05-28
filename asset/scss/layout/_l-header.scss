@@ -10,6 +10,7 @@
   height: 100vh;
 
   &__siteTtl {
+    width: 100%;
     opacity: 0;
 
     position: fixed;
@@ -18,6 +19,10 @@
     z-index: 1000;
 
     transition: all 0.5s;
+
+    @include mq-down() {
+      height: 12.5rem;
+    }
 
     &--hd {
       position: absolute;
@@ -30,12 +35,26 @@
 
       transition: all 0.5s ease;
 
+      @include mq-down() {
+        top: 2rem;
+        left: 2rem;
+        line-height: 4.5rem;
+      }
+
       & p {
         font-size: 1.2rem;
+
+        @include mq-down() {
+          font-size: 2rem;
+        }
       }
 
       & h1 {
         font-size: 2.8rem;
+
+        @include mq-down() {
+          font-size: 4rem;
+        }
       }
     }
   }
@@ -46,11 +65,21 @@
     right: 0;
     z-index: 1000;
 
+    @include mq-down(lg) {
+      top: 0;
+      right: 13rem;
+    }
+
+    @include mq-down() {
+      right: 12rem;
+    }
+
     & a {
       display: flex;
-
+      flex-direction: column;
       width: 5rem;
       height: 18rem;
+      line-height: 1;
 
       background-color: $default-color;
 
@@ -61,7 +90,19 @@
 
       justify-content: center;
       align-items: center;
-      writing-mode: vertical-rl;
+      text-align: center;
+
+      @include mq-down() {
+        width: 13rem;
+        height: 13rem;
+        writing-mode: horizontal-tb;
+        flex-direction: unset;
+      }
+
+      @include  mq-down() {
+        width: 12.5rem;
+        height: 12.5rem;
+      }
 
       &::after {
         padding: 0.25rem;
@@ -76,6 +117,26 @@
 
         margin-top: 2rem;
 
+        @include mq-down(lg) {
+          content: "ご予約";
+          background-color: $default-color;
+          color: map-get($colors, "c-white");
+          margin-top: 0;
+        }
+
+        @include mq-down() {
+          font-size: 2rem;
+        }
+
+      }
+
+      & span {
+        display: block;
+        writing-mode: vertical-rl;
+
+        @include mq-down(lg) {
+          display: none;
+        }
       }
     }
   }
@@ -86,21 +147,25 @@
     right: 25px;
     z-index: 1000;
 
+    @include mq-down() {
+      position: fixed;
+      top: 25px;
+      right: 25px;
+
+    }
+
     @include mq-down(lg) {
-      top: 0;
-      right: 0;
+      width: 7rem;
+      height: 7rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
     }
 
-    @include mq-down(){
-      width: 7rem;
-      height: 7rem;
-    }
-
     &--box {
       position: relative;
+
+      color: #ffffff;
 
       width: 4rem;
       height: 32px;
@@ -122,7 +187,6 @@
         width: 3rem;
         margin: 0 auto;
 
-        color: #ffffff;
         font-family: $font-family__caveat;
         font-size: 1.8rem;
         text-align: center;
@@ -130,7 +194,7 @@
         content: "menu";
 
         @include mq-down() {
-          font-size: 1.5rem;
+          font-size: 2em;
         }
       }
     }
@@ -147,6 +211,10 @@
       background-color: #ffffff;
 
       transition: ease .4s;
+
+      @include mq-down() {
+        width: 5rem;
+      }
 
       &:nth-child(1) {
         top: 0;
@@ -177,7 +245,7 @@
     width: 100%;
     height: 100vh;
     margin: 0 auto;
-    padding: 0 20%;
+    padding: 0 5%;
 
     background-color: #1b2f5b;
 
@@ -190,7 +258,10 @@
     align-items: center;
 
     @include mq-down() {
-      height: auto;
+      height: 100vh;
+      display: block;
+      text-align: left;
+      padding-top: 5rem;
     }
 
 
@@ -201,11 +272,25 @@
 
       max-width: 32rem;
 
+      @include mq-down() {
+        position: fixed;
+      }
+
+      & p {
+        @include mq-down() {
+          font-size: 2rem;
+        }
+      }
+
       & h2 {
         font-family: $font-family__hiragino--proN;
         font-size: 2rem;
-      }
 
+        @include mq-down() {
+          width: 100vw;
+          font-size: 4.5rem;
+        }
+      }
     }
 
     &--contents {
@@ -213,6 +298,7 @@
 
       @include mq-down() {
         min-width: 100%;
+        padding: 10rem 0 10rem 5%;
       }
     }
 
@@ -225,8 +311,16 @@
     &--content {
       margin-top: 50px;
 
+      @include mq-down() {
+        font-size: 3.5rem;
+      }
+
       &:first-child {
         margin-top: 0;
+
+        @include mq-down() {
+          margin-top: 5rem;
+        }
       }
     }
 
@@ -258,14 +352,29 @@
 
     z-index: 4;
 
+  @include mq-down() {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 3rem;
+    margin-left: 3rem;
+    text-align: left;
+  }
+
     &--txt {
       font-family: $font-family__hiragino--proN;
       font-size: 2.5rem;
+
+
     }
 
     &--hd {
       font-family: $font-family__times;
       font-size: 6.5rem;
+
+      @include mq-down() {
+        font-size: 5rem;
+      }
     }
 
     & ,p, h1 {
@@ -288,14 +397,14 @@
 
       @include mq-down() {
         height: 100vh;
-        max-height: 66.7rem;
-        width: 100%;
+        width: 100vw;
       }
     }
   }
 
   &__pagination {
-    width: 100px;
+    width: 100%;
+    padding: 0 45%;
     display: flex;
     justify-content: space-around;
     position: absolute;
@@ -303,12 +412,22 @@
     left: 50%;
     transform: translateX(-50%);
 
+    @include mq-down() {
+      left: 8rem;
+      padding: 0 40%;
+    }
+
     &--circle {
       width: .75rem;
       height: .75rem;
       border-radius: 5rem;
       background-color: $sub-title;
       position: relative;
+
+      @include mq-down() {
+        width: 1.8rem;
+        height: 1.8rem;
+      }
 
       &.target::before {
         content: "";
@@ -321,6 +440,11 @@
         left: 50%;
         transform: translate(-50%, -50%);
         background-color: #ffffff;
+
+        @include mq-down() {
+          width: 1.8rem;
+          height: 1.8rem;
+        }
       }
     }
   }
@@ -339,6 +463,10 @@
     transform-origin: left;
 
     letter-spacing: 0.08rem;
+
+    @include mq-down() {
+      font-size: 4rem;
+    }
   }
 
   &__scroll {
@@ -357,12 +485,19 @@
 
       padding-right: 10rem;
 
+      @include mq-down() {
+        right: -7rem;
+        bottom: 15rem;
+        font-size: 3.25rem;
+        display: block;
+      }
+
       &::before {
         position: absolute;
         top: 1rem;
         right: 0.5rem;
 
-        width: 5rem;
+        width: 7rem;
         height: 1px;
 
         background-color: #ffffff;
@@ -371,6 +506,10 @@
 
         animation: borderLong 3s ease 0s infinite normal;
         animation: borderShort 3s ease 0s infinite normal;
+
+        @include mq-down() {
+          top: 3.5rem;
+        }
       }
     }
   }
@@ -384,6 +523,18 @@
 
 .is-hidden {
   opacity: 0;
+}
+
+.initial {
+  position: initial;
+}
+
+.changeFntColor {
+  color: $default-color;
+}
+
+.changeColor {
+  background-color: $default-color;
 }
 
 /* keyframes */
