@@ -1,17 +1,28 @@
 @use "../global" as *;
 
 .p-news {
+  @include mq-down() {
+    margin-top: 9rem;
+  }
 
   &__ttl {
-
     justify-content: space-between;
+    @include mq-down() {
+      display: block;
+
+      text-align: center;
+    }
+
+    & p {
+      font-size: 2.5rem;
+    }
 
     &--notice {
-      padding-left: 3rem;
       line-height: 1.4;
 
-      & p {
+      padding-left: 3rem;
 
+      & p {
         padding-top: 3rem;
 
         &::after {
@@ -33,6 +44,10 @@
 
   &__txt {
     font-size: 1.25rem;
+
+    @include mq-down() {
+      font-size: 2.5rem;
+    }
   }
 
   &__conts {
@@ -41,21 +56,28 @@
   }
 
   &__cont {
-    width: 100%;
-    //background-clip: padding-box;
-    border-bottom: 1px solid rgb(154, 159, 167, 0.3);
     display: block;
+
     position: relative;
 
+    width: 100%;
+
+    border-bottom: 1px solid rgb(154, 159, 167, 0.3);
+
     &::after {
-      content: "";
       display: block;
-      width: 2.5rem;
-      height: 1px;
-      background-color: $default-color;
+
       position: absolute;
       bottom: 0;
       left: 10;
+
+      width: 2.5rem;
+      height: 1px;
+
+      background-color: $default-color;
+
+      content: "";
+
       transition: .5s;
     }
 
@@ -65,11 +87,13 @@
 
     &--img {
       overflow: hidden;
+
       height: 175px;
 
       & img {
         width: 100%;
         height: 100%;
+
         transition: .5s;
       }
     }
@@ -83,14 +107,15 @@
     }
 
     &--txt {
-      letter-spacing: 1.5px;
-      line-height: 2.5rem;
       font-size: 1.3rem;
+      line-height: 2.5rem;
+      letter-spacing: 1.5px;
     }
 
     &--date {
-      font-size: 1.2rem;
       color: $sub-title;
+      font-size: 1.2rem;
+
       padding-bottom: 3rem;
     }
   }
