@@ -42,10 +42,12 @@ body {
 img,
 video,
 object {
+  width: 100%;
   max-width: 100%;
   height: auto;
   border: none;
   display: block;
+  vertical-align: middle;
 }
 
 a {
@@ -64,6 +66,20 @@ a {
       -o-transition: all 0.3s;
       transition: all 0.3s;
     }
+  }
+}
+
+p {
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "palt";
+  letter-spacing: .08rem;
+
+  @include mq-down() {
+    font-size: 1.35rem;
+    line-height: 1.8;
+    letter-spacing: .1rem;
   }
 }
 
