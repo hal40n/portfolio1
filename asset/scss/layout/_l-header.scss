@@ -10,7 +10,6 @@
   height: 100vh;
 
   &__siteTtl {
-    width: 100%;
     opacity: 0;
 
     position: fixed;
@@ -18,10 +17,14 @@
     left: 0;
     z-index: 1000;
 
+    width: 100%;
+
     transition: all 0.5s;
 
     @include mq-down() {
       height: 12.5rem;
+
+      background-color: #fff;
     }
 
     &--hd {
@@ -38,8 +41,9 @@
       @include mq-down() {
         top: 2rem;
         left: 2rem;
-        line-height: 4.5rem;
+
         font-size: 3.5rem;
+        line-height: 4.5rem;
       }
 
       & p {
@@ -70,36 +74,35 @@
       top: 0;
       right: 13rem;
     }
-
     @include mq-down() {
       right: 12rem;
     }
 
     & a {
       display: flex;
-      flex-direction: column;
+
       width: 5rem;
       height: 18rem;
-      line-height: 1;
 
       background-color: $default-color;
 
       color: #ffffff;
       font-family: $font-family__tsuku;
+      line-height: 1;
+      text-align: center;
 
       transition: all 0.5s;
 
+      flex-direction: column;
       justify-content: center;
       align-items: center;
-      text-align: center;
-
       @include mq-down() {
         width: 13rem;
         height: 13rem;
+
         writing-mode: horizontal-tb;
         flex-direction: unset;
       }
-
       @include  mq-down() {
         width: 12.5rem;
         height: 12.5rem;
@@ -117,14 +120,15 @@
         content: "▶";
 
         margin-top: 2rem;
-
         @include mq-down(lg) {
-          content: "ご予約";
           background-color: $default-color;
+
           color: map-get($colors, "c-white");
+
+          content: "ご予約";
+
           margin-top: 0;
         }
-
         @include mq-down() {
           font-size: 2rem;
         }
@@ -133,8 +137,8 @@
 
       & span {
         display: block;
-        writing-mode: vertical-rl;
 
+        writing-mode: vertical-rl;
         @include mq-down(lg) {
           display: none;
         }
@@ -154,11 +158,12 @@
       right: 25px;
 
     }
-
     @include mq-down(lg) {
+      display: flex;
+
       width: 7rem;
       height: 7rem;
-      display: flex;
+
       align-items: center;
       justify-content: space-between;
     }
@@ -166,11 +171,10 @@
     &--box {
       position: relative;
 
-      color: #ffffff;
-
       width: 4rem;
       height: 32px;
 
+      color: #ffffff;
       text-align: center;
 
       cursor: pointer;
@@ -257,28 +261,32 @@
 
     justify-content: space-between;
     align-items: center;
-
     @include mq-down() {
-      height: 100vh;
       display: block;
+
+      height: 100vh;
+
       text-align: left;
+
       padding-top: 5rem;
     }
 
 
     &--contents {
-      text-align: left;
       width: 100%;
       height: 100%;
+      margin: 0 auto;
+
+      text-align: left;
+
       max-width: calc(98rem + 12%);
       align-items: center;
       justify-content: space-between;
-      margin: 0 auto;
-
       @include mq-down() {
-        min-width: 100%;
-        padding: 10rem 0 10rem 5%;
         height: auto;
+        padding: 10rem 0 10rem 5%;
+
+        min-width: 100%;
       }
     }
 
@@ -288,13 +296,11 @@
       width: 32rem;
 
       max-width: 32rem;
-
       @include mq-down() {
         display: none;
       }
 
       & p {
-
         font-size: 2.5rem;
 
         @include mq-down() {
@@ -308,6 +314,7 @@
 
         @include mq-down() {
           width: 100vw;
+
           font-size: 4.5rem;
         }
       }
@@ -315,22 +322,23 @@
 
     &--nav {
       @include mq-down() {
-        padding-top: 2rem;
         height: auto;
+
+        padding-top: 2rem;
       }
     }
 
     &--content {
-      width: 100%;
-      margin-top: 5rem;
       display: inline-block;
 
+      width: 100%;
+
+      margin-top: 5rem;
       @include mq-down() {
         font-size: 3.5rem;
       }
 
       & a {
-
         @include mq-down() {
           font-size: 3.5rem;
         }
@@ -338,7 +346,6 @@
 
       &:first-child {
         margin-top: 0;
-
         @include mq-down() {
           margin-top: 5rem;
         }
@@ -346,8 +353,9 @@
 
       &.reserve {
         width: 100%;
-        border: 1px solid #fff;
         padding: 1rem;
+        border: 1px solid #fff;
+
         text-align: center;
       }
     }
@@ -355,7 +363,6 @@
 
   &__sns {
     margin-top: 5rem;
-
     @include mq-down() {
       margin-top: 10rem;
     }
@@ -367,10 +374,13 @@
 
       &:before {
         display: inline-block;
-        padding-left: 0.5rem;
+
         width: 3rem;
         height: 3rem;
+
         font-size: 2rem;
+
+        padding-left: 0.5rem;
       }
     }
   }
@@ -387,22 +397,28 @@
     position: absolute;
     top: 0;
     left: 50%;
+    z-index: 4;
+
     line-height: 5rem;
     text-align: center;
 
     padding-top: 5rem;
     margin-left: -25rem;
-
-    z-index: 4;
-
   @include mq-down() {
     position: fixed;
     top: 0;
     left: 0;
+
+    text-align: left;
+
     padding-top: 3rem;
     margin-left: 3rem;
-    text-align: left;
   }
+    @include mq-down() {
+      opacity: 1;
+
+      font-size: 1rem;
+    }
 
     &--txt {
       font-family: $font-family__hiragino--proN;
@@ -423,11 +439,6 @@
     & ,p, h1 {
       color: #ffffff;
     }
-
-    @include mq-down() {
-      font-size: 1rem;
-      opacity: 1;
-    }
   }
 
   &__slider {
@@ -439,33 +450,38 @@
       height: 100vh;
 
       @include mq-down() {
-        height: 100vh;
         width: 100vw;
+        height: 100vh;
       }
     }
   }
 
   &__pagination {
-    width: 100%;
-    padding: 0 45%;
     display: flex;
-    justify-content: space-around;
+
     position: absolute;
     bottom: 5rem;
     left: 50%;
     transform: translateX(-50%);
 
+    width: 100%;
+    padding: 0 45%;
+
+    justify-content: space-around;
     @include mq-down() {
       left: 8rem;
+
       padding: 0 40%;
     }
 
     &--circle {
+      position: relative;
+
       width: .75rem;
       height: .75rem;
       border-radius: 5rem;
+
       background-color: $sub-title;
-      position: relative;
 
       @include mq-down() {
         width: 1.8rem;
@@ -473,16 +489,20 @@
       }
 
       &.target::before {
-        content: "";
-        width: .75rem;
-        height: .75rem;
-        border-radius: 5rem;
         display: block;
+
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+
+        width: .75rem;
+        height: .75rem;
+        border-radius: 5rem;
+
         background-color: #ffffff;
+
+        content: "";
 
         @include mq-down() {
           width: 1.8rem;
@@ -502,11 +522,9 @@
     color: #ffffff;
     font-family: $font-family__caveat;
     font-size: 2.5rem;
-
-    transform-origin: left;
-
     letter-spacing: 0.08rem;
 
+    transform-origin: left;
     @include mq-down() {
       font-size: 4rem;
     }
@@ -515,24 +533,26 @@
   &__scroll {
 
     &--down {
+      overflow: hidden;
+
       position: absolute;
       right: -4rem;
       bottom: 6rem;
       z-index: 4;
       transform: rotate(90deg);
-      letter-spacing: 0.2rem;
-      overflow: hidden;
 
       color: #ffffff;
       font-family: $font-family__caveat;
+      letter-spacing: 0.2rem;
 
       padding-right: 10rem;
-
       @include mq-down() {
+        display: block;
+
         right: -7rem;
         bottom: 15rem;
+
         font-size: 3.25rem;
-        display: block;
       }
 
       &::before {
@@ -626,6 +646,7 @@
   } to {
     display: none;
     opacity: 0;
+
     z-index: -1;
   }
 }
