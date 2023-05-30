@@ -5,10 +5,20 @@
   &__map {
     width: 100%;
     height: 50rem;
+
+    @include mq-down() {
+      height: 30rem;
+    }
   }
 
   &__conts {
     justify-content: space-between;
+    margin-top: 7rem;
+
+    @include mq-down() {
+      margin-top: 20rem;
+      display: block;
+    }
   }
 
   &__ttl {
