@@ -23,30 +23,67 @@
 
   &__ttl {
     width: 30%;
+
+    @include mq-down() {
+      width: 100%;
+    }
+
+    & p {
+      @include mq-down() {
+        margin-top: -3rem;
+        font-size: 2.5rem;
+      }
+    }
   }
 
   &__cont {
       width: 70%;
 
+      @include mq-down() {
+        width: 100%;
+        margin-top: 5rem;
+      }
+
       &--txt {
       line-height: 2.5rem;
       font-size: 1.25rem;
+
+      @include mq-down() {
+        font-size: 2.5rem;
+        line-height: 3.5rem;
+      }
     }
 
     &Contact {
       justify-content: flex-start;
+
+      @include mq-down() {
+        display: block;
+      }
     }
 
     &Addr {
       padding-left: 1rem;
 
+      @include mq-down() {
+        padding-left: 2rem;
+      }
+
       &--hd {
         color: $default-color;
+
+        @include mq-down() {
+          font-size: 3rem;
+        }
       }
 
       &--txt {
         margin-top: 1rem;
         font-size: 1.5rem;
+
+        @include mq-down() {
+          font-size: 2.5rem;
+        }
       }
     }
 
@@ -54,13 +91,27 @@
       padding-left: 1rem;
       margin-left: 7rem;
 
+      @include mq-down() {
+        padding-left: 2rem;
+        margin-top: 3rem;
+        margin-left: 0;
+      }
+
       &--hd {
         color: $default-color;
+
+        @include mq-down() {
+          font-size: 3rem;
+        }
       }
 
       &--txt {
         margin-top: .5rem;
         font-size: 1.5rem;
+
+        @include mq-down() {
+          font-size: 2.5rem;
+        }
       }
     }
 
@@ -71,10 +122,21 @@
       text-indent: -1rem;
       line-height: 1.5;
 
+      @include mq-down() {
+        margin-top: 5rem;
+        font-size: 2rem;
+        line-height: 1.7;
+        color: map-get($colors, "c-gray__light");
+      }
+
       & span {
         font-size: 1.25rem;
         vertical-align: -0.1rem;
         color: $base-color;
+
+        @include mq-down() {
+          font-size: 2rem;
+        }
       }
     }
   }
