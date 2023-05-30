@@ -15,6 +15,10 @@
     z-index: 99;
     opacity: 0;
 
+    @include mq-down() {
+      right: -3rem;
+    }
+
     &--link {
       display: block;
       transform: rotate(90deg);
@@ -30,6 +34,10 @@
         display: block;
         line-height: 1.2rem;
         white-space: nowrap;
+
+        @include mq-down() {
+          font-size: 3rem;
+        }
 
         &::before {
           position: absolute;
@@ -59,10 +67,23 @@
     &--title {
       font-family: $font-family__tsuku;
 
+      & p {
+
+        @include mq-down() {
+          font-size: 3rem;
+        }
+
+      }
+
       & h2 {
         font-size: 3.75rem;
 
         margin-top: 0.5rem;
+
+        @include mq-down() {
+          margin-top: -2rem;
+          font-size: 5.5rem;
+        }
       }
 
     }
@@ -76,8 +97,19 @@
         font-size: 1.35rem;
         letter-spacing: .35rem;
 
+        @include mq-down() {
+          display: block;
+          list-style: none;
+          font-size: 2.5rem;
+          margin-top: 7rem;
+        }
+
         &+li {
           margin-left: 3.5rem;
+          @include mq-down() {
+            margin-left: 0;
+            margin-top: 5rem;
+          }
         }
       }
     }
@@ -89,6 +121,20 @@
       border: 1px solid map-get($colors, "c-white");
 
       text-align: center;
+
+      @include mq-down() {
+        margin-top: 7rem;
+        font-size: 2.5rem;
+        padding: 2rem 5rem;
+      }
+
+      & p {
+
+        @include mq-down() {
+          font-size: 2.5rem;
+        }
+
+      }
     }
 
     &--tel {
@@ -96,22 +142,49 @@
 
       margin-top: 3rem;
 
+      @include mq-down() {
+        margin-top: 5rem;
+        font-size: 2rem;
+      }
+
       & a {
         font-size: 1.8rem;
         text-decoration: none;
         letter-spacing: 0.08rem;
+
+        @include mq-down() {
+          font-size: 3rem;
+        }
       }
     }
 
     &--sns {
       width: 10rem;
       margin: 4rem auto 0 auto;
+      display: flex;
+
+      @include mq-down() {
+        margin-top: 7rem;
+        width: 100%;
+        display: block;
+      }
 
       & li {
         width: 3rem;
         height: 2.2rem;
 
         justify-content: space-between;
+
+        @include mq-down() {
+          width: 4.5rem;
+          height: 4.5rem;
+          border-radius: 2.5rem;
+        }
+
+        &::before {
+          font-size: 3rem;
+          margin-top: 2rem;
+        }
       }
     }
   }
@@ -123,7 +196,26 @@
 
     text-align: center;
 
-    padding-top: 3rem;
-    padding-bottom: 2rem;
+    position: relative;
+
+    padding: 5rem 0;
+
+
+    & p {
+
+      font-size: 2rem;
+    
+      &::before {
+        width: 100%;
+        height: 3rem;
+        background-image: url(../../../asset/img/li_bwave2.svg) 0 0 no-repeat;
+        background-size: 100% auto;
+        content: "";
+        display: block;
+        position: absolute;
+        top: -1rem;
+        left: -1%;
+      }
+    }
   }
 }

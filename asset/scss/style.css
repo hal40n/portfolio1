@@ -599,6 +599,11 @@ th {
   z-index: 99;
   opacity: 0;
 }
+@media screen and (max-width: 767px) {
+  .l-footer__pageTop {
+    right: -3rem;
+  }
+}
 .l-footer__pageTop--link {
   display: block;
   transform: rotate(90deg);
@@ -615,6 +620,11 @@ th {
   display: block;
   line-height: 1.2rem;
   white-space: nowrap;
+}
+@media screen and (max-width: 767px) {
+  .l-footer__pageTop--link span {
+    font-size: 3rem;
+  }
 }
 .l-footer__pageTop--link span::before {
   position: absolute;
@@ -638,9 +648,20 @@ th {
 .l-footer__contents--title {
   font-family: "FOT-筑紫Aオールド明朝 Pr6 D", TsukuAOldMinPr6-D, serif;
 }
+@media screen and (max-width: 767px) {
+  .l-footer__contents--title p {
+    font-size: 3rem;
+  }
+}
 .l-footer__contents--title h2 {
   font-size: 3.75rem;
   margin-top: 0.5rem;
+}
+@media screen and (max-width: 767px) {
+  .l-footer__contents--title h2 {
+    margin-top: -2rem;
+    font-size: 5.5rem;
+  }
 }
 .l-footer__contents--nav {
   text-align: center;
@@ -650,8 +671,22 @@ th {
   font-size: 1.35rem;
   letter-spacing: 0.35rem;
 }
+@media screen and (max-width: 767px) {
+  .l-footer__contents--nav li {
+    display: block;
+    list-style: none;
+    font-size: 2.5rem;
+    margin-top: 7rem;
+  }
+}
 .l-footer__contents--nav li + li {
   margin-left: 3.5rem;
+}
+@media screen and (max-width: 767px) {
+  .l-footer__contents--nav li + li {
+    margin-left: 0;
+    margin-top: 5rem;
+  }
 }
 .l-footer__contents--reserve {
   width: -moz-fit-content;
@@ -661,30 +696,86 @@ th {
   border: 1px solid #ffffff;
   text-align: center;
 }
+@media screen and (max-width: 767px) {
+  .l-footer__contents--reserve {
+    margin-top: 7rem;
+    font-size: 2.5rem;
+    padding: 2rem 5rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .l-footer__contents--reserve p {
+    font-size: 2.5rem;
+  }
+}
 .l-footer__contents--tel {
   font-size: 1.3rem;
   margin-top: 3rem;
+}
+@media screen and (max-width: 767px) {
+  .l-footer__contents--tel {
+    margin-top: 5rem;
+    font-size: 2rem;
+  }
 }
 .l-footer__contents--tel a {
   font-size: 1.8rem;
   text-decoration: none;
   letter-spacing: 0.08rem;
 }
+@media screen and (max-width: 767px) {
+  .l-footer__contents--tel a {
+    font-size: 3rem;
+  }
+}
 .l-footer__contents--sns {
   width: 10rem;
   margin: 4rem auto 0 auto;
+  display: flex;
+}
+@media screen and (max-width: 767px) {
+  .l-footer__contents--sns {
+    margin-top: 7rem;
+    width: 100%;
+    display: block;
+  }
 }
 .l-footer__contents--sns li {
   width: 3rem;
   height: 2.2rem;
   justify-content: space-between;
 }
+@media screen and (max-width: 767px) {
+  .l-footer__contents--sns li {
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 2.5rem;
+  }
+}
+.l-footer__contents--sns li::before {
+  font-size: 3rem;
+  margin-top: 2rem;
+}
 .l-footer__cr {
   margin: 0 auto;
   background-color: #0a1a3c;
   text-align: center;
-  padding-top: 3rem;
-  padding-bottom: 2rem;
+  position: relative;
+  padding: 5rem 0;
+}
+.l-footer__cr p {
+  font-size: 2rem;
+}
+.l-footer__cr p::before {
+  width: 100%;
+  height: 3rem;
+  background-image: url(../../../asset/img/li_bwave2.svg) 0 0 no-repeat;
+  background-size: 100% auto;
+  content: "";
+  display: block;
+  position: absolute;
+  top: -1rem;
+  left: -1%;
 }
 
 .l-header {
@@ -1290,6 +1381,11 @@ th {
   height: 1.5rem;
   padding-top: 3.5px;
 }
+@media screen and (max-width: 767px) {
+  .c-icon {
+    padding-top: 7px;
+  }
+}
 
 .c-inner {
   width: 100%;
@@ -1303,7 +1399,7 @@ th {
   .c-inner {
     width: 100%;
     max-width: 100%;
-    padding: 0 3rem;
+    padding: 0 4rem;
   }
 }
 
