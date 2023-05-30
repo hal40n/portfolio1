@@ -3,26 +3,40 @@
 .p-tour {
 
   &__bg {
-    width: 100%;
-    background: #f4f7f8;
-    padding: 4rem 0 32rem;
-    margin: 30rem 0 7rem;
-    box-sizing: border-box;
     position: relative;
+
+    width: 100%;
+    margin: 30rem 0 7rem;
+    padding: 4rem 0 32rem;
+    box-sizing: border-box;
+
+    background: #f4f7f8;
   }
 
   &__ttl {
     text-align: center;
+
+
+    & p {
+      @include mq-down() {
+        font-size: 2.5rem;
+      }
+    }
   }
 
   &__txt {
-    text-align: center;
     font-size: 1.35rem;
+    text-align: center;
+
+    @include mq-down() {
+      font-size: 2.5rem;
+    }
   }
 
   &__slider-container {
+    overflow: hidden;
+
     position: relative;
-    overflow: hidden
   }
 
   &__slides {
@@ -30,19 +44,31 @@
   }
 
   &__slide {
-    background-color: map-get($colors, "c-white");
-    padding: 10px;
-    margin: 0 20px;
     display: block;
+
+    margin: 0 20px;
+    padding: 10px;
+
+    background-color: map-get($colors, "c-white");
+
+    @include mq-down() {
+      max-width: 100%;
+    }
 
     &--img {
       overflow: hidden;
+
       width: 100%;
       height: 193px;
+
+      @include mq-down() {
+        height: auto;
+      }
 
       & img {
         width: 100%;
         height: 100%;
+
         transition: .5s;
       }
     }
@@ -51,27 +77,45 @@
       transform: scale(1.1);
     }
 
+    &--txtBox {
+      padding: 3rem 2rem 2rem;
+    }
+
     &--hd {
       color: map-get($colors, "c-black");
       font-weight: inherit;
 
+      @include mq-down() {
+        font-size: 3rem;
+      }
+
     }
 
     &--txt {
-      letter-spacing: 1.5px;
-      line-height: 2.5rem;
       font-size: 1.3rem;
+      line-height: 2.5rem;
+      letter-spacing: 1.5px;
+
+      @include mq-down() {
+        font-size: 2.5rem;
+        line-height: 1.8;
+      }
     }
 
     &--date {
-      font-size: 1.2rem;
       color: $sub-title;
+      font-size: 1.2rem;
+
       padding-bottom: 3rem;
+      @include mq-down() {
+        font-size: 2.5rem;
+      }
     }
   }
 
   &__select--contents {
     margin: 0 20px;
+
     justify-content: space-between;
   }
 
@@ -80,59 +124,77 @@
     justify-content: left;
     align-items: center;
     margin-top: 1.5rem;
+    @include mq-down() {
+      margin-top: 0;
+    }
 
     &--prev {
       font-size: 2rem;
+
       cursor: pointer;
+
       margin-right: 3rem;
     }
 
     &--next {
       font-size: 2rem;
+
       cursor: pointer;
     }
   }
 
   &__select {
-    background-color: #808080;
-    color: #ffffff;
+    margin: 0 0.5rem;
     padding: 0.5rem 1rem;
     border: none;
-    margin: 0 0.5rem;
+
+    background-color: #808080;
+
+    color: #ffffff;
+
     cursor: pointer;
   }
 
   &__pagination {
     position: absolute;
-    bottom: -5rem;
     right: 0;
+    bottom: -5rem;
+
     margin-right: 1rem;
 
     & li {
+      position: relative;
+
       width: 0.75rem;
       height: 0.75rem;
-      border-radius: 50%;
-      background-color: $sub-title;
       margin: 0 1rem;
-      position: relative;
+      border-radius: 50%;
+
+      background-color: $sub-title;
 
 
       & button {
-        font-size: 0pt;
-        background: transparent;
         border: 0;
+
+        background: transparent;
+
+        font-size: 0pt;
       }
 
       &.slick-active button::before {
-        content: "・";
-        width: .75rem;
-        height: .75rem;
-        border-radius: 50%;
         display: block;
-        background-color: $default-color;
+
         position: absolute;
         top: 0;
         left: 0;
+
+        width: .75rem;
+        height: .75rem;
+        border-radius: 50%;
+
+        background-color: $default-color;
+
+        content: "・";
       }
     }
   }
