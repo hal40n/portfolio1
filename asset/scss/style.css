@@ -1329,36 +1329,96 @@ th {
 .p-access__ttl {
   width: 30%;
 }
+@media screen and (max-width: 767px) {
+  .p-access__ttl {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .p-access__ttl p {
+    margin-top: -3rem;
+    font-size: 2.5rem;
+  }
+}
 .p-access__cont {
   width: 70%;
+}
+@media screen and (max-width: 767px) {
+  .p-access__cont {
+    width: 100%;
+    margin-top: 5rem;
+  }
 }
 .p-access__cont--txt {
   line-height: 2.5rem;
   font-size: 1.25rem;
 }
+@media screen and (max-width: 767px) {
+  .p-access__cont--txt {
+    font-size: 2.5rem;
+    line-height: 3.5rem;
+  }
+}
 .p-access__contContact {
   justify-content: flex-start;
+}
+@media screen and (max-width: 767px) {
+  .p-access__contContact {
+    display: block;
+  }
 }
 .p-access__contAddr {
   padding-left: 1rem;
 }
+@media screen and (max-width: 767px) {
+  .p-access__contAddr {
+    padding-left: 2rem;
+  }
+}
 .p-access__contAddr--hd {
   color: #1b2f5b;
+}
+@media screen and (max-width: 767px) {
+  .p-access__contAddr--hd {
+    font-size: 3rem;
+  }
 }
 .p-access__contAddr--txt {
   margin-top: 1rem;
   font-size: 1.5rem;
 }
+@media screen and (max-width: 767px) {
+  .p-access__contAddr--txt {
+    font-size: 2.5rem;
+  }
+}
 .p-access__contTel {
   padding-left: 1rem;
   margin-left: 7rem;
 }
+@media screen and (max-width: 767px) {
+  .p-access__contTel {
+    padding-left: 2rem;
+    margin-top: 3rem;
+    margin-left: 0;
+  }
+}
 .p-access__contTel--hd {
   color: #1b2f5b;
+}
+@media screen and (max-width: 767px) {
+  .p-access__contTel--hd {
+    font-size: 3rem;
+  }
 }
 .p-access__contTel--txt {
   margin-top: 0.5rem;
   font-size: 1.5rem;
+}
+@media screen and (max-width: 767px) {
+  .p-access__contTel--txt {
+    font-size: 2.5rem;
+  }
 }
 .p-access__contList {
   padding-left: 1rem;
@@ -1367,10 +1427,23 @@ th {
   text-indent: -1rem;
   line-height: 1.5;
 }
+@media screen and (max-width: 767px) {
+  .p-access__contList {
+    margin-top: 5rem;
+    font-size: 2rem;
+    line-height: 1.7;
+    color: #5a5a5a;
+  }
+}
 .p-access__contList span {
   font-size: 1.25rem;
   vertical-align: -0.1rem;
   color: #333333;
+}
+@media screen and (max-width: 767px) {
+  .p-access__contList span {
+    font-size: 2rem;
+  }
 }
 
 .p-concept {
