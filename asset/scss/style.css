@@ -1982,6 +1982,11 @@ th {
   overflow: hidden;
   height: 175px;
 }
+@media screen and (max-width: 767px) {
+  .p-news__cont--img {
+    height: auto;
+  }
+}
 .p-news__cont--img img {
   width: 100%;
   height: 100%;
@@ -1993,15 +1998,30 @@ th {
 .p-news__cont--hd {
   color: #1b2f5b;
 }
+@media screen and (max-width: 767px) {
+  .p-news__cont--hd {
+    font-size: 2.5rem;
+  }
+}
 .p-news__cont--txt {
   font-size: 1.3rem;
   line-height: 2.5rem;
   letter-spacing: 1.5px;
 }
+@media screen and (max-width: 767px) {
+  .p-news__cont--txt {
+    font-size: 2rem;
+  }
+}
 .p-news__cont--date {
   color: rgba(154, 159, 167, 0.75);
   font-size: 1.2rem;
   padding-bottom: 3rem;
+}
+@media screen and (max-width: 767px) {
+  .p-news__cont--date {
+    font-size: 1.5rem;
+  }
 }
 
 .p-illust {
