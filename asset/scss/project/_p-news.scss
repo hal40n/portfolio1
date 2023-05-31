@@ -22,6 +22,10 @@
 
       padding-left: 3rem;
 
+      @include mq-down() {
+        display: none;
+      }
+
       & p {
         padding-top: 3rem;
 
@@ -37,6 +41,7 @@
           content: "▶";
 
           margin-left: 3rem;
+
         }
       }
     }
@@ -63,6 +68,7 @@
     width: 100%;
 
     border-bottom: 1px solid rgb(154, 159, 167, 0.3);
+
 
     &::after {
       display: block;
