@@ -48,14 +48,18 @@
 
       & p {
         font-size: 1.2rem;
+        display: block;
 
         @include mq-down() {
           font-size: 2rem;
+          z-index: 1000;
+          opacity: 1 !important;
         }
       }
 
       & h1 {
         font-size: 2.8rem;
+        display: block;
 
         @include mq-down() {
           font-size: 3.5rem;
@@ -148,91 +152,92 @@
 
   &__toggle {
     position: absolute;
-    top: 25px;
-    right: 25px;
+    top: 3rem;
+    right: 3rem;
     z-index: 1000;
 
-    @include mq-down() {
-      position: fixed;
-      top: 25px;
-      right: 25px;
-
-    }
     @include mq-down(lg) {
       display: flex;
+      top: 0;
+      right: 0;
 
-      width: 7rem;
-      height: 7rem;
+      width: 9rem;
+      height: 9rem;
 
       align-items: center;
-      justify-content: space-between;
+      justify-content: center;
+
+      background: rgb(0, 0, 0, 0);
+    }
+
+    @include mq-down() {
+      width: 10rem;
+      height: 10rem;
+
     }
 
     &--box {
       position: relative;
 
-      width: 4rem;
-      height: 32px;
-
-      color: #ffffff;
       text-align: center;
 
       cursor: pointer;
 
+      width: 4rem;
+
       @include mq-down() {
-        width: 3rem;
+        width: 5rem;
       }
 
       &::after  {
         display: block;
 
         position: absolute;
-        top: 115%;
-
         width: 3rem;
         margin: 0 auto;
 
+        color: #fff;
+
         font-family: $font-family__caveat;
-        font-size: 1.8rem;
+        font-size: 2rem;
         text-align: center;
 
         content: "menu";
 
         @include mq-down() {
-          font-size: 2em;
+          font-size: 2rem;
+          top: 1.5rem;
+          right: 1.5rem;
         }
       }
     }
 
-    &--bar {
+    & span {
       display: block;
 
-      position: absolute;
-      left: 0;
+      width: 5rem;
+      height: 1rem;
+      background: url(../../../asset/img/line_menu.svg) 0 0 no-repeat;
+      background-image: url(../../../asset/img/line_menu_wt.svg);
+      background-size: 100% 0.75rem;
 
-      width: 3rem;
-      height: 1px;
-
-      background-color: #ffffff;
+      margin: 0 auto;
 
       transition: ease .4s;
 
+      @include mq-down(lg) {
+        width: 4rem;
+        height: 1rem;
+      }
+
       @include mq-down() {
-        width: 5rem;
+        width: 3rem;
+        height: 1rem;
+        background-size: 100% auto;
       }
 
-      &:nth-child(1) {
-        top: 0;
-      }
 
-      &:nth-child(2) {
-        top: 50%;
-        transform: translateY(-50%);
-      }
 
-      &:nth-child(3) {
-        bottom: 0;
-      }
     }
   }
 
@@ -432,7 +437,7 @@
       font-size: 6.5rem;
 
       @include mq-down() {
-        font-size: 5rem;
+        font-size: 4.5rem;
       }
     }
 
@@ -452,6 +457,7 @@
       @include mq-down() {
         width: 100vw;
         height: 100vh;
+        //max-height: 66.7rem;
       }
     }
   }
@@ -526,6 +532,7 @@
 
     transform-origin: left;
     @include mq-down() {
+      top: 60%;
       font-size: 4rem;
     }
   }
@@ -549,10 +556,15 @@
       @include mq-down() {
         display: block;
 
-        right: -7rem;
         bottom: 15rem;
 
-        font-size: 3.25rem;
+        font-size: 3.5rem;
+
+        & p {
+          @include mq-down() {
+            font-size: 2rem;
+          }
+        }
       }
 
       &::before {
@@ -571,22 +583,12 @@
         animation: borderShort 3s ease 0s infinite normal;
 
         @include mq-down() {
-          top: 3.5rem;
+          top: 2rem;
         }
       }
     }
   }
 }
-
-// #reserve {
-//   margin-top: 0.5rerm;
-
-//   @include mq-down() {
-//     margin-top: 5rem;
-//     font-size: 3.5rem;
-//     margin: 0 auto;
-//   }
-// }
 
 /* scroll */
 

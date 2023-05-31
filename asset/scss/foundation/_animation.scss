@@ -70,7 +70,15 @@
   & span {
     background: #ffffff;
 
+    & p {
+      @include mq-down() {
+        font-size: 2rem;
+      }
+    }
+
     &:nth-child(1) {
+      height: 0.1rem;
+      position: absolute;
       top: 50%;
       transform: rotate(45deg) translateY(-50%);
     }
@@ -80,6 +88,8 @@
     }
 
     &:nth-child(3) {
+      height: 0.1rem;
+      position: absolute;
       top: 50%;
       transform: rotate(-45deg) translateY(-50%);
     }
@@ -87,11 +97,16 @@
 
   &::after {
     position: absolute;
-    top: 115%;
+    top: 2rem;
 
     color: #fff !important;
 
     content: "close";
+
+    @include mq-down() {
+      top: 1rem;
+      right: 2.25rem;
+    }
   }
 }
 

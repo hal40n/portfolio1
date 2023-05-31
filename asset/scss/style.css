@@ -51,7 +51,14 @@
 .l-header__toggle--box.active span {
   background: #ffffff;
 }
+@media screen and (max-width: 767px) {
+  .l-header__toggle--box.active span p {
+    font-size: 2rem;
+  }
+}
 .l-header__toggle--box.active span:nth-child(1) {
+  height: 0.1rem;
+  position: absolute;
   top: 50%;
   transform: rotate(45deg) translateY(-50%);
 }
@@ -59,14 +66,22 @@
   opacity: 0;
 }
 .l-header__toggle--box.active span:nth-child(3) {
+  height: 0.1rem;
+  position: absolute;
   top: 50%;
   transform: rotate(-45deg) translateY(-50%);
 }
 .l-header__toggle--box.active::after {
   position: absolute;
-  top: 115%;
+  top: 2rem;
   color: #fff !important;
   content: "close";
+}
+@media screen and (max-width: 767px) {
+  .l-header__toggle--box.active::after {
+    top: 1rem;
+    right: 2.25rem;
+  }
 }
 
 /* メニュ―表示 */
@@ -591,6 +606,28 @@ th {
   margin: 0 auto;
   background-color: #1b2f5b;
   color: #ffffff;
+  position: relative;
+}
+.l-footer::before {
+  width: 102%;
+  height: 17rem;
+  background: url(.././../../asset/img/li_bwave.svg) 0 0 no-repeat;
+  background-size: cover;
+  content: "";
+  display: block;
+  position: absolute;
+  top: -15rem;
+  left: -1%;
+}
+@media screen and (max-width: 767px) {
+  .l-footer::before {
+    width: 100%;
+    height: 5rem;
+    background: url(../../../asset/img/li_bwave.svg) 0 0 no-repeat;
+    background-size: 100% auto;
+    top: -4rem;
+    left: -1%;
+  }
 }
 .l-footer__pageTop {
   position: fixed;
@@ -598,6 +635,11 @@ th {
   bottom: 5rem;
   z-index: 99;
   opacity: 0;
+}
+@media screen and (max-width: 767px) {
+  .l-footer__pageTop {
+    right: -3rem;
+  }
 }
 .l-footer__pageTop--link {
   display: block;
@@ -615,6 +657,11 @@ th {
   display: block;
   line-height: 1.2rem;
   white-space: nowrap;
+}
+@media screen and (max-width: 767px) {
+  .l-footer__pageTop--link span {
+    font-size: 3rem;
+  }
 }
 .l-footer__pageTop--link span::before {
   position: absolute;
@@ -638,9 +685,20 @@ th {
 .l-footer__contents--title {
   font-family: "FOT-筑紫Aオールド明朝 Pr6 D", TsukuAOldMinPr6-D, serif;
 }
+@media screen and (max-width: 767px) {
+  .l-footer__contents--title p {
+    font-size: 3rem;
+  }
+}
 .l-footer__contents--title h2 {
   font-size: 3.75rem;
   margin-top: 0.5rem;
+}
+@media screen and (max-width: 767px) {
+  .l-footer__contents--title h2 {
+    margin-top: -2rem;
+    font-size: 5.5rem;
+  }
 }
 .l-footer__contents--nav {
   text-align: center;
@@ -650,8 +708,22 @@ th {
   font-size: 1.35rem;
   letter-spacing: 0.35rem;
 }
+@media screen and (max-width: 767px) {
+  .l-footer__contents--nav li {
+    display: block;
+    list-style: none;
+    font-size: 2.5rem;
+    margin-top: 7rem;
+  }
+}
 .l-footer__contents--nav li + li {
   margin-left: 3.5rem;
+}
+@media screen and (max-width: 767px) {
+  .l-footer__contents--nav li + li {
+    margin-left: 0;
+    margin-top: 5rem;
+  }
 }
 .l-footer__contents--reserve {
   width: -moz-fit-content;
@@ -661,30 +733,86 @@ th {
   border: 1px solid #ffffff;
   text-align: center;
 }
+@media screen and (max-width: 767px) {
+  .l-footer__contents--reserve {
+    margin-top: 7rem;
+    font-size: 2.5rem;
+    padding: 2rem 5rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .l-footer__contents--reserve p {
+    font-size: 2.5rem;
+  }
+}
 .l-footer__contents--tel {
   font-size: 1.3rem;
   margin-top: 3rem;
+}
+@media screen and (max-width: 767px) {
+  .l-footer__contents--tel {
+    margin-top: 5rem;
+    font-size: 2rem;
+  }
 }
 .l-footer__contents--tel a {
   font-size: 1.8rem;
   text-decoration: none;
   letter-spacing: 0.08rem;
 }
+@media screen and (max-width: 767px) {
+  .l-footer__contents--tel a {
+    font-size: 3rem;
+  }
+}
 .l-footer__contents--sns {
   width: 10rem;
   margin: 4rem auto 0 auto;
+  display: flex;
+}
+@media screen and (max-width: 767px) {
+  .l-footer__contents--sns {
+    margin-top: 7rem;
+    width: 100%;
+    display: block;
+  }
 }
 .l-footer__contents--sns li {
   width: 3rem;
   height: 2.2rem;
   justify-content: space-between;
 }
+@media screen and (max-width: 767px) {
+  .l-footer__contents--sns li {
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 2.5rem;
+  }
+}
+.l-footer__contents--sns li::before {
+  font-size: 3rem;
+  margin-top: 2rem;
+}
 .l-footer__cr {
   margin: 0 auto;
   background-color: #0a1a3c;
   text-align: center;
-  padding-top: 3rem;
-  padding-bottom: 2rem;
+  position: relative;
+  padding: 5rem 0;
+}
+.l-footer__cr p {
+  font-size: 2rem;
+}
+.l-footer__cr p::before {
+  width: 100%;
+  height: 3rem;
+  background-image: url(../../../asset/img/li_bwave2.svg) 0 0 no-repeat;
+  background-size: 100% auto;
+  content: "";
+  display: block;
+  position: absolute;
+  top: -1rem;
+  left: -1%;
 }
 
 .l-header {
@@ -727,14 +855,18 @@ th {
 }
 .l-header__siteTtl--hd p {
   font-size: 1.2rem;
+  display: block;
 }
 @media screen and (max-width: 767px) {
   .l-header__siteTtl--hd p {
     font-size: 2rem;
+    z-index: 1000;
+    opacity: 1 !important;
   }
 }
 .l-header__siteTtl--hd h1 {
   font-size: 2.8rem;
+  display: block;
 }
 @media screen and (max-width: 767px) {
   .l-header__siteTtl--hd h1 {
@@ -819,78 +951,79 @@ th {
 }
 .l-header__toggle {
   position: absolute;
-  top: 25px;
-  right: 25px;
+  top: 3rem;
+  right: 3rem;
   z-index: 1000;
-}
-@media screen and (max-width: 767px) {
-  .l-header__toggle {
-    position: fixed;
-    top: 25px;
-    right: 25px;
-  }
 }
 @media screen and (max-width: 999px) {
   .l-header__toggle {
     display: flex;
-    width: 7rem;
-    height: 7rem;
+    top: 0;
+    right: 0;
+    width: 9rem;
+    height: 9rem;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0);
+  }
+}
+@media screen and (max-width: 767px) {
+  .l-header__toggle {
+    width: 10rem;
+    height: 10rem;
   }
 }
 .l-header__toggle--box {
   position: relative;
-  width: 4rem;
-  height: 32px;
-  color: #ffffff;
   text-align: center;
   cursor: pointer;
+  width: 4rem;
 }
 @media screen and (max-width: 767px) {
   .l-header__toggle--box {
-    width: 3rem;
+    width: 5rem;
   }
 }
 .l-header__toggle--box::after {
   display: block;
   position: absolute;
-  top: 115%;
   width: 3rem;
   margin: 0 auto;
+  color: #fff;
   font-family: "Caveat", cursive;
-  font-size: 1.8rem;
+  font-size: 2rem;
   text-align: center;
   content: "menu";
 }
 @media screen and (max-width: 767px) {
   .l-header__toggle--box::after {
-    font-size: 2em;
+    font-size: 2rem;
+    top: 1.5rem;
+    right: 1.5rem;
   }
 }
-.l-header__toggle--bar {
+.l-header__toggle span {
   display: block;
-  position: absolute;
-  left: 0;
-  width: 3rem;
-  height: 1px;
-  background-color: #ffffff;
+  width: 5rem;
+  height: 1rem;
+  background: url(../../../asset/img/line_menu.svg) 0 0 no-repeat;
+  background-image: url(../../../asset/img/line_menu_wt.svg);
+  background-size: 100% 0.75rem;
+  margin: 0 auto;
   transition: ease 0.4s;
 }
-@media screen and (max-width: 767px) {
-  .l-header__toggle--bar {
-    width: 5rem;
+@media screen and (max-width: 999px) {
+  .l-header__toggle span {
+    width: 4rem;
+    height: 1rem;
   }
 }
-.l-header__toggle--bar:nth-child(1) {
-  top: 0;
-}
-.l-header__toggle--bar:nth-child(2) {
-  top: 50%;
-  transform: translateY(-50%);
-}
-.l-header__toggle--bar:nth-child(3) {
-  bottom: 0;
+@media screen and (max-width: 767px) {
+  .l-header__toggle span {
+    width: 3rem;
+    height: 1rem;
+    background-size: 100% auto;
+  }
 }
 .l-header__menu {
   display: flex;
@@ -1057,7 +1190,7 @@ th {
 }
 @media screen and (max-width: 767px) {
   .l-header__ttl--hd {
-    font-size: 5rem;
+    font-size: 4.5rem;
   }
 }
 .l-header__ttl, .l-header__ttl p, .l-header__ttl h1 {
@@ -1138,6 +1271,7 @@ th {
 }
 @media screen and (max-width: 767px) {
   .l-header__copy {
+    top: 60%;
     font-size: 4rem;
   }
 }
@@ -1156,9 +1290,13 @@ th {
 @media screen and (max-width: 767px) {
   .l-header__scroll--down {
     display: block;
-    right: -7rem;
     bottom: 15rem;
-    font-size: 3.25rem;
+    font-size: 3.5rem;
+  }
+}
+@media screen and (max-width: 767px) and (max-width: 767px) {
+  .l-header__scroll--down p {
+    font-size: 2rem;
   }
 }
 .l-header__scroll--down::before {
@@ -1174,7 +1312,7 @@ th {
 }
 @media screen and (max-width: 767px) {
   .l-header__scroll--down::before {
-    top: 3.5rem;
+    top: 2rem;
   }
 }
 
@@ -1241,6 +1379,11 @@ th {
 .c-border__left {
   border-left: 1px solid rgba(154, 159, 167, 0.3);
 }
+@media screen and (max-width: 767px) {
+  .c-border__left {
+    border: 0;
+  }
+}
 
 .c-flex {
   display: flex;
@@ -1290,6 +1433,11 @@ th {
   height: 1.5rem;
   padding-top: 3.5px;
 }
+@media screen and (max-width: 767px) {
+  .c-icon {
+    padding-top: 7px;
+  }
+}
 
 .c-inner {
   width: 100%;
@@ -1303,7 +1451,7 @@ th {
   .c-inner {
     width: 100%;
     max-width: 100%;
-    padding: 0 3rem;
+    padding: 0 4rem;
   }
 }
 
@@ -1619,8 +1767,6 @@ th {
 }
 .p-concept__sec2--contPic1 {
   position: relative;
-  width: 450px;
-  height: 300px;
 }
 @media screen and (max-width: 999px) {
   .p-concept__sec2--contPic1 {
@@ -1631,13 +1777,19 @@ th {
   position: absolute;
   top: 25rem;
   left: 12.5rem;
-  width: 300px;
-  height: 460px;
+}
+@media screen and (max-width: 999px) {
+  .p-concept__sec2--contPic2 {
+    position: relative;
+    right: 0;
+    z-index: 2;
+    margin: -10rem 0 0 50%;
+  }
 }
 @media screen and (max-width: 767px) {
   .p-concept__sec2--contPic2 {
     width: 25rem;
-    margin: -3rem 0 0 10rem;
+    margin: -30rem 0 0 10rem;
   }
 }
 .p-concept__sec2--contPic2::after {
@@ -1664,6 +1816,7 @@ th {
 }
 @media screen and (max-width: 767px) {
   .p-concept__sec2--contPic2::after {
+    top: -10rem;
     right: 160%;
     font-size: 2.25rem;
     margin-top: 35rem;
@@ -1776,6 +1929,11 @@ th {
   line-height: 1.4;
   padding-left: 3rem;
 }
+@media screen and (max-width: 767px) {
+  .p-news__ttl--notice {
+    display: none;
+  }
+}
 .p-news__ttl--notice p {
   padding-top: 3rem;
 }
@@ -1824,6 +1982,11 @@ th {
   overflow: hidden;
   height: 175px;
 }
+@media screen and (max-width: 767px) {
+  .p-news__cont--img {
+    height: auto;
+  }
+}
 .p-news__cont--img img {
   width: 100%;
   height: 100%;
@@ -1835,15 +1998,30 @@ th {
 .p-news__cont--hd {
   color: #1b2f5b;
 }
+@media screen and (max-width: 767px) {
+  .p-news__cont--hd {
+    font-size: 2.5rem;
+  }
+}
 .p-news__cont--txt {
   font-size: 1.3rem;
   line-height: 2.5rem;
   letter-spacing: 1.5px;
 }
+@media screen and (max-width: 767px) {
+  .p-news__cont--txt {
+    font-size: 2rem;
+  }
+}
 .p-news__cont--date {
   color: rgba(154, 159, 167, 0.75);
   font-size: 1.2rem;
   padding-bottom: 3rem;
+}
+@media screen and (max-width: 767px) {
+  .p-news__cont--date {
+    font-size: 1.5rem;
+  }
 }
 
 .p-illust {
@@ -1872,6 +2050,52 @@ th {
   z-index: 2;
   display: block;
 }
+.p-illust2 {
+  margin-top: 20rem;
+  width: 100%;
+  height: 0;
+  padding-top: 60%;
+  background: url(../../../asset/img/illust2-ftr_bg.jpg) bottom left no-repeat;
+  position: relative;
+  z-index: -1;
+  display: block;
+  overflow: hidden;
+}
+@media screen and (max-width: 767px) {
+  .p-illust2 {
+    height: 70rem;
+    background: url(../../../asset/img/illust2-ftr_bg.jpg) -7rem top no-repeat;
+    background-size: 120rem auto;
+  }
+}
+.p-illust2__lure {
+  width: 40%;
+  height: 48%;
+  background: url(../../../asset/img/il_lure.svg) center no-repeat;
+  background-size: 100% auto;
+  position: absolute;
+  top: 37.5%;
+  left: 5%;
+  z-index: -1;
+}
+.p-illust2__fish {
+  width: 50%;
+  height: 50%;
+  background: url(../../../asset/img/il_fish.svg) center no-repeat;
+  background-size: 100% auto;
+  position: absolute;
+  top: 55%;
+  left: 42%;
+  z-index: -2;
+}
+@media screen and (max-width: 767px) {
+  .p-illust2__fish {
+    width: 60rem;
+    height: 30rem;
+    top: 42.5rem;
+    left: 25rem;
+  }
+}
 
 .p-tour__bg {
   position: relative;
@@ -1880,6 +2104,35 @@ th {
   padding: 4rem 0 32rem;
   box-sizing: border-box;
   background: #f4f7f8;
+}
+.p-tour__bg::before {
+  width: 100%;
+  height: 17rem;
+  position: absolute;
+  top: -16rem;
+  left: 0;
+  content: "";
+  background: url(../../../asset/img/li_bwave3.svg) top center no-repeat;
+  background-size: cover;
+  z-index: 2;
+  display: block;
+}
+@media screen and (max-width: 767px) {
+  .p-tour__bg::before {
+    top: -5rem;
+  }
+}
+.p-tour__bg::after {
+  width: 100%;
+  height: 15rem;
+  position: absolute;
+  bottom: -1rem;
+  left: 0;
+  content: "";
+  background: url(../../../asset/img/li_bwave_wt2.svg) top center no-repeat;
+  background-size: cover;
+  z-index: 2;
+  display: block;
 }
 .p-tour__ttl {
   text-align: center;

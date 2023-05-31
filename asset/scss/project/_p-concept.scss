@@ -186,9 +186,6 @@
         &1 {
           position: relative;
 
-          width: 450px;
-          height: 300px;
-
           @include mq-down(lg) {
             width: 100%;
           }
@@ -199,12 +196,16 @@
           top: 25rem;
           left: 12.5rem;
 
-          width: 300px;
-          height: 460px;
+          @include mq-down(lg) {
+            position: relative;
+            right: 0;
+            z-index: 2;
 
+            margin: -10rem 0 0 50%;
+          }
           @include mq-down() {
             width: 25rem;
-            margin: -3rem 0 0 10rem;
+            margin: -30rem 0 0 10rem;
           }
 
           &::after {
@@ -232,6 +233,7 @@
               margin-top: 30rem;
             }
             @include mq-down() {
+              top: -10rem;
               right: 160%;
 
               font-size: 2.25rem;

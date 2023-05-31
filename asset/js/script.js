@@ -108,37 +108,38 @@ $(function() {
 
 
 /* slider of tour contents */
-
-$('.autoplay').slick({
-  slidesToShow: 3,
-  slidesToScroll: 1,
-  autoplay: true,
-  prevArrow:'<a class="prev"><span class="p-tour__selects--prev">＜</span></a>',
-  nextArrow:'<a class="next"><span class="p-tour__selects--next">＞</span></a>',
-  appendArrows: $('.p-tour__selects'),
-  pauseOnHover: true,
-  arrows: true,
-  dots:true,
-  dotsClass: 'p-tour__pagination c-flex',
-  autoplaySpeed: 10000,
-  infinite: true,
-  responsive: [
-    {
-    breakpoint: 999,
-    settings: {
-      slidesToShow: 1,
-      slidesToScroll: 1,
-    }
-  },
-  {
-    breakpoint: 767,
-    settings: {
-      slidesToShow: 1,
-      slidesToScroll: 1,
-    }
-  }
-]
-});
+$(function() {
+  $('.autoplay').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    prevArrow:'<a class="prev"><span class="p-tour__selects--prev">＜</span></a>',
+    nextArrow:'<a class="next"><span class="p-tour__selects--next">＞</span></a>',
+    appendArrows: $('.p-tour__selects'),
+    pauseOnHover: true,
+    arrows: true,
+    dots:true,
+    dotsClass: 'p-tour__pagination c-flex',
+    autoplaySpeed: 10000,
+    infinite: true,
+    responsive: [
+      {
+          breakpoint: 999,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+          },
+        },
+        {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  });
+})
 
 /* fade-in */
 
