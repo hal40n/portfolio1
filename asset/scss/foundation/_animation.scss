@@ -23,20 +23,32 @@
   }
 
   &__siteTtl {
-
     position: absolute;
     top: 50%;
     left: 50%;
     transform:translate(-50%,-50%);
 
+    @include mq-down() {
+      width: 100%;
+      text-align: center;
+    }
+
     & p {
       font-family: $font-family__tsuku;
       font-size: 1.5rem;
+
+      @include mq-down() {
+        font-size: 1rem;
+      }
     }
 
     & h1 {
       font-family: $font-family__times;
       font-size: 3.5rem;
+
+      @include mq-down() {
+        font-size: 2.5rem;
+      }
     }
   }
 }

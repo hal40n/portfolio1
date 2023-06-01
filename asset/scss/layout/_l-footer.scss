@@ -11,7 +11,7 @@
   position: relative;
 
   &::before {
-    width: 102%;
+    width: 101%;
     height: 17rem;
     background: url(.././../../asset/img/li_bwave.svg) 0 0 no-repeat;
     background-size: cover;
@@ -22,7 +22,7 @@
     left: -1%;
 
     @include mq-down() {
-      width: 100%;
+      width: 101%;
       height: 5rem;
       background: url(../../../asset/img/li_bwave.svg) 0 0 no-repeat;
       background-size: 100% auto;
@@ -39,7 +39,7 @@
     opacity: 0;
 
     @include mq-down() {
-      right: -3rem;
+      right: -2rem;
     }
 
     &--link {
@@ -57,10 +57,6 @@
         display: block;
         line-height: 1.2rem;
         white-space: nowrap;
-
-        @include mq-down() {
-          font-size: 3rem;
-        }
 
         &::before {
           position: absolute;
@@ -93,7 +89,7 @@
       & p {
 
         @include mq-down() {
-          font-size: 3rem;
+          font-size: 1.5rem;
         }
 
       }
@@ -104,8 +100,8 @@
         margin-top: 0.5rem;
 
         @include mq-down() {
-          margin-top: -2rem;
-          font-size: 5.5rem;
+          margin-top: -1rem;
+          font-size: 3rem;
         }
       }
 
@@ -123,15 +119,15 @@
         @include mq-down() {
           display: block;
           list-style: none;
-          font-size: 2.5rem;
-          margin-top: 7rem;
+          font-size: 1.5rem;
+          margin-top: 3rem;
         }
 
         &+li {
           margin-left: 3.5rem;
           @include mq-down() {
             margin-left: 0;
-            margin-top: 5rem;
+            margin-top: 3rem;
           }
         }
       }
@@ -146,15 +142,15 @@
       text-align: center;
 
       @include mq-down() {
-        margin-top: 7rem;
-        font-size: 2.5rem;
-        padding: 2rem 5rem;
+        margin-top: 5rem;
+        font-size: 1.5rem;
+        padding: 1.5rem 3rem;
       }
 
       & p {
 
         @include mq-down() {
-          font-size: 2.5rem;
+          font-size: 1.5rem;
         }
 
       }
@@ -167,7 +163,7 @@
 
       @include mq-down() {
         margin-top: 5rem;
-        font-size: 2rem;
+        font-size: 1.35rem;
       }
 
       & a {
@@ -176,7 +172,7 @@
         letter-spacing: 0.08rem;
 
         @include mq-down() {
-          font-size: 3rem;
+          font-size: 2rem;
         }
       }
     }
@@ -187,7 +183,7 @@
       display: flex;
 
       @include mq-down() {
-        margin-top: 7rem;
+        margin-top: 5rem;
         width: 100%;
         display: block;
       }
@@ -199,14 +195,14 @@
         justify-content: space-between;
 
         @include mq-down() {
-          width: 4.5rem;
-          height: 4.5rem;
-          border-radius: 2.5rem;
+          width: 3rem;
+          height: 3rem;
+          border-radius: 2rem;
         }
 
         &::before {
-          font-size: 3rem;
-          margin-top: 2rem;
+          font-size: 2rem;
+          margin-top: 4rem;
         }
       }
     }
@@ -227,6 +223,10 @@
     & p {
 
       font-size: 2rem;
+
+      @include mq-down() {
+        font-size: 1.35rem;
+      }
 
       &::before {
         width: 100%;
