@@ -89,7 +89,7 @@
 }
 .l-header__toggle--box.active::after {
   position: absolute;
-  top: 2rem;
+  top: 3rem;
   color: #fff !important;
   content: "close";
 }
@@ -184,7 +184,7 @@ html {
 
 body {
   color: #333333;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   font-family: "FOT-筑紫Aオールド明朝 Pr6 D", TsukuAOldMinPr6-D, serif;
   min-width: 350px;
   width: 100%;
@@ -837,20 +837,30 @@ th {
   width: 100%;
   height: 100vh;
 }
-.l-header__siteTtl {
+.l-header__wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+.l-header__wrap {
   opacity: 0;
   position: fixed;
+  width: 100%;
+}
+@media screen and (max-width: 767px) {
+  .l-header__wrap {
+    position: fixed;
+    height: 7rem;
+    background-color: #fff;
+  }
+}
+.l-header__siteTtl {
   top: 0;
   left: 0;
   z-index: 1000;
   width: 100%;
   transition: all 0.5s;
-}
-@media screen and (max-width: 767px) {
-  .l-header__siteTtl {
-    height: 7rem;
-    background-color: #fff;
-  }
 }
 .l-header__siteTtl--hd {
   position: absolute;
@@ -887,9 +897,9 @@ th {
   }
 }
 .l-header__reserve {
-  position: fixed;
   top: calc(50vh - 8rem);
   right: 0;
+  position: absolute;
   z-index: 1000;
 }
 @media screen and (max-width: 999px) {
@@ -963,6 +973,7 @@ th {
   }
 }
 .l-header__toggle {
+  opacity: 1;
   position: absolute;
   top: 3rem;
   right: 3rem;
@@ -994,17 +1005,17 @@ th {
 }
 @media screen and (max-width: 767px) {
   .l-header__toggle--box {
-    width: 5rem;
+    width: 3rem;
   }
 }
 .l-header__toggle--box::after {
   display: block;
   position: absolute;
-  width: 3rem;
+  width: 4.5rem;
   margin: 0 auto;
   color: #fff;
   font-family: "Caveat", cursive;
-  font-size: 2rem;
+  font-size: 2.5rem;
   text-align: center;
   content: "menu";
 }
@@ -1019,8 +1030,6 @@ th {
   display: block;
   width: 5rem;
   height: 1rem;
-  background: url(../../../asset/img/line_menu.svg) 0 0 no-repeat;
-  background-image: url(../../../asset/img/line_menu_wt.svg);
   background-size: 100% 0.75rem;
   margin: 0 auto;
   transition: ease 0.4s;
@@ -1201,29 +1210,36 @@ th {
 @media screen and (max-width: 767px) {
   .l-header__ttl {
     position: fixed;
-    top: 0;
-    left: 0;
+    top: 1.5rem;
+    left: 1.5rem;
     text-align: left;
-    padding-top: 3rem;
-    margin-left: 3rem;
   }
 }
 @media screen and (max-width: 767px) {
   .l-header__ttl {
     opacity: 1;
     font-size: 1rem;
+    margin-left: 0;
+    padding-top: 0;
   }
 }
 .l-header__ttl--txt {
   font-family: "ヒラギノ明朝 ProN";
-  font-size: 1rem;
+  font-size: 3rem;
+}
+@media screen and (max-width: 767px) {
+  .l-header__ttl--txt {
+    font-size: 1rem;
+  }
 }
 .l-header__ttl--hd {
   font-family: Times;
   font-size: 6.5rem;
+  margin-top: 3.5rem;
 }
 @media screen and (max-width: 767px) {
   .l-header__ttl--hd {
+    margin-top: 0.5rem;
     font-size: 2.5rem;
   }
 }
@@ -1240,7 +1256,6 @@ th {
 }
 @media screen and (max-width: 767px) {
   .l-header__slider--img {
-    width: 100vw;
     height: 100vh;
   }
 }
@@ -1256,7 +1271,8 @@ th {
 }
 @media screen and (max-width: 767px) {
   .l-header__pagination {
-    left: 8rem;
+    left: 5rem;
+    bottom: 2rem;
     padding: 0 40%;
   }
 }
@@ -1269,8 +1285,8 @@ th {
 }
 @media screen and (max-width: 767px) {
   .l-header__pagination--circle {
-    width: 1.8rem;
-    height: 1.8rem;
+    width: 0.8rem;
+    height: 0.8rem;
   }
 }
 .l-header__pagination--circle.target::before {
@@ -1287,8 +1303,8 @@ th {
 }
 @media screen and (max-width: 767px) {
   .l-header__pagination--circle.target::before {
-    width: 1.8rem;
-    height: 1.8rem;
+    width: 0.8rem;
+    height: 0.8rem;
   }
 }
 .l-header__copy {
@@ -1307,6 +1323,7 @@ th {
   .l-header__copy {
     top: 70%;
     font-size: 2rem;
+    left: 2rem;
   }
 }
 .l-header__scroll--down {
@@ -1368,8 +1385,12 @@ th {
   color: #1b2f5b;
 }
 
+.defaultColor {
+  background-image: url(../../../asset/img/line_menu_wt.svg);
+}
+
 .changeColor {
-  background-color: #1b2f5b;
+  background: url(../../../asset/img/line_menu.svg) 0 0 no-repeat;
 }
 
 /* keyframes */
@@ -1455,7 +1476,7 @@ th {
 .c-font__contTxt {
   margin-top: 3rem;
   line-height: 2;
-  font-size: 1.5rem;
+  font-size: 1.35rem;
 }
 @media screen and (max-width: 767px) {
   .c-font__contTxt {
@@ -1633,15 +1654,19 @@ th {
 }
 
 .p-concept {
-  width: 82.5%;
-  margin: 0 auto;
-  max-width: 1400px;
+  position: relative;
 }
 @media screen and (max-width: 767px) {
   .p-concept {
     width: 100%;
     max-width: 100%;
   }
+}
+.p-concept__sec1 {
+  width: 82.5%;
+  margin: 0 auto;
+  max-width: 1400px;
+  position: relative;
 }
 @media screen and (max-width: 767px) {
   .p-concept__sec1 {
@@ -1650,22 +1675,14 @@ th {
     margin-top: 9rem;
   }
 }
-.p-concept__sec1--ttl {
-  position: relative;
-}
-@media screen and (max-width: 767px) {
-  .p-concept__sec1--ttl {
-    display: block;
-  }
-}
 .p-concept__sec1--ttlCont {
+  transform: rotate(90deg);
+  transform-origin: bottom left;
+  display: flex;
+  align-items: center;
   position: absolute;
   top: -6rem;
   left: 0;
-  transform: rotate(90deg);
-  text-align: center;
-  transform-origin: bottom left;
-  align-items: center;
 }
 @media screen and (max-width: 767px) {
   .p-concept__sec1--ttlCont {
@@ -1700,7 +1717,7 @@ th {
 }
 .p-concept__sec1--contPic {
   position: relative;
-  width: 440px;
+  width: 100%;
 }
 @media screen and (max-width: 767px) {
   .p-concept__sec1--contPic {
@@ -1713,7 +1730,8 @@ th {
   position: absolute;
   color: #1b2f5b;
   font-family: "Caveat", cursive;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
+  margin-top: 1rem;
   content: "Play and laugh a lot in the great nature of the Miura Peninsula";
 }
 @media screen and (max-width: 999px) {
@@ -1751,6 +1769,7 @@ th {
 .p-concept__sec2 {
   margin-top: 25rem;
   margin-right: 0;
+  width: 100%;
 }
 @media screen and (max-width: 999px) {
   .p-concept__sec2 {
@@ -1776,7 +1795,10 @@ th {
   }
 }
 .p-concept__sec2--contTxt {
-  width: 50%;
+  max-width: 50rem;
+  width: 70%;
+  padding-left: 10rem;
+  padding-right: 10rem;
   line-height: 3.5rem;
 }
 @media screen and (max-width: 767px) {
@@ -1799,7 +1821,6 @@ th {
 }
 .p-concept__sec2--contPic {
   position: relative;
-  padding-left: 5rem;
 }
 @media screen and (max-width: 767px) {
   .p-concept__sec2--contPic {

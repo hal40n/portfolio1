@@ -66,13 +66,13 @@ window.addEventListener('scroll', function() {
   let scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
 
   let elmElements = document.querySelectorAll('.elm');
-  const reserveElement = document.querySelector('.l-header__siteTtl');
+  const reserveElement = document.querySelector('.l-header__wrap');
   const linkElement = document.querySelector('.l-footer__pageTop');
   const hdTtl = document.querySelector('.l-header__ttl');
   const tglMenu = document.querySelector('.l-header__toggle--box');
-  const tgl1 = document.querySelector('.l-header__toggle--bar');
-  const tgl2 = document.querySelector('.l-header__toggle--bar:nth-child(2)');
-  const tgl3 = document.querySelector('.l-header__toggle--bar:nth-child(3)');
+  const tgl1 = document.querySelector('.l-header__toggle--box span');
+  const tgl2 = document.querySelector('.l-header__toggle--box span:nth-child(2)');
+  const tgl3 = document.querySelector('.l-header__toggle--box span:nth-child(3)');
 
   elmElements.forEach(function(elm) {
     let elementOffset = elm.offsetTop;
@@ -105,7 +105,38 @@ $(function() {
   });
 });
 
-
+$(function() {
+  $('.autoplay_news').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    prevArrow:'<a class="prev"><span class="p-news__selects--prev">＜</span></a>',
+    nextArrow:'<a class="next"><span class="p-news__selects--next">＞</span></a>',
+    appendArrows: $('.p-news__selects'),
+    pauseOnHover: true,
+    arrows: true,
+    dots:true,
+    dotsClass: 'p-news__pagination c-flex',
+    autoplaySpeed: 10000,
+    infinite: true,
+    responsive: [
+      {
+          breakpoint: 999,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+          },
+        },
+        {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  });
+})
 
 /* slider of tour contents */
 $(function() {
