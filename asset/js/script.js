@@ -83,6 +83,7 @@ window.addEventListener('scroll', function() {
       reserveElement.classList.add('is-visible');
       linkElement.classList.add('is-visible');
       hdTtl.classList.add('initial');
+      siteTtl.classList.add('openScrolled');
       siteTtl.classList.add('changeFntColor');
       reserveBox.classList.add('is-visible');
       tgl1.classList.add('changeColor');
@@ -93,6 +94,7 @@ window.addEventListener('scroll', function() {
       reserveElement.classList.remove('is-visible');
       linkElement.classList.remove('is-visible');
       siteTtl.classList.remove('changeFntColor');
+      siteTtl.classList.remove('openScrolled');
       hdTtl.classList.remove('initial');
       reserveBox.classList.remove('is-visible');
       tgl1.classList.remove('changeColor');
@@ -194,6 +196,7 @@ function fadeAnime(){
     let scroll = $(window).scrollTop();
     let itemHeight = $(window).height();
     let child = $(this).children();
+
 
     if(scroll >= elemPos - itemHeight && !$(parent).hasClass("play")) {
       $(child).each(function() {

@@ -149,6 +149,10 @@
   transform: translateX(0);
 }
 
+.l-header__wrap.open > .l-header__siteTtl.openScrolled {
+  background-color: rgba(0, 0, 0, 0);
+}
+
 /* fadeIn and fadeOut for fv */
 .fade-out {
   opacity: 0;

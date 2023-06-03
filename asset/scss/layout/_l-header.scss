@@ -45,12 +45,13 @@
     opacity: 0;
 
     @include mq-down(lg) {
-      opacity: 1;
+      opacity: 0;
       top: 2.5rem;
       color: #fff;
     }
 
     @include mq-down() {
+      opacity: 1;
       top: 1.5rem;
       left: 1.5rem;
     }
@@ -93,13 +94,13 @@
     opacity: 0;
 
     @include mq-down(lg) {
-      top: -2.5rem;
-      right: -45rem;
+      top:0;
+      right: 10rem;
     }
 
     @include mq-down() {
-      top: -1rem;
-      right: -8.5rem;
+      top: 0;
+      right: 6rem;
 
       opacity: 0;
     }
