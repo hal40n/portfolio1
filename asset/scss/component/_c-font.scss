@@ -9,7 +9,7 @@
       color: map-get($colors, "c-navy");
       font-size: 5rem;
 
-      @include mq-down() {
+      @include mq-down(lg) {
         font-size: 4rem;
       }
 
@@ -18,6 +18,10 @@
     &Txt {
       color: $sub-title;
       //margin-top: 1rem;
+
+      @include mq-down(lg) {
+        font-size: 1.5rem;
+      }
 
       @include mq-down() {
         font-size: 2rem;
@@ -33,7 +37,7 @@
       letter-spacing: .25rem;
       color: $default-color;
 
-      @include mq-down() {
+      @include mq-down(lg) {
         font-size: 2.5rem;
       }
     }
@@ -43,7 +47,7 @@
       line-height: 2;
       font-size: 1.35rem;
 
-      @include mq-down() {
+      @include mq-down(lg) {
         font-size: 1.5rem;
       }
     }

@@ -7,6 +7,10 @@
   background-size: cover;
   position: relative;
 
+  @include mq-down(lg) {
+    margin-bottom: 25rem;
+  }
+
   @include mq-down() {
     height: auto;
   }
@@ -27,6 +31,11 @@
     z-index: 2;
     display: block;
 
+    @include mq-down(lg) {
+      height: 20rem;
+      bottom: -27.5rem;
+    }
+
     @include mq-down() {
       bottom: -10rem;
     }
@@ -43,8 +52,16 @@
     display: block;
     overflow: hidden;
 
+    @include mq-down(lg) {
+      height: 45rem;
+      padding-top: 60rem;
+      background: url(../../../asset/img/illust2-ftr_bg.jpg)  -7rem top no-repeat;
+      background-size: 100rem auto;
+    }
+
     @include mq-down() {
       height: 45rem;
+      padding-top: 0;
       background: url(../../../asset/img/illust2-ftr_bg.jpg)  -7rem top no-repeat;
       background-size: 73rem auto;
     }

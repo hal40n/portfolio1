@@ -18,6 +18,11 @@
     max-width: 1400px;
     position: relative;
 
+    @include mq-down(lg) {
+      width: 85%;
+      max-width: 85%;
+    }
+
     @include mq-down() {
       width: 100%;
       margin-top: 9rem;
@@ -60,10 +65,16 @@
       justify-content: space-between;
       align-items: flex-end;
       padding-left: 11rem;
+
       @include mq-down(lg) {
         flex-wrap: wrap;
 
         padding-left: 0;
+        margin-top: 5rem;
+      }
+
+      @include mq-down() {
+        margin-top: 0;
       }
 
       &Pic {
@@ -90,17 +101,19 @@
           content: "Play and laugh a lot in the great nature of the Miura Peninsula";
 
           @include mq-down(lg) {
-            top: -5rem;
+            top: -4rem;
             right: 1rem;
             bottom: inherit;
             left: inherit;
 
+            font-size: 2rem;
             text-align: right;
             white-space: pre;
 
             content: "Play and laugh\a a lot in the great nature\aof the Miura Peninsula.";
           }
           @include mq-down() {
+            top: -5rem;
             font-size: 1.25rem;
           }
         }
@@ -112,10 +125,13 @@
         width: 70%;
 
         padding-left: 6%;
+
         @include  mq-down(lg) {
           width: 100%;
           padding: 0;
+          margin-top: 5rem;
         }
+
         @include  mq-down() {
           margin-top: 10rem;
         }
@@ -146,7 +162,8 @@
 
       &Top {
         justify-content: space-between;
-        @include mq-down() {
+
+        @include mq-down(lg) {
           flex-wrap: wrap;
         }
       }
@@ -160,6 +177,7 @@
 
         @include mq-down(lg) {
           width: 100%;
+          max-width: 100%;
           order: 2;
           padding: 5rem 0 0 0;
         }
@@ -201,6 +219,7 @@
 
           @include mq-down(lg) {
             position: relative;
+            top: 0;
             right: 0;
             z-index: 2;
 
@@ -234,7 +253,7 @@
               top: 0;
               right: 110%;
 
-              margin-top: 30rem;
+              margin-top: 20rem;
             }
             @include mq-down() {
               top: -10rem;
@@ -273,7 +292,7 @@
 
     margin-top: 20rem;
     @include mq-down(lg) {
-      margin-top: 15rem;
+      padding-top: 5rem;
     }
     @include mq-down() {
       margin-top: 10rem;

@@ -14,6 +14,11 @@
   &__conts {
     justify-content: space-between;
     margin-top: 7rem;
+    display: flex;
+
+    @include mq-down(lg) {
+      display: block;
+    }
 
     @include mq-down() {
       margin-top: 20rem;
@@ -36,11 +41,15 @@
   }
 
   &__cont {
-      width: 70%;
+      max-width: 70%;
 
-      @include mq-down() {
+      @include mq-down(lg) {
         width: 100%;
         margin-top: 5rem;
+      }
+
+      @include mq-down() {
+        max-width: 100%;
       }
 
       &--txt {

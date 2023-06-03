@@ -129,9 +129,16 @@
   opacity: 1;
 }
 
-.l-header__wrap.open .l-header__siteTtl {
-  opacity: 1 !important;
-  z-index: 1000;
+.l-header__wrap.open {
+
+  & .l-header__siteTtl {
+    opacity: 1 !important;
+    z-index: 1000;
+
+    & .l-header__reserve {
+      opacity: 0;
+    }
+  }
 }
 
 .l-header__menu.open {

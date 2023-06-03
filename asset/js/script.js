@@ -129,9 +129,9 @@ $(function() {
     infinite: true,
     responsive: [
       {
-          breakpoint: 999,
+          breakpoint: 950,
           settings: {
-            slidesToShow: 1,
+            slidesToShow: 3,
             slidesToScroll: 1,
           },
         },
@@ -158,16 +158,17 @@ $(function() {
     appendArrows: $('.selects'),
     pauseOnHover: true,
     arrows: true,
-    dots:true,
+    dots: true,
     dotsClass: 'pagination c-flex',
     autoplaySpeed: 10000,
     infinite: true,
     responsive: [
       {
-          breakpoint: 999,
+          breakpoint: 950,
           settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            dots:false,
           },
         },
         {
