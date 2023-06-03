@@ -40,38 +40,37 @@
               <span class="defaultColor"></span>
             </div><!-- l-header__toggle--box -->
           </div><!-- l-header__toggle -->
-        </div>
-      </div>
-      <div class="l-header__menu">
-        <div class="l-header__menu--contents">
-          <div class="l-header__menu--ttl">
-            <p>夫婦で営む手づくりのお宿</p>
-            <h2>bed&breakfast ichi</h2>
-          </div><!-- l-header__menu--title -->
-          <nav class="l-header__menu--nav">
-            <ul class="l-header__menu--list">
-              <li class="l-header__menu--content"><a href="#">ホーム</a></li>
-              <li class="l-header__menu--content"><a href="#">ichiの1日とお宿のすべて</a></li>
-              <li class="l-header__menu--content"><a href="#">宿からのお知らせ</a></li>
-              <li class="l-header__menu--content"><a href="#">体験ツアー</a></li>
-              <il class="l-header__menu--content reserve"><a href="#">ご予約・お問合せ</a></il>
-            </ul><!-- l-header__menu--list -->
-            <div class="l-header__sns">
-              <ul class="c-flex">
-                <li class="l-header__sns--insta fa-brands fa-instagram c-icon"></li>
-                <li class="fa-brands fa-facebook c-icon"></li>
-                <li class="fa-brands fa-twitter c-icon"></li>
-              </ul>
-            </div><!-- l-header__menu--sns -->
-            <div class="l-header__contact">
-              <h3>TEL. 0468-87-0574</h3>
-              <h3>ADDRESS</h3>
-              <p>〒238-0243 神奈川県三浦市三崎1−15−4</p>
-            </div><!-- l-header__menu--contact-->
-          </nav><!-- l-header__menu--nav -->
-        </div><!-- l-header__menu--contents -->
-      </div><!-- l-header__menu -->
-
+          <div class="l-header__menu">
+            <div class="l-header__menu--contents">
+              <div class="l-header__menu--ttl">
+                <p>夫婦で営む手づくりのお宿</p>
+                <h2>bed&breakfast ichi</h2>
+              </div><!-- l-header__menu--title -->
+              <nav class="l-header__menu--nav">
+                <ul class="l-header__menu--list">
+                  <li class="l-header__menu--content"><a href="#">ホーム</a></li>
+                  <li class="l-header__menu--content"><a href="#">ichiの1日とお宿のすべて</a></li>
+                  <li class="l-header__menu--content"><a href="#">宿からのお知らせ</a></li>
+                  <li class="l-header__menu--content"><a href="#">体験ツアー</a></li>
+                  <il class="l-header__menu--content reserve"><a href="#">ご予約・お問合せ</a></il>
+                </ul><!-- l-header__menu--list -->
+                <div class="l-header__sns">
+                  <ul class="c-flex">
+                    <li class="l-header__sns--insta fa-brands fa-instagram c-icon"></li>
+                    <li class="fa-brands fa-facebook c-icon"></li>
+                    <li class="fa-brands fa-twitter c-icon"></li>
+                  </ul>
+                </div><!-- l-header__menu--sns -->
+                <div class="l-header__contact">
+                  <h3>TEL. 0468-87-0574</h3>
+                  <h3>ADDRESS</h3>
+                  <p>〒238-0243 神奈川県三浦市三崎1−15−4</p>
+                </div><!-- l-header__menu--contact-->
+              </nav><!-- l-header__menu--nav -->
+            </div><!-- l-header__menu--contents -->
+          </div><!-- l-header__menu -->
+        </div><!-- l-header__wrap -->
+      </div><!-- l-header__wrapper-->
       <!-- Main Contents -->
       <div class="l-header__ttl fadeDown_onLoad">
         <p class="l-header__ttl--txt">夫婦で営む手づくりのお宿</p>
@@ -100,11 +99,11 @@
     </header><!-- l-header -->
     <main class="l-main elm">
       <div class="p-concept">
-        <div class="p-concept__sec1 fadeUpTrigger c-flex"></div>
-            <h1 class="p-concept__sec1--ttlCont c-flex">
-              <span  class="c-font__secTtl">CONCEPT</span>
-              <span class="c-font__secTxt">コンセプト</span>
-            </h1>
+        <div class="p-concept__sec1 fadeUpTrigger">
+          <h2 class="p-concept__sec1--ttlCont">
+            <span  class="c-font__secTtl">CONCEPT</span>
+            <span class="c-font__secTxt">コンセプト</span>
+          </h2>
           <div class="p-concept__sec1--cont c-flex">
             <div class="p-concept__sec1--contPic">
               <img src="asset/img/concept1.jpg">
@@ -174,8 +173,8 @@
             <p>過去のお知らせ一覧</p>
           </div><!-- p-news__ttl--notice -->
         </div><!-- p-news__ttl -->
-        <p class="p-news__txt u-margin__top7">宿からのお知らせです。イベント情報、季節のお便りなど随時お届けします</p>
-        <div class="p-news__conts c-flex u-margin__top7 autoplay">
+        <p class="p-news__txt">宿からのお知らせです。イベント情報、季節のお便りなど随時お届けします</p>
+        <div class="p-news__conts c-flex autoplay__news">
           <div class="p-news__cont">
             <div class="p-news__cont--img">
               <img src="asset/img/news1.jpg">
@@ -201,9 +200,7 @@
             <p class="p-news__cont--date u-margin__top3">2022.07.21</p>
           </div><!-- p-news__cont -->
         </div><!-- p-news__conts -->
-        <div class="p-news__selects c-flex">
-          <div class="p-news__selects--arrow c-flex">
-          </div><!-- p-news__selects -->
+        <div id="select" class="news--selects c-flex">
         </div>
       </div><!-- p-news -->
       <div class="p-tour">
@@ -216,7 +213,7 @@
             <p class="p-tour__txt u-margin__top7">ichiで提供している「体験ツアー」を詳しい記事にしました。検討中の方はぜひ参考にして</p>
             <div class="p-tour__article u-margin__top7">
               <div class="p-tour__slider-container">
-                <ul class="p-tour__slides c-flex autoplay_news">
+                <ul class="p-tour__slides c-flex autoplay__tour">
                   <li class="p-tour__slide">
                     <div class="p-tour__slide--img">
                       <img src="asset/img/tour1.jpg" alt="Slide Image 1">
@@ -258,9 +255,9 @@
                     </div>
                   </li>
                 </ul><!-- p-tour__slides -->
-                <div class="p-tour__select--contents c-flex">
-                  <div class="p-tour__selects c-flex">
-                  </div><!-- p-tour__selects -->
+                <div class="select--contents c-flex">
+                  <div id="select" class="selects c-flex">
+                  </div><!-- selects -->
                 </div>
               </div><!-- p-tour__slider--container -->
             </div><!-- p-tour__article -->

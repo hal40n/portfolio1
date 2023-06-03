@@ -3,9 +3,13 @@
 .p-illust {
   width: 100%;
   height: 90vh;
-  background-image: url("../asset.img/illust1_sp.png") top center no-repeat;
+  background: url("../asset.img/illust1_sp.png") top center no-repeat;
   background-size: cover;
   position: relative;
+
+  @include mq-down() {
+    height: auto;
+  }
 
   & img {
     height: auto;
@@ -24,7 +28,7 @@
     display: block;
 
     @include mq-down() {
-      bottom: -15rem;
+      bottom: -10rem;
     }
   }
 

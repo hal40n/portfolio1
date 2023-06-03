@@ -2,7 +2,7 @@
 
 .p-news {
   @include mq-down() {
-    margin-top: 9rem;
+    margin-top: 5rem;
   }
 
   &__ttl {
@@ -53,15 +53,22 @@
 
   &__txt {
     font-size: 1.25rem;
+    margin-top: 7rem;
 
     @include mq-down() {
+      margin-top: 3rem;
       font-size: 1.35rem;
     }
   }
 
   &__conts {
+    margin-top: 7ren;
     justify-content: space-between;
     gap: 5rem;
+
+    @include mq-down() {
+      margin-top: 3rem;
+    }
   }
 
   &__cont {
