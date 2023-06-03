@@ -47,7 +47,6 @@
       content: "";
       background: url(../../../asset/img/li_bwave_wt2.svg) top center no-repeat;
       background-size: cover;
-      z-index: 1;
       display: block;
 
       @include mq-down {

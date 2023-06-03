@@ -125,7 +125,6 @@
 /* メニュ―表示 */
 
 .open  {
-  overflow: hidden;
   opacity: 1;
 }
 
@@ -134,6 +133,7 @@
   & .l-header__siteTtl {
     opacity: 1 !important;
     z-index: 1000;
+    color: #fff;
 
     & .l-header__reserve {
       opacity: 0;
@@ -174,6 +174,7 @@
   animation-duration: 1s;
   animation-fill-mode: forwards;
 }
+
 
 @keyframes fadeUpAnime {
   from {

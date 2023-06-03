@@ -102,13 +102,13 @@
 
 /* メニュ―表示 */
 .open {
-  overflow: hidden;
   opacity: 1;
 }
 
 .l-header__wrap.open .l-header__siteTtl {
   opacity: 1 !important;
   z-index: 1000;
+  color: #fff;
 }
 .l-header__wrap.open .l-header__siteTtl .l-header__reserve {
   opacity: 0;
@@ -897,10 +897,11 @@ th {
   z-index: 1000;
   position: absolute;
   transition: all 0.5s;
+  opacity: 0;
 }
 @media screen and (max-width: 950px) {
   .l-header__siteTtl {
-    opacity: 0;
+    opacity: 1;
     top: 2.5rem;
     color: #fff;
   }
@@ -944,6 +945,7 @@ th {
   right: 0;
   position: absolute;
   z-index: 1000;
+  opacity: 0;
 }
 @media screen and (max-width: 950px) {
   .l-header__reserve {
@@ -1022,7 +1024,7 @@ th {
   opacity: 1;
   position: absolute;
   top: 3rem;
-  right: 3rem;
+  right: 5rem;
   z-index: 1000;
 }
 @media screen and (max-width: 950px) {
@@ -1130,7 +1132,7 @@ th {
 }
 .l-header__menu--contents {
   width: 100%;
-  height: 100vh;
+  height: 10%;
   margin: 0 auto;
   text-align: left;
   max-width: calc(98rem + 12%);
@@ -1145,14 +1147,14 @@ th {
   .l-header__menu--contents {
     display: block;
     min-width: 100%;
-    margin-top: 10rem;
+    padding-top: 0;
+    margin-top: 0;
     padding-right: 50%;
   }
 }
 @media screen and (max-width: 767px) {
   .l-header__menu--contents {
-    padding-top: 5rem;
-    padding-bottom: 10rem;
+    padding-bottom: 0;
     padding-right: 0;
   }
 }
@@ -1185,9 +1187,16 @@ th {
     font-size: 4.5rem;
   }
 }
-@media screen and (max-width: 767px) {
+.l-header__menu--nav {
+  width: 50%;
+  margin-top: 10rem;
+  padding-bottom: 10rem;
+}
+@media screen and (max-width: 950px) {
   .l-header__menu--nav {
     height: auto;
+    width: 100%;
+    margin-top: 0;
     padding-top: 2rem;
   }
 }
@@ -1203,8 +1212,9 @@ th {
 .l-header__menu--content {
   display: inline-block;
   width: 100%;
-  margin-top: 1.5rem;
+  margin-top: 5rem;
   padding-bottom: 0.5rem;
+  font-size: 1.6rem;
 }
 @media screen and (max-width: 950px) {
   .l-header__menu--content {
@@ -1461,11 +1471,17 @@ th {
     background-color: white;
   }
 }
+.l-header__wrap.is-visible .l-header__siteTtl {
+  opacity: 1;
+}
 @media screen and (max-width: 950px) {
   .l-header__wrap.is-visible .l-header__siteTtl {
     background-color: white;
     opacity: 1;
   }
+}
+.l-header__wrap.is-visible .l-header__reserve {
+  opacity: 1;
 }
 
 .is-hidden {
@@ -1637,7 +1653,7 @@ th {
 }
 @media screen and (max-width: 950px) {
   .c-font__contTtl {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 }
 .c-font__contTxt {
@@ -1919,7 +1935,7 @@ th {
   position: absolute;
   color: #1b2f5b;
   font-family: "Caveat", cursive;
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   margin-top: 1rem;
   content: "Play and laugh a lot in the great nature of the Miura Peninsula";
 }
@@ -1987,8 +2003,8 @@ th {
   }
 }
 .p-concept__sec2--contTxt {
-  max-width: 50rem;
-  width: 70%;
+  max-width: 65rem;
+  width: 75%;
   padding-left: 10rem;
   padding-right: 10rem;
   line-height: 3.5rem;
@@ -2029,7 +2045,7 @@ th {
 }
 .p-concept__sec2--contPic2 {
   position: absolute;
-  top: 25rem;
+  top: 30rem;
   right: 30%;
   width: 45%;
 }
@@ -2052,7 +2068,7 @@ th {
 .p-concept__sec2--contPic2::after {
   display: block;
   position: absolute;
-  top: -5rem;
+  top: 10rem;
   right: -7rem;
   transform: rotate(90deg);
   color: #1b2f5b;
@@ -2082,11 +2098,13 @@ th {
 .p-concept__sec2--contBtm {
   width: 50%;
   margin-top: 20rem;
+  padding: 0 7.5rem;
 }
 @media screen and (max-width: 950px) {
   .p-concept__sec2--contBtm {
     width: 100%;
     margin-left: 0;
+    padding: 0;
   }
 }
 @media screen and (max-width: 767px) {
@@ -2118,7 +2136,7 @@ th {
 }
 @media screen and (max-width: 767px) {
   .p-concept__sec3--ttl {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 }
 .p-concept__sec3--sp {
@@ -2135,7 +2153,7 @@ th {
 }
 @media screen and (max-width: 767px) {
   .p-concept__sec3--txt {
-    font-size: 1.35rem;
+    font-size: 1.25rem;
   }
 }
 .p-concept__sec3--detail {
@@ -2187,7 +2205,7 @@ th {
   }
 }
 .p-news__ttl p {
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 @media screen and (max-width: 950px) {
   .p-news__ttl p {
@@ -2209,6 +2227,7 @@ th {
 .p-news__ttl--notice p::after {
   padding: 0.25rem;
   border-radius: 1.2rem;
+  font-size: 2.5rem;
   background-color: #1b2f5b;
   color: #ffffff;
   font-size: 0.05rem;
@@ -2231,9 +2250,8 @@ th {
   }
 }
 .p-news__conts {
-  margin-top: 7ren;
-  justify-content: space-between;
-  gap: 5rem;
+  margin-top: 7rem;
+  justify-content: space-around;
 }
 @media screen and (max-width: 950px) {
   .p-news__conts {
@@ -2249,7 +2267,10 @@ th {
 .p-news__cont {
   display: block;
   position: relative;
-  width: 100%;
+  flex: 1;
+  width: 33%;
+  max-width: 30rem;
+  margin: 0 2%;
   border-bottom: 1px solid rgba(154, 159, 167, 0.3);
 }
 @media screen and (max-width: 950px) {
@@ -2321,15 +2342,10 @@ th {
 
 .p-illust {
   width: 100%;
-  height: 90vh;
+  height: auto;
   background: url("../asset.img/illust1_sp.png") top center no-repeat;
   background-size: cover;
   position: relative;
-}
-@media screen and (max-width: 950px) {
-  .p-illust {
-    margin-bottom: 25rem;
-  }
 }
 @media screen and (max-width: 767px) {
   .p-illust {
@@ -2351,12 +2367,6 @@ th {
   z-index: 2;
   display: block;
 }
-@media screen and (max-width: 950px) {
-  .p-illust::after {
-    height: 20rem;
-    bottom: -27.5rem;
-  }
-}
 @media screen and (max-width: 767px) {
   .p-illust::after {
     bottom: -10rem;
@@ -2368,6 +2378,7 @@ th {
   height: 0;
   padding-top: 60%;
   background: url(../../../asset/img/illust2-ftr_bg.jpg) bottom left no-repeat;
+  background-size: cover;
   position: relative;
   z-index: -1;
   display: block;
@@ -2469,7 +2480,6 @@ th {
   content: "";
   background: url(../../../asset/img/li_bwave_wt2.svg) top center no-repeat;
   background-size: cover;
-  z-index: 1;
   display: block;
 }
 @media screen and (max-width: 767px) {

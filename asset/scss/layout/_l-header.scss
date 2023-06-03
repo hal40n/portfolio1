@@ -42,9 +42,10 @@
     position: absolute;
 
     transition: all 0.5s;
+    opacity: 0;
 
     @include mq-down(lg) {
-      opacity: 0;
+      opacity: 1;
       top: 2.5rem;
       color: #fff;
     }
@@ -89,6 +90,7 @@
     right: 0;
     position: absolute;
     z-index: 1000;
+    opacity: 0;
 
     @include mq-down(lg) {
       top: -2.5rem;
@@ -175,7 +177,7 @@
     opacity: 1;
     position: absolute;
     top: 3rem;
-    right: 3rem;
+    right: 5rem;
     z-index: 1000;
 
     @include mq-down(lg) {
@@ -309,7 +311,7 @@
 
     &--contents {
       width: 100%;
-      height: 100vh;
+      height: 10%;
       margin: 0 auto;
 
       text-align: left;
@@ -326,13 +328,13 @@
       @include mq-down(lg) {
         display: block;
         min-width: 100%;
-        margin-top: 10rem;
+        padding-top: 0;
+        margin-top: 0;
         padding-right: 50%;
       }
 
       @include mq-down() {
-        padding-top: 5rem;
-        padding-bottom: 10rem;
+        padding-bottom: 0;
         padding-right: 0;
       }
     }
@@ -370,9 +372,15 @@
     }
 
     &--nav {
-      @include mq-down() {
-        height: auto;
 
+      width: 50%;
+      margin-top: 10rem;
+      padding-bottom: 10rem;
+
+      @include mq-down(lg) {
+        height: auto;
+        width: 100%;
+        margin-top: 0;
         padding-top: 2rem;
       }
     }
@@ -391,8 +399,10 @@
       display: inline-block;
 
       width: 100%;
-      margin-top: 1.5rem;
+      margin-top: 5rem;
       padding-bottom: 0.5rem;
+
+      font-size: 1.6rem;
 
       @include mq-down(lg) {
         margin-top: 5rem;
@@ -694,10 +704,16 @@
 
   & .l-header__siteTtl {
 
+    opacity: 1;
+
     @include mq-down(lg) {
       background-color: white;
       opacity: 1;
     }
+  }
+
+  & .l-header__reserve {
+    opacity: 1;
   }
 }
 
