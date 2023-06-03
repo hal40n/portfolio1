@@ -66,13 +66,15 @@ window.addEventListener('scroll', function() {
   let scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
 
   let elmElements = document.querySelectorAll('.elm');
-  const reserveElement = document.querySelector('.l-header__siteTtl');
+  const reserveElement = document.querySelector('.l-header__wrap');
   const linkElement = document.querySelector('.l-footer__pageTop');
+  const siteTtl = document.querySelector('.l-header__siteTtl');
   const hdTtl = document.querySelector('.l-header__ttl');
+  const reserveBox = document.querySelector('.l-header__reserve');
   const tglMenu = document.querySelector('.l-header__toggle--box');
-  const tgl1 = document.querySelector('.l-header__toggle--bar');
-  const tgl2 = document.querySelector('.l-header__toggle--bar:nth-child(2)');
-  const tgl3 = document.querySelector('.l-header__toggle--bar:nth-child(3)');
+  const tgl1 = document.querySelector('.l-header__toggle--box span');
+  const tgl2 = document.querySelector('.l-header__toggle--box span:nth-child(2)');
+  const tgl3 = document.querySelector('.l-header__toggle--box span:nth-child(3)');
 
   elmElements.forEach(function(elm) {
     let elementOffset = elm.offsetTop;
@@ -81,6 +83,8 @@ window.addEventListener('scroll', function() {
       reserveElement.classList.add('is-visible');
       linkElement.classList.add('is-visible');
       hdTtl.classList.add('initial');
+      siteTtl.classList.add('changeFntColor');
+      reserveBox.classList.add('is-visible');
       tgl1.classList.add('changeColor');
       tgl2.classList.add('changeColor');
       tgl3.classList.add('changeColor');
@@ -88,7 +92,9 @@ window.addEventListener('scroll', function() {
     } else {
       reserveElement.classList.remove('is-visible');
       linkElement.classList.remove('is-visible');
+      siteTtl.classList.remove('changeFntColor');
       hdTtl.classList.remove('initial');
+      reserveBox.classList.remove('is-visible');
       tgl1.classList.remove('changeColor');
       tgl2.classList.remove('changeColor');
       tgl3.classList.remove('changeColor');
@@ -101,33 +107,68 @@ window.addEventListener('scroll', function() {
 $(function() {
   $('#toggle').on('click', function() {
     $('#toggle').toggleClass('active');
+    $('.l-header__wrap').toggleClass('open');
     $('.l-header__menu').toggleClass('open');
   });
 });
 
-
-
-/* slider of tour contents */
+/* slider of news contents */
 $(function() {
-  $('.autoplay').slick({
+  $('.autoplay__news').slick({
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
-    prevArrow:'<a class="prev"><span class="p-tour__selects--prev">＜</span></a>',
-    nextArrow:'<a class="next"><span class="p-tour__selects--next">＞</span></a>',
-    appendArrows: $('.p-tour__selects'),
+    prevArrow:'<a class="prev"><span class="selects--prev">＜</span></a>',
+    nextArrow:'<a class="next"><span class="selects--next">＞</span></a>',
+    appendArrows: $('.news--selects'),
     pauseOnHover: true,
     arrows: true,
     dots:true,
-    dotsClass: 'p-tour__pagination c-flex',
+    dotsClass: 'pagination c-flex',
     autoplaySpeed: 10000,
     infinite: true,
     responsive: [
       {
-          breakpoint: 999,
+          breakpoint: 950,
           settings: {
-            slidesToShow: 1,
+            slidesToShow: 3,
             slidesToScroll: 1,
+          },
+        },
+        {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  });
+})
+
+
+/* slider of tour contents */
+$(function() {
+  $('.autoplay__tour').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    prevArrow:'<a class="prev"><span class="selects--prev">＜</span></a>',
+    nextArrow:'<a class="next"><span class="selects--next">＞</span></a>',
+    appendArrows: $('.selects'),
+    pauseOnHover: true,
+    arrows: true,
+    dots: true,
+    dotsClass: 'pagination c-flex',
+    autoplaySpeed: 10000,
+    infinite: true,
+    responsive: [
+      {
+          breakpoint: 950,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            dots:false,
           },
         },
         {
@@ -182,17 +223,6 @@ function fadeAnime(){
       }
     });
   });
-
-  /*$('.fadeDownTrigger').each(function(){
-    let elemPos = $(this).offset().top-50;
-    let scroll = $(window).scrollTop();
-    let itemHeight = $(window).height;
-    if(scroll >= elemPos - itemHeight){
-      $(this).addClass('fade-down');
-    } else {
-      $(this).removeClass('fade-down');
-    }
-  }) */
 }
 
 $(window).on('scroll', function(){

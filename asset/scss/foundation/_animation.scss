@@ -109,7 +109,7 @@
 
   &::after {
     position: absolute;
-    top: 2rem;
+    top: 3rem;
 
     color: #fff !important;
 
@@ -125,7 +125,20 @@
 /* メニュ―表示 */
 
 .open  {
-  overflow: hidden;
+  opacity: 1;
+}
+
+.l-header__wrap.open {
+
+  & .l-header__siteTtl {
+    opacity: 1 !important;
+    z-index: 1000;
+    color: #fff;
+
+    & .l-header__reserve {
+      opacity: 0;
+    }
+  }
 }
 
 .l-header__menu.open {
@@ -161,6 +174,7 @@
   animation-duration: 1s;
   animation-fill-mode: forwards;
 }
+
 
 @keyframes fadeUpAnime {
   from {

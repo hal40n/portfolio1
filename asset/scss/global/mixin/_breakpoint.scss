@@ -3,7 +3,7 @@
 $breakpoint-up: (
   'sm': 'screen and (min-width: 400px)',
   'md': 'screen and (min-width: 768px)',
-  'lg': 'screen and (min-width: 1000px)',
+  'lg': 'screen and (min-width: 951px)',
   'xl': 'screen and (min-width: 1200px)',
 ) !default;
 
@@ -11,7 +11,7 @@ $breakpoint-up: (
 $breakpoint-down: (
   'sm': 'screen and (max-width: 399px)',
   'md': 'screen and (max-width: 767px)',
-  'lg': 'screen and (max-width: 999px)',
+  'lg': 'screen and (max-width: 950px)',
   'xl': 'screen and (max-width: 1199px)',
 ) !default;
 
