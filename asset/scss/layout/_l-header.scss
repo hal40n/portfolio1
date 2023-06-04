@@ -352,6 +352,18 @@
         position: fixed;
       }
 
+      &::after {
+        width: 7rem;
+        height: 7.5rem;
+        background: url(../../../asset/img/il_seagull_wt.svg) 0 0 no-repeat;
+        background-size: auto 100%;
+        display: block;
+        content: "";
+        position: absolute;
+        bottom: 15rem;
+        left: 10rem;
+      }
+
       & p {
         font-size: 1.5rem;
 
@@ -381,8 +393,12 @@
       @include mq-down(lg) {
         height: auto;
         width: 100%;
-        margin-top: 0;
+        margin-top: -25rem;
         padding-top: 2rem;
+      }
+
+      @include mq-down() {
+        margin-top: -12rem;
       }
     }
 
@@ -410,12 +426,16 @@
       }
 
       @include mq-down() {
-        margin-top: 3rem;
+        margin-top: 1rem;
       }
 
       & a {
         @include mq-down(lg) {
           font-size: 2rem;
+        }
+
+        @include mq-down() {
+          font-size: 1.5rem;
         }
       }
 
@@ -473,9 +493,28 @@
 
   &__contact {
 
+    &::after {
+      @include mq-down() {
+        width: 4rem;
+        height: 5rem;
+        background: url(../../../asset/img/il_seagull_wt.svg) 0 0 no-repeat;
+        background-size: auto 100%;
+        display: block;
+        content: "";
+        position: absolute;
+        bottom: -22rem;
+        right: 3.5rem;
+        transform: scale(-1, 1);
+      }
+    }
+
     & h3 {
       margin-top: 50px;
       font-size: 2rem;
+
+      @include mq-down() {
+        font-size: 1.5rem;
+      }
     }
 
     & p {
@@ -484,6 +523,11 @@
 
       @include mq-down(lg) {
         font-size: 1.5rem;
+      }
+
+      @include mq-down() {
+        margin-top: 1rem;
+        font-size: 1.2rem;
       }
     }
   }
