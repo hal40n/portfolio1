@@ -11,5 +11,6 @@
 
   @include mq-down() {
     padding-top: 7px;
+    border-radius: 2rem;
   }
 }
