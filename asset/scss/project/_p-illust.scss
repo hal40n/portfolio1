@@ -115,7 +115,7 @@
 
         @include mq-down(){
           height: 5%;
-          top: 6%;
+          top: 10%;
         }
       }
 
@@ -130,6 +130,7 @@
         left: 20%;
         z-index: 2;
         display: block;
+        animation: fadeUpBubble 2s infinite;
 
         @include mq-down() {
           height: 3.5%;
@@ -139,3 +140,4 @@
     }
   }
 }
+

@@ -215,3 +215,74 @@
   }
 }
 
+
+// moving fish and lure //
+
+.moveFish {
+  animation-name: moveFish;
+  animation-duration: 5s;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes moveFish {
+  0%, 100% {
+    transform: translateX(3rem) translateY(-2rem);
+  } 50% {
+    transform: translateX(2rem) translateY(2rem);
+  } 70% {
+    transform: translateX(1rem) translateY(0);
+  }
+}
+
+.moveLure {
+  animation-name: moveLure;
+  animation-duration: 5s;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes moveLure {
+  0%, 100% {
+    transform: translateX(0);
+  } 50% {
+    transform: translateX(3rem);
+  } 60% {
+    transform: translateX(2rem);
+  } 70% {
+    transform: translateX(3rem);
+  } 80% {
+    transform :translateX(4rem)
+  }
+}
+
+.fadeUpBubble {
+  animation-name: fadeUpBubble;
+  animation-duration: 3s;
+  animation-timing-function: ease;
+  animation-delay: 0;
+  animation-iteration-count: infinite;
+}
+
+@keyframes fadeUpBubble {
+  0% {
+    top: 10%;
+    @include mq-down() {
+      height: 0.5%;
+      width: 0.5%;
+      top: 20%;
+    }
+  } 70% {
+    opacity: 0.3;
+  } 100% {
+    top: -3%;
+    opacity: 0;
+    @include mq-down() {
+      height: 3%;
+      width: 3%;
+      top: 10%;
+    }
+  }
+}
