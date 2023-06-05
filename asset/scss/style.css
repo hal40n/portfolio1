@@ -174,6 +174,80 @@
     transform: translateY(0);
   }
 }
+.moveFish {
+  animation-name: moveFish;
+  animation-duration: 5s;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes moveFish {
+  0%, 100% {
+    transform: translateX(3rem) translateY(-2rem);
+  }
+  50% {
+    transform: translateX(2rem) translateY(2rem);
+  }
+  70% {
+    transform: translateX(1rem) translateY(0);
+  }
+}
+.moveLure {
+  animation-name: moveLure;
+  animation-duration: 5s;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes moveLure {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(3rem);
+  }
+  60% {
+    transform: translateX(2rem);
+  }
+  70% {
+    transform: translateX(3rem);
+  }
+  80% {
+    transform: translateX(4rem);
+  }
+}
+.fadeUpBubble {
+  animation-name: fadeUpBubble;
+  animation-duration: 3s;
+  animation-timing-function: ease;
+  animation-delay: 0;
+  animation-iteration-count: infinite;
+}
+
+@keyframes fadeUpBubble {
+  0% {
+    top: 10%;
+    @media screen and (max-width: 767px) {
+      height: 0.5%;
+      width: 0.5%;
+      top: 20%;
+    }
+  }
+  70% {
+    opacity: 0.3;
+  }
+  100% {
+    top: -3%;
+    opacity: 0;
+    @media screen and (max-width: 767px) {
+      height: 3%;
+      width: 3%;
+      top: 10%;
+    }
+  }
+}
 /* base */
 *,
 *:before,
@@ -653,7 +727,7 @@ th {
     height: 35rem;
     background: url(../../../asset/img/li_bwave.svg) 0 0 no-repeat;
     background-size: 100% auto;
-    top: -8rem;
+    top: -10rem;
     left: -1%;
   }
 }
@@ -2577,7 +2651,7 @@ th {
 @media screen and (max-width: 767px) {
   .p-illust2__fish::before {
     height: 5%;
-    top: 6%;
+    top: 10%;
   }
 }
 .p-illust2__fish::after {
@@ -2591,6 +2665,7 @@ th {
   left: 20%;
   z-index: 2;
   display: block;
+  animation: fadeUpBubble 2s infinite;
 }
 @media screen and (max-width: 767px) {
   .p-illust2__fish::after {
