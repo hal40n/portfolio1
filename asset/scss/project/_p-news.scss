@@ -74,7 +74,9 @@
 
   &__conts {
     margin-top: 7rem;
-    justify-content: space-around;
+    justify-content: flex-start;
+    margin-left: -2%;
+    margin-right: -2%;
 
 
     @include mq-down(lg) {
@@ -88,22 +90,29 @@
   }
 
   &__cont {
+
     display: block;
 
     position: relative;
 
-    flex: 1;
-
-    width: 33%;
-    max-width: 30rem;
     margin: 0 2%;
 
     border-bottom: 1px solid rgb(154, 159, 167, 0.3);
 
+
+    &:nth-child(3) {
+      margin-right: 0;
+    }
+
     @include mq-down(lg) {
       width: 33%;
       max-width: 30rem;
-      margin: 0px 2%;
+      margin: 0 2%;
+    }
+
+    @include mq-down() {
+      max-width:100%;
+      margin: 0 2rem;
     }
 
 
@@ -153,7 +162,7 @@
       color: $default-color;
 
       @include mq-down(){
-        font-size: 2rem;
+        font-size: 1.5rem;
       }
     }
 
@@ -163,7 +172,7 @@
       letter-spacing: 1.5px;
 
       @include mq-down(){
-        font-size: 1.5rem;
+        font-size: 1.3rem;
       }
     }
 
