@@ -2480,13 +2480,13 @@ th {
   .p-news__cont {
     width: 33%;
     max-width: 30rem;
-    margin: 0px 2%;
+    margin: 0 2%;
   }
 }
 @media screen and (max-width: 767px) {
   .p-news__cont {
     max-width: 100%;
-    margin: 0px 2rem;
+    margin: 0 2rem;
   }
 }
 .p-news__cont::after {

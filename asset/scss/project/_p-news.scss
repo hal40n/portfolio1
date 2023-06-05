@@ -107,12 +107,12 @@
     @include mq-down(lg) {
       width: 33%;
       max-width: 30rem;
-      margin: 0px 2%;
+      margin: 0 2%;
     }
 
     @include mq-down() {
       max-width:100%;
-      margin: 0px 2rem;
+      margin: 0 2rem;
     }
 
 
