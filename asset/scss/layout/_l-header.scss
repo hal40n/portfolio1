@@ -29,7 +29,7 @@
     }
 
     @include mq-down() {
-      height: 7rem;
+      height: 6.5rem;
 
       background-color: rgb(0, 0, 0, 0);
     }
@@ -755,10 +755,22 @@
       background-color: white;
       opacity: 1;
     }
+
+    &--hd {
+      opacity: 0;
+
+      @include mq-down(lg) {
+        opacity: 1;
+      }
+    }
   }
 
   & .l-header__reserve {
     opacity: 1;
+  }
+
+  &.open .l-header__reserve {
+    opacity: 0;
   }
 }
 
