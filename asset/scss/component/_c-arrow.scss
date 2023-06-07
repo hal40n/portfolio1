@@ -45,6 +45,11 @@
 
   margin-right: 1rem;
 
+  @include mq-down() {
+    position: static;
+    margin-top: 2rem;
+  }
+
   & li {
     position: relative;
 

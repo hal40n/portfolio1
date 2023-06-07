@@ -117,7 +117,7 @@
 
     @include mq-down() {
       top: 1rem;
-      right: 2.25rem;
+      right: 1rem;
     }
   }
 }
@@ -131,9 +131,13 @@
 .l-header__wrap.open {
 
   & .l-header__siteTtl {
-    opacity: 1 !important;
+    opacity: 0;
     z-index: 1000;
     color: #fff;
+
+    @include mq-down(lg) {
+      opacity: 1 !important;
+    }
 
     & .l-header__reserve {
       opacity: 0;

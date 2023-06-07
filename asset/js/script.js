@@ -126,6 +126,7 @@ $(function() {
     pauseOnHover: true,
     arrows: true,
     dots:true,
+    appendDots: $('.p-news__selectDots'),
     dotsClass: 'pagination c-flex',
     autoplaySpeed: 10000,
     infinite: true,
