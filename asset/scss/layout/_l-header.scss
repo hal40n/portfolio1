@@ -198,6 +198,7 @@
     @include mq-down() {
       width: 7rem;
       height: 7rem;
+      top: -0.5rem;
 
     }
 
@@ -230,9 +231,9 @@
         content: "menu";
 
         @include mq-down() {
-          font-size: 2rem;
-          top: 1.5rem;
-          right: 1.5rem;
+          font-size: 1.75rem;
+          top: 2rem;
+          right: 1.15rem;
         }
       }
     }
@@ -699,7 +700,7 @@
         display: block;
         right: -6rem;
 
-        bottom: 15rem;
+        bottom: 4rem;
 
         font-size: 3.5rem;
       }
@@ -726,7 +727,7 @@
 
       & p {
         @include mq-down() {
-          font-size: 2rem;
+          font-size: 1.5rem;
         }
       }
     }
