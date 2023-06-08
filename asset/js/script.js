@@ -127,7 +127,7 @@ $(function() {
     arrows: true,
     dots:true,
     appendDots: $('.p-news__selectDots'),
-    dotsClass: 'pagination c-flex',
+    dotsClass: 'paginationNews c-flex',
     autoplaySpeed: 10000,
     infinite: true,
     responsive: [
@@ -162,7 +162,7 @@ $(function() {
     pauseOnHover: true,
     arrows: true,
     dots: true,
-    dotsClass: 'pagination c-flex',
+    dotsClass: 'paginationTour c-flex',
     autoplaySpeed: 10000,
     infinite: true,
     responsive: [
@@ -171,6 +171,7 @@ $(function() {
           settings: {
             slidesToShow: 3,
             slidesToScroll: 3,
+            arrows: false,
             dots:false,
           },
         },

@@ -1,9 +1,23 @@
 @use "../global" as *;
 
 .select--contents {
-  margin: 0 20px;
 
-  justify-content: space-between;
+  &News {
+    display: none;
+    margin: 0 20px;
+
+    justify-content: space-between;
+
+    @include mq-down() {
+      font-display: block;
+    }
+  }
+
+  &Tour {
+    margin: 0 20px;
+
+    justify-content: space-between;
+  }
 }
 
 
@@ -39,50 +53,103 @@
 }
 
 .pagination {
-  position: absolute;
-  right: 0;
-  bottom: -5rem;
 
-  margin-right: 1rem;
+  &News {
 
-  @include mq-down() {
-    position: static;
-    margin-top: 2rem;
-  }
+    position: absolute;
+    right: 0;
+    bottom: -5rem;
 
-  & li {
-    position: relative;
+    margin-right: 1rem;
 
-    width: 0.75rem;
-    height: 0.75rem;
-    margin: 0 1rem;
-    border-radius: 50%;
-
-    background-color: $sub-title;
-
-
-    & button {
-      border: 0;
-
-      background: transparent;
-
-      font-size: 0pt;
+    @include mq-down() {
+      position: static;
+      margin-top: 2rem;
     }
 
-    &.slick-active button::before {
-      display: block;
+    & li {
+      position: relative;
 
-      position: absolute;
-      top: 0;
-      left: 0;
-
-      width: .75rem;
-      height: .75rem;
+      width: 0.75rem;
+      height: 0.75rem;
+      margin: 0 1rem;
       border-radius: 50%;
 
-      background-color: $default-color;
+      background-color: $sub-title;
 
-      content: "・";
+
+      & button {
+        border: 0;
+
+        background: transparent;
+
+        font-size: 0pt;
+      }
+
+      &.slick-active button::before {
+        display: block;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: .75rem;
+        height: .75rem;
+        border-radius: 50%;
+
+        background-color: $default-color;
+
+        content: "・";
+      }
+    }
+  }
+
+  &Tour {
+
+    position: absolute;
+    right: 0;
+    bottom: -5rem;
+
+    margin-right: 1rem;
+
+    @include mq-down() {
+      margin-top: 2rem;
+    }
+
+    & li {
+      position: relative;
+
+      width: 0.75rem;
+      height: 0.75rem;
+      margin: 0 1rem;
+      border-radius: 50%;
+
+      background-color: $sub-title;
+
+
+      & button {
+        border: 0;
+
+        background: transparent;
+
+        font-size: 0pt;
+      }
+
+      &.slick-active button::before {
+        display: block;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: .75rem;
+        height: .75rem;
+        border-radius: 50%;
+
+        background-color: $default-color;
+
+        content: "・";
+      }
     }
   }
 }
