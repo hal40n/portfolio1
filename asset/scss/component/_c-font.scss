@@ -12,11 +12,6 @@
       @include mq-down(lg) {
         font-size: 4rem;
       }
-
-      @include mq-down() {
-        line-height: 1.3rem;
-      }
-
     }
 
     &Txt {
@@ -26,17 +21,13 @@
       @include mq-down(lg) {
         font-size: 1.5rem;
       }
-
-      // @include mq-down() {
-      //   font-size: 2rem;
-      // }
     }
   }
 
   &__cont {
 
     &Ttl {
-      font-size: 2.5rem;
+      font-size: 2.35rem;
       line-height: 1.5;
       letter-spacing: .25rem;
 

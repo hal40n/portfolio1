@@ -7,14 +7,13 @@
   @include mq-down() {
     width: 100%;
     max-width: 100%;
-    //padding: 0 2rem;
   }
 
   &__sec1 {
 
     width: 82.5%;
     margin: 0 auto;
-  
+
     max-width: 1400px;
     position: relative;
 
@@ -60,14 +59,17 @@
 
           &:first-child {
             margin-left: 0;
+
+            @include mq-down() {
+              line-height: 1.3;
+            }
           }
 
           &:last-child {
-              @include mq-down() {
-                font-size: 1.25rem;
-                margin-top: 1.5rem;
-                margin-left: 0;
-              }
+            @include mq-down() {
+              font-size: 1.25rem;
+              margin-left: 0;
+            }
           }
         }
       }
@@ -207,7 +209,7 @@
 
       &Txt {
         max-width: 65rem;
-        width: 75%;
+        width: 85%;
         padding-left: 10rem;
         padding-right: 10rem;
         line-height: 3.5rem;
