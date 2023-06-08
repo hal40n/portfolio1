@@ -1688,7 +1688,17 @@ th {
   margin-top: 12.5rem;
 }
 
-.select--contents {
+.select--contentsNews {
+  display: none;
+  margin: 0 20px;
+  justify-content: space-between;
+}
+@media screen and (max-width: 767px) {
+  .select--contentsNews {
+    font-display: block;
+  }
+}
+.select--contentsTour {
   margin: 0 20px;
   justify-content: space-between;
 }
@@ -1720,19 +1730,19 @@ th {
   cursor: pointer;
 }
 
-.pagination {
+.paginationNews {
   position: absolute;
   right: 0;
   bottom: -5rem;
   margin-right: 1rem;
 }
 @media screen and (max-width: 767px) {
-  .pagination {
+  .paginationNews {
     position: static;
     margin-top: 2rem;
   }
 }
-.pagination li {
+.paginationNews li {
   position: relative;
   width: 0.75rem;
   height: 0.75rem;
@@ -1740,12 +1750,47 @@ th {
   border-radius: 50%;
   background-color: rgba(154, 159, 167, 0.75);
 }
-.pagination li button {
+.paginationNews li button {
   border: 0;
   background: transparent;
   font-size: 0pt;
 }
-.pagination li.slick-active button::before {
+.paginationNews li.slick-active button::before {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  background-color: #1b2f5b;
+  content: "・";
+}
+.paginationTour {
+  position: absolute;
+  right: 0;
+  bottom: -5rem;
+  margin-right: 1rem;
+}
+@media screen and (max-width: 767px) {
+  .paginationTour {
+    margin-top: 2rem;
+  }
+}
+.paginationTour li {
+  position: relative;
+  width: 0.75rem;
+  height: 0.75rem;
+  margin: 0 1rem;
+  border-radius: 50%;
+  background-color: rgba(154, 159, 167, 0.75);
+}
+.paginationTour li button {
+  border: 0;
+  background: transparent;
+  font-size: 0pt;
+}
+.paginationTour li.slick-active button::before {
   display: block;
   position: absolute;
   top: 0;
@@ -1759,11 +1804,6 @@ th {
 
 .c-border__left {
   border-left: 1px solid rgba(154, 159, 167, 0.3);
-}
-@media screen and (max-width: 767px) {
-  .c-border__left {
-    border: 0;
-  }
 }
 
 .c-flex {
@@ -2596,7 +2636,8 @@ th {
 @media screen and (max-width: 767px) {
   .p-news__selectMore {
     opacity: 1;
-    margin-top: 1rem;
+    padding-top: 1.5rem;
+    padding-left: 1rem;
   }
 }
 .p-news__selectMore p::after {
@@ -2806,6 +2847,7 @@ th {
 @media screen and (max-width: 767px) {
   .p-tour__ttl p {
     font-size: 1.5rem;
+    margin-top: 2rem;
   }
 }
 .p-tour__txt {

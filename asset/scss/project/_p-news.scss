@@ -194,13 +194,14 @@
   }
 
   &__select {
-    
+
       &More {
         opacity: 0;
 
         @include mq-down() {
           opacity: 1;
-          margin-top: 1rem;
+          padding-top: 1.5rem;
+          padding-left: 1rem;
         }
 
       & p {
