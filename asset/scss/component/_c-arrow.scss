@@ -62,8 +62,11 @@
 
     margin-right: 1rem;
 
+    display: none;
+
     @include mq-down() {
       position: static;
+      display:flex;
       margin-top: 2rem;
     }
 

@@ -62,7 +62,6 @@
     & p {
       @include mq-down() {
         font-size: 1.5rem;
-        margin-top: 2rem;
       }
     }
   }
@@ -90,7 +89,7 @@
     display: block;
 
     margin: 0 20px;
-    padding: 10px;
+    padding: 15px;
 
     background-color: map-get($colors, "c-white");
 

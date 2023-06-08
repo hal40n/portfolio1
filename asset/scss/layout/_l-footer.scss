@@ -118,6 +118,11 @@
 
     &--nav {
       text-align: center;
+      margin-top: 5rem;
+
+      @include mq-down() {
+        margin-top: 3rem;
+      }
 
       & li {
         display: inline-block;
@@ -128,15 +133,15 @@
         @include mq-down() {
           display: block;
           list-style: none;
-          font-size: 1.5rem;
-          margin-top: 3rem;
+          font-size: 1.25rem;
+          margin-top: 1rem;
         }
 
         &+li {
           margin-left: 3.5rem;
           @include mq-down() {
             margin-left: 0;
-            margin-top: 3rem;
+            margin-top: 1.35rem;
           }
         }
       }
@@ -199,8 +204,8 @@
 
 
       & li {
-        width: 3rem;
-        height: 2.2rem;
+        width: 4rem;
+        height: 3rem;
 
         justify-content: space-between;
 
