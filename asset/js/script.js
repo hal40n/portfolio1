@@ -14,7 +14,7 @@ const slideImages = [
   'https://github.com/hal40n/portfolio1/blob/main/asset/img/fv1.jpg?raw=true',
   'https://github.com/hal40n/portfolio1/blob/main/asset/img/fv2.jpg?raw=true',
   'https://github.com/hal40n/portfolio1/blob/main/asset/img/fv3.jpg?raw=true',
-  'https://github.com/hal40n/portfolio1/blob/main/asset/img/concept4.jpg?raw=true'
+  'https://github.com/hal40n/portfolio1/blob/main/asset/img/fv4.jpg?raw=true'
 ];
 
 let nowCnt = -1;
