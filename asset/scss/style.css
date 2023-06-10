@@ -884,9 +884,10 @@ th {
   }
 }
 .l-footer__contents--sns {
-  width: 10rem;
+  width: 15rem;
   margin: 4rem auto 0 auto;
   display: flex;
+  justify-content: space-between;
 }
 @media screen and (max-width: 950px) {
   .l-footer__contents--sns {
@@ -896,9 +897,10 @@ th {
   }
 }
 .l-footer__contents--sns li {
-  width: 4rem;
+  width: 3rem;
   height: 3rem;
   justify-content: space-between;
+  margin-right: 0;
 }
 @media screen and (max-width: 950px) {
   .l-footer__contents--sns li {
@@ -1343,6 +1345,15 @@ th {
     font-size: 1.5rem;
   }
 }
+.l-header__menu--content a:hover {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='squiggle-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.squiggle{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%23ff9800' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
+  background-position: 0 100%;
+  background-size: auto 6px;
+  background-repeat: repeat-x;
+  text-decoration: none;
+  padding-bottom: 0.5rem;
+  transition: 0;
+}
 .l-header__menu--content:first-child {
   margin-top: 0;
 }
@@ -1357,6 +1368,7 @@ th {
   border: 1px solid #fff;
   text-align: center;
   margin-top: 3rem;
+  background: none;
 }
 @media screen and (max-width: 950px) {
   .l-header__menu--content.reserve {
@@ -1596,6 +1608,15 @@ th {
   .l-header__scroll--down p {
     font-size: 1.5rem;
   }
+}
+
+.home a {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='squiggle-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.squiggle{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%23ff9800' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
+  background-position: 0 100%;
+  background-size: auto 6px;
+  background-repeat: repeat-x;
+  text-decoration: none;
+  padding-bottom: 0.5rem;
 }
 
 /* scroll */
@@ -2435,9 +2456,6 @@ th {
     font-size: 2rem;
   }
 }
-.p-concept__sec3--sp {
-  display: none;
-}
 @media screen and (max-width: 767px) {
   .p-concept__sec3--sp {
     display: block;
@@ -2457,6 +2475,18 @@ th {
   position: relative;
   font-size: 1.5rem;
   margin-top: 3rem;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='squiggle-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.squiggle{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%23ff9800' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
+  background-position: 0 100%;
+  background-size: auto 6px;
+  background-repeat: repeat-x;
+  text-decoration: none;
+  padding-bottom: 2rem;
+  display: inline-block;
+}
+@media screen and (max-width: 767px) {
+  .p-concept__sec3--detail {
+    padding-bottom: 1rem;
+  }
 }
 .p-concept__sec3--detail a {
   cursor: pointer;
@@ -2687,7 +2717,7 @@ th {
 .p-illust {
   width: 100%;
   height: auto;
-  background: url("../asset.img/illust1_sp.png") top center no-repeat;
+  background: url(../../../asset/img/illust1_sp.png) top center no-repeat;
   background-size: cover;
   position: relative;
 }
