@@ -148,8 +148,12 @@
         }
 
         &::before {
+<<<<<<< HEAD
           display: block;
 
+=======
+          background: url('https://raw.githubusercontent.com/hal40n/portfolio1/a57a3b071d1af3061c6ebf4865e3d68483af9c1d/asset/img/li_boots.svg') 0 0 no-repeat;
+>>>>>>> 850ea904407515520d7a06905fceb1205741d6e0
           position: absolute;
           top: -10rem;
           right: -1rem;
@@ -253,7 +257,13 @@
           position: absolute;
           top: -7rem;
           left: 4rem;
+<<<<<<< HEAD
 
+=======
+          content: "";
+          background: url(https://raw.githubusercontent.com/hal40n/portfolio1/a57a3b071d1af3061c6ebf4865e3d68483af9c1d/asset/img/il_seagull.svg) 0 0 no-repeat;
+          background-size: 100% auto;
+>>>>>>> 850ea904407515520d7a06905fceb1205741d6e0
           width: 6rem;
           height: 7.5rem;
 
@@ -363,7 +373,13 @@
           position: absolute;
           top: -10.5rem;
           left: 12rem;
+<<<<<<< HEAD
 
+=======
+          content: "";
+          background: url(https://raw.githubusercontent.com/hal40n/portfolio1/a57a3b071d1af3061c6ebf4865e3d68483af9c1d/asset/img/il_lighthouse.svg) 0 0 no-repeat;
+          background-size: 100% auto;
+>>>>>>> 850ea904407515520d7a06905fceb1205741d6e0
           width: 5rem;
           height: 12rem;
 
@@ -441,6 +457,12 @@
       }
 
       &::after {
+<<<<<<< HEAD
+=======
+        background-image: url(https://raw.githubusercontent.com/hal40n/portfolio1/0b041aef3066717f157dab9714aeb4142f580b32/asset/img/li_bwaveMove.svg);
+        background-position: 0 0.5rem;
+        margin-top: 1rem;
+>>>>>>> 850ea904407515520d7a06905fceb1205741d6e0
         display: block;
 
         width: 100%;

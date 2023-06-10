@@ -364,6 +364,13 @@
       }
 
       &::after {
+<<<<<<< HEAD
+=======
+        width: 7rem;
+        height: 7.5rem;
+        background: url(https://raw.githubusercontent.com/hal40n/portfolio1/f36bdfb73e2cb98e0c74ef81b08e2d7d22d626c0/asset/img/il_seagull_wt.svg) 0 0 no-repeat;
+        background-size: auto 100%;
+>>>>>>> 850ea904407515520d7a06905fceb1205741d6e0
         display: block;
 
         position: absolute;
@@ -450,8 +457,12 @@
         }
 
         &:hover {
+<<<<<<< HEAD
           background-image: url(../../../asset/img/ダウンロード.svg);
           background-repeat: repeat-x;
+=======
+          background-image: url(https://raw.githubusercontent.com/hal40n/portfolio1/b43ec4751edfc9c645cf3d92fe58b9974ac55818/asset/img/li_bwaveMove_wt.svg);
+>>>>>>> 850ea904407515520d7a06905fceb1205741d6e0
           background-position: 0 100%;
           background-size: auto 6px;
 
@@ -528,8 +539,12 @@
 
         width: 4rem;
         height: 5rem;
+<<<<<<< HEAD
 
         background: url(../../../asset/img/il_seagull_wt.svg) 0 0 no-repeat;
+=======
+        background: url(https://raw.githubusercontent.com/hal40n/portfolio1/b43ec4751edfc9c645cf3d92fe58b9974ac55818/asset/img/il_seagull_wt.svg) 0 0 no-repeat;
+>>>>>>> 850ea904407515520d7a06905fceb1205741d6e0
         background-size: auto 100%;
 
         content: "";
@@ -640,16 +655,26 @@
 
     &1 {
       height: 100vh;
+<<<<<<< HEAD
 
         background: url(../../../asset/img/fv1.jpg);
+=======
+        background: url(https://github.com/hal40n/portfolio1/blob/main/asset/img/fv1.jpg?raw=true);
+        background-size: cover;
+>>>>>>> 850ea904407515520d7a06905fceb1205741d6e0
         background-repeat: no-repeat;
         background-size: cover;
         background-size: cover;
 
         @include mq-down() {
           height: 100vh;
+<<<<<<< HEAD
 
           background-image: url(../../../asset/img/fv1.jpg);
+=======
+          background-image: url(https://github.com/hal40n/portfolio1/blob/main/asset/img/fv1.jpg?raw=true);
+          background-position: center center;
+>>>>>>> 850ea904407515520d7a06905fceb1205741d6e0
           background-repeat: no-repeat;
           background-position: center center;
           background-size: cover;
@@ -658,16 +683,26 @@
 
     &2 {
       height: 100vh;
+<<<<<<< HEAD
 
       background-image: url(../../../asset/img/fv2.jpg);
+=======
+      background-image: url(https://github.com/hal40n/portfolio1/blob/main/asset/img/fv2.jpg?raw=true);
+      background-size: cover;
+>>>>>>> 850ea904407515520d7a06905fceb1205741d6e0
       background-repeat: no-repeat;
       background-size: cover;
       background-size: cover;
 
       @include mq-down() {
         height: 100vh;
+<<<<<<< HEAD
 
         background-image: url(../../../asset/img/fv2.jpg);
+=======
+        background-image: url(https://github.com/hal40n/portfolio1/blob/main/asset/img/fv2.jpg?raw=true);
+        background-position: center center;
+>>>>>>> 850ea904407515520d7a06905fceb1205741d6e0
         background-repeat: no-repeat;
         background-position: center center;
         background-size: cover;
@@ -675,17 +710,27 @@
     }
 
     &3 {
+<<<<<<< HEAD
       height: 100vh;
 
       background: url(../../../asset/img/fv3.jpg);
+=======
+      background: url(https://github.com/hal40n/portfolio1/blob/main/asset/img/fv3.jpg?raw=true);
+      background-size: cover;
+>>>>>>> 850ea904407515520d7a06905fceb1205741d6e0
       background-repeat: no-repeat;
       background-size: cover;
       background-size: cover;
 
       @include mq-down() {
         height: 100vh;
+<<<<<<< HEAD
 
         background-image: url(../../../asset/img/fv3.jpg);
+=======
+        background-image: url(https://github.com/hal40n/portfolio1/blob/main/asset/img/fv3.jpg?raw=true);
+        background-position: center center;
+>>>>>>> 850ea904407515520d7a06905fceb1205741d6e0
         background-repeat: no-repeat;
         background-position: center center;
         background-size: cover;
@@ -694,16 +739,26 @@
 
   &4 {
     height: 100vh;
+<<<<<<< HEAD
 
     background: url(../../../asset/img/fv4.jpg);
+=======
+    background: url(https://github.com/hal40n/portfolio1/blob/main/asset/img/fv4.jpg?raw=true);
+    background-size: cover;
+>>>>>>> 850ea904407515520d7a06905fceb1205741d6e0
     background-repeat: no-repeat;
     background-size: cover;
     background-size: cover;
 
     @include mq-down() {
       height: 100vh;
+<<<<<<< HEAD
 
       background-image: url(../../../asset/img/fv4.jpg);
+=======
+      background-image: url(https://github.com/hal40n/portfolio1/blob/main/asset/img/fv4.jpg?raw=true);
+      background-position: center center;
+>>>>>>> 850ea904407515520d7a06905fceb1205741d6e0
       background-repeat: no-repeat;
       background-position: center center;
       background-size: cover;
@@ -845,8 +900,12 @@
 }
 
 .home a {
+<<<<<<< HEAD
   background-image: url(../../../asset/img/li_bwaveMove_wt.svg);
   background-repeat: repeat-x;
+=======
+  background-image: url(https://raw.githubusercontent.com/hal40n/portfolio1/b43ec4751edfc9c645cf3d92fe58b9974ac55818/asset/img/li_bwaveMove_wt.svg);
+>>>>>>> 850ea904407515520d7a06905fceb1205741d6e0
   background-position: 0 100%;
   background-size: auto 6px;
 
@@ -908,11 +967,11 @@
 }
 
 .defaultColor {
-  background: url(../../../asset/img/line_menu_wt.svg) 0 0 no-repeat;
+  background: url(https://raw.githubusercontent.com/hal40n/portfolio1/b93a02004f0fd5b91956127521908a9a6c7b1742/asset/img/line_menu_wt.svg) 0 0 no-repeat;
 }
 
 .changeColor {
-  background: url(../../../asset/img/line_menu.svg) 0 0 no-repeat;
+  background: url(https://raw.githubusercontent.com/hal40n/portfolio1/7fae7a71321ac1ee59898245958bbfb55ad1d2b5/asset/img/line_menu.svg) 0 0 no-repeat;
 }
 
 .l-header__toggle--box.changeFntColor::after {
