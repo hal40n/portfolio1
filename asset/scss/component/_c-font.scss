@@ -5,7 +5,6 @@
   &__sec {
 
     &Ttl {
-
       color: map-get($colors, "c-navy");
       font-size: 5rem;
 
@@ -37,10 +36,10 @@
     }
 
     &Txt {
-      margin-top: 3rem;
-      line-height: 2;
       font-size: 1.35rem;
+      line-height: 2;
 
+      margin-top: 3rem;
       @include mq-down(lg) {
         font-size: 1.3rem;
       }
