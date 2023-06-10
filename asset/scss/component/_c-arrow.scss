@@ -4,10 +4,10 @@
 
   &News {
     display: none;
+
     margin: 0 20px;
 
     justify-content: space-between;
-
     @include mq-down() {
       font-display: block;
     }
@@ -55,13 +55,15 @@
 .pagination {
 
   &Fv {
-
-    position: absolute;
     display: none;
 
+    position: absolute;
+
     @include mq-down() {
-      position: static;
       display:flex;
+
+      position: static;
+
       margin-top: 2rem;
     }
 
@@ -114,18 +116,18 @@
   }
 
   &News {
+    display: none;
 
     position: absolute;
     right: 0;
     bottom: -5rem;
 
     margin-right: 1rem;
-
-    display: none;
-
     @include mq-down() {
-      position: static;
       display:flex;
+
+      position: static;
+
       margin-top: 2rem;
     }
 
@@ -167,13 +169,11 @@
   }
 
   &Tour {
-
     position: absolute;
     right: 0;
     bottom: -5rem;
 
     margin-right: 1rem;
-
     @include mq-down() {
       margin-top: 2rem;
     }

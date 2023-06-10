@@ -1,11 +1,9 @@
 @use "../global" as *;
 
 .p-news {
-
   @include mq-down(lg) {
     background-color: #fff;
   }
-
   @include mq-down() {
     margin-top: 5rem;
   }
@@ -30,7 +28,6 @@
       @include mq-down(lg) {
         font-size: 1.6rem;
       }
-
       @include mq-down() {
         font-size: 1.3rem;
       }
@@ -40,7 +37,6 @@
       line-height: 1.4;
 
       padding-left: 3rem;
-
       @include mq-down() {
         display: none;
       }
@@ -51,11 +47,11 @@
         &::after {
           padding: 0.25rem;
           border-radius: 1.2rem;
-          font-size: 2.5rem;
 
           background-color: $default-color;
 
           color: map-get($colors, "c-white");
+          font-size: 2.5rem;
           font-size: .05rem;
 
           content: "▶";
@@ -69,16 +65,15 @@
 
   &__txt {
     font-size: 1.25rem;
+
     margin-top: 7rem;
-
-
     @include mq-down(lg) {
       margin-top: 5rem;
     }
-
     @include mq-down() {
-      margin-top: 3rem;
       font-size: 1.35rem;
+
+      margin-top: 3rem;
     }
   }
 
@@ -87,20 +82,16 @@
     justify-content: flex-start;
     margin-left: -2%;
     margin-right: -2%;
-
-
     @include mq-down(lg) {
       gap: 5px;
       margin-top: 5rem;
     }
-
     @include mq-down() {
       margin-top: 3rem;
     }
   }
 
   &__cont {
-
     display: block;
 
     position: relative;
@@ -108,21 +99,21 @@
     margin: 0 2%;
 
     border-bottom: 1px solid rgb(154, 159, 167, 0.3);
+    @include mq-down(lg) {
+      width: 33%;
+      margin: 0 2%;
+
+      max-width: 30rem;
+    }
+    @include mq-down() {
+      margin: 0 2rem;
+
+      max-width:100%;
+    }
 
 
     &:nth-child(3) {
       margin-right: 0;
-    }
-
-    @include mq-down(lg) {
-      width: 33%;
-      max-width: 30rem;
-      margin: 0 2%;
-    }
-
-    @include mq-down() {
-      max-width:100%;
-      margin: 0 2rem;
     }
 
 
@@ -191,7 +182,6 @@
       font-size: 1.2rem;
 
       padding-bottom: 3rem;
-
       @include mq-down(){
         font-size: 1.5rem;
       }
@@ -205,6 +195,7 @@
 
         @include mq-down() {
           opacity: 1;
+
           padding-top: 1.5rem;
           padding-left: 1rem;
         }
@@ -214,19 +205,19 @@
         &::after {
           padding: 0.25rem;
           border-radius: 1.2rem;
-          font-size: 2.5rem;
 
           background-color: $default-color;
 
           color: map-get($colors, "c-white");
+          font-size: 2.5rem;
           font-size: .05rem;
 
           content: "▶";
 
           margin-left: 3rem;
-
           @include mq-down() {
             padding: 0.4rem;
+
             margin-left: 1rem;
           }
 

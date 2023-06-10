@@ -10,24 +10,27 @@
   height: 100vh;
 
   &__wrapper {
-    position: relative;
-    width: 100%;
     overflow: hidden;
+
+    position: relative;
+
+    width: 100%;
   }
 
   &__wrap {
     position: fixed;
-    width: 100%;
     z-index: 100;
 
+    width: 100%;
+
     @include mq-down(lg) {
+      position: fixed;
       top: 0;
       left: 0;
-      height: 9rem;
-      position: fixed;
       z-index: 102;
-    }
 
+      height: 9rem;
+    }
     @include mq-down() {
       height: 7rem;
 
@@ -36,28 +39,30 @@
   }
 
   &__siteTtl {
+    opacity: 0;
+
+    position: absolute;
     top: 3rem;
     left: 3rem;
     z-index: 1000;
-    position: absolute;
 
     transition: all 0.5s;
-    opacity: 0;
 
     @include mq-down(lg) {
       opacity: 0;
+
       top: 2.5rem;
+
       color: #fff;
     }
-
     @include mq-down() {
       opacity: 1;
+
       top: 1.5rem;
       left: 1.5rem;
     }
 
     &--hd {
-
       transition: all 0.5s ease;
 
       @include mq-down() {
@@ -65,19 +70,23 @@
       }
 
       & p {
-        font-size: 1.2rem;
         display: block;
 
+        font-size: 1.2rem;
+
         @include mq-down() {
-          font-size: 1.1rem;
-          z-index: 1000;
           opacity: 1 !important;
+
+          z-index: 1000;
+
+          font-size: 1.1rem;
         }
       }
 
       & h1 {
-        font-size: 2.8rem;
         display: block;
+
+        font-size: 2.8rem;
 
         @include mq-down() {
           font-size: 2.25rem;
@@ -87,22 +96,22 @@
   }
 
   &__reserve {
+    opacity: 0;
+
+    position: absolute;
     top: calc(50vh - 8rem);
     right: 1rem;
-    position: absolute;
     z-index: 1000;
-    opacity: 0;
 
     @include mq-down(lg) {
       top:0;
       right: 10rem;
     }
-
     @include mq-down() {
+      opacity: 0;
+
       top: 0;
       right: 7rem;
-
-      opacity: 0;
     }
 
     & a {
@@ -126,6 +135,7 @@
       @include mq-down(lg) {
         width: 9rem;
         height: 9rem;
+
         font-size: 1.5rem;
 
         writing-mode: horizontal-tb;
@@ -176,6 +186,7 @@
 
   &__toggle {
     opacity: 1;
+
     position: absolute;
     top: 3rem;
     right: 5rem;
@@ -183,33 +194,34 @@
 
     @include mq-down(lg) {
       display: flex;
+
       top: 0;
       right: 0;
 
       width: 10rem;
       height: 8rem;
 
+      background: rgb(0, 0, 0, 0);
+
       align-items: center;
       justify-content: center;
-
-      background: rgb(0, 0, 0, 0);
     }
-
     @include mq-down() {
+      top: -0.5rem;
+
       width: 7rem;
       height: 7rem;
-      top: -0.5rem;
 
     }
 
     &--box {
       position: relative;
 
+      width: 4rem;
+
       text-align: center;
 
       cursor: pointer;
-
-      width: 4rem;
 
       @include mq-down() {
         width:3rem;
@@ -219,11 +231,11 @@
         display: block;
 
         position: absolute;
+
         width: 2rem;
         margin: 0 auto;
 
         color: #fff;
-
         font-family: $font-family__caveat;
         font-size: 2.5rem;
         text-align: center;
@@ -231,9 +243,10 @@
         content: "menu";
 
         @include mq-down() {
-          font-size: 1.75rem;
           top: 2rem;
           right: 1.15rem;
+
+          font-size: 1.75rem;
         }
       }
     }
@@ -243,9 +256,9 @@
 
       width: 5rem;
       height: 1rem;
-      background-size: 100% 0.75rem;
-
       margin: 0 auto;
+
+      background-size: 100% 0.75rem;
 
       transition: ease .4s;
 
@@ -253,10 +266,10 @@
         width: 4rem;
         height: 1rem;
       }
-
       @include mq-down() {
         width: 3rem;
         height: 1rem;
+
         background-size: 100% auto;
       }
 
@@ -292,8 +305,6 @@
 
     justify-content: space-between;
     align-items: center;
-
-
     @include mq-down() {
       height: auto;
 
@@ -312,6 +323,8 @@
 
 
     &--contents {
+      display: flex;
+
       width: 100%;
       height: 10%;
       margin: 0 auto;
@@ -320,21 +333,18 @@
 
       max-width: calc(98rem + 12%);
       align-items: center;
-      display: flex;
       justify-content: space-between;
-
       padding-top: 10rem;
       padding-bottom: 10rem;
       padding-left: 5%;
-
       @include mq-down(lg) {
         display: block;
+
         min-width: 100%;
         padding-top: 0;
         margin-top: 0;
         padding-right: 50%;
       }
-
       @include mq-down() {
         padding-bottom: 0;
         padding-right: 0;
@@ -347,22 +357,26 @@
       width: 32rem;
 
       max-width: 32rem;
-
       @include mq-down(lg) {
         display: none;
+
         position: fixed;
       }
 
       &::after {
-        width: 7rem;
-        height: 7.5rem;
-        background: url(../../../asset/img/il_seagull_wt.svg) 0 0 no-repeat;
-        background-size: auto 100%;
         display: block;
-        content: "";
+
         position: absolute;
         bottom: 15rem;
         left: 10rem;
+
+        width: 7rem;
+        height: 7.5rem;
+
+        background: url(../../../asset/img/il_seagull_wt.svg) 0 0 no-repeat;
+        background-size: auto 100%;
+
+        content: "";
       }
 
       & p {
@@ -386,18 +400,17 @@
     }
 
     &--nav {
-
       width: 50%;
+
       margin-top: 10rem;
       padding-bottom: 10rem;
-
       @include mq-down(lg) {
-        height: auto;
         width: 100%;
+        height: auto;
+
         margin-top: -25rem;
         padding-top: 2rem;
       }
-
       @include mq-down() {
         margin-top: -12rem;
       }
@@ -407,7 +420,6 @@
       height: auto;
 
       min-width: 100%;
-
       @include mq-down() {
         padding-top: 2rem;
       }
@@ -417,44 +429,42 @@
       display: inline-block;
 
       width: 100%;
-      margin-top: 5rem;
-      padding-bottom: 0.5rem;
 
       font-size: 1.6rem;
 
-
+      margin-top: 5rem;
+      padding-bottom: 0.5rem;
       @include mq-down(lg) {
         margin-top: 5rem;
       }
-
       @include mq-down() {
         margin-top: 1rem;
       }
 
       & a {
-
         @include mq-down(lg) {
           font-size: 2rem;
         }
-
         @include mq-down() {
           font-size: 1.5rem;
         }
 
         &:hover {
           background-image: url(../../../asset/img/ダウンロード.svg);
+          background-repeat: repeat-x;
           background-position: 0 100%;
           background-size: auto 6px;
-          background-repeat: repeat-x;
+
           text-decoration: none;
-          padding-bottom: 0.5rem;
+
           transition: 0;
+
+          padding-bottom: 0.5rem;
         }
       }
 
       &:first-child {
         margin-top: 0;
-
         @include mq-down(lg) {
           margin-top: .5rem;
         }
@@ -465,14 +475,15 @@
         padding: 1.5rem;
         border: 1px solid #fff;
 
-        text-align: center;
-        margin-top: 3rem;
-
         background: none;
 
+        text-align: center;
+
+        margin-top: 3rem;
         @include mq-down(lg) {
-          margin-top: 5rem;
           display: block;
+
+          margin-top: 5rem;
         }
       }
     }
@@ -492,15 +503,13 @@
       &:before {
         display: inline-block;
 
+        font-size: 2rem;
+
         @include mq-down() {
           width: 3.5rem;
           height: 3.5rem;
           border-radius: 4rem;
         }
-
-
-        font-size: 2rem;
-
         padding-left: 0.5rem;
       }
     }
@@ -510,39 +519,43 @@
 
     &::after {
       @include mq-down() {
+        display: block;
+
+        position: absolute;
+        right: 3.5rem;
+        bottom: -22rem;
+        transform: scale(-1, 1);
+
         width: 4rem;
         height: 5rem;
+
         background: url(../../../asset/img/il_seagull_wt.svg) 0 0 no-repeat;
         background-size: auto 100%;
-        display: block;
+
         content: "";
-        position: absolute;
-        bottom: -22rem;
-        right: 3.5rem;
-        transform: scale(-1, 1);
       }
     }
 
     & h3 {
-      margin-top: 50px;
       font-size: 2rem;
 
+      margin-top: 50px;
       @include mq-down() {
         font-size: 1.5rem;
       }
     }
 
     & p {
-      margin-top: 2rem;
       font-size: 1.75rem;
 
+      margin-top: 2rem;
       @include mq-down(lg) {
         font-size: 1.5rem;
       }
-
       @include mq-down() {
-        margin-top: 1rem;
         font-size: 1.2rem;
+
+        margin-top: 1rem;
       }
     }
   }
@@ -561,6 +574,7 @@
     margin-left: -25rem;
   @include mq-down() {
     display: none;
+
     position: fixed;
     top: 1.5rem;
     left: 1.5rem;
@@ -589,11 +603,12 @@
     &--hd {
       font-family: $font-family__times;
       font-size: 6.5rem;
-      margin-top: 3.5rem;
 
+      margin-top: 3.5rem;
       @include mq-down() {
-        margin-top: 0.5rem;
         font-size: 2.5rem;
+
+        margin-top: 0.5rem;
       }
     }
 
@@ -604,12 +619,14 @@
 
   &__fv {
     height: 100vh;
+
     max-height: 66.7rem;
   }
 
   &__slider {
     position: relative;
     top: 0;
+
     width: 100%;
     height: 100%;
 
@@ -617,73 +634,81 @@
       width: 100vw;
       height: 100vh;
 
+      @include mq-down() {
+        height: 100%;
+      }
+
     &1 {
       height: 100vh;
+
         background: url(../../../asset/img/fv1.jpg);
-        background-size: cover;
         background-repeat: no-repeat;
+        background-size: cover;
         background-size: cover;
 
         @include mq-down() {
           height: 100vh;
+
           background-image: url(../../../asset/img/fv1.jpg);
-          background-position: center center;
           background-repeat: no-repeat;
+          background-position: center center;
           background-size: cover;
         }
       }
 
     &2 {
       height: 100vh;
+
       background-image: url(../../../asset/img/fv2.jpg);
-      background-size: cover;
       background-repeat: no-repeat;
+      background-size: cover;
       background-size: cover;
 
       @include mq-down() {
         height: 100vh;
+
         background-image: url(../../../asset/img/fv2.jpg);
-        background-position: center center;
         background-repeat: no-repeat;
+        background-position: center center;
         background-size: cover;
       }
     }
 
     &3 {
+      height: 100vh;
+
       background: url(../../../asset/img/fv3.jpg);
-      background-size: cover;
       background-repeat: no-repeat;
       background-size: cover;
-      height: 100vh;
+      background-size: cover;
 
       @include mq-down() {
         height: 100vh;
+
         background-image: url(../../../asset/img/fv3.jpg);
-        background-position: center center;
         background-repeat: no-repeat;
+        background-position: center center;
         background-size: cover;
       }
     }
 
   &4 {
     height: 100vh;
+
     background: url(../../../asset/img/fv4.jpg);
-    background-size: cover;
     background-repeat: no-repeat;
+    background-size: cover;
     background-size: cover;
 
     @include mq-down() {
       height: 100vh;
+
       background-image: url(../../../asset/img/fv4.jpg);
-      background-position: center center;
       background-repeat: no-repeat;
+      background-position: center center;
       background-size: cover;
     }
   }
-
-      @include mq-down() {
-        height: 100%;
-      }
     }
   }
 
@@ -700,8 +725,8 @@
 
     justify-content: space-around;
     @include mq-down() {
-      left: 5rem;
       bottom: 2rem;
+      left: 5rem;
 
       padding: 0 40%;
     }
@@ -759,8 +784,9 @@
     transform-origin: left;
     @include mq-down() {
       top: 70%;
-      font-size: 2rem;
       left: 2rem;
+
+      font-size: 2rem;
     }
   }
 
@@ -782,8 +808,8 @@
       padding-right: 10rem;
       @include mq-down() {
         display: block;
-        right: -6rem;
 
+        right: -6rem;
         bottom: 4rem;
 
         font-size: 3.5rem;
@@ -820,10 +846,12 @@
 
 .home a {
   background-image: url(../../../asset/img/li_bwaveMove_wt.svg);
+  background-repeat: repeat-x;
   background-position: 0 100%;
   background-size: auto 6px;
-  background-repeat: repeat-x;
+
   text-decoration: none;
+
   padding-bottom: 0.5rem;
 }
 
@@ -835,18 +863,17 @@
 }
 
 .l-header__wrap.is-visible {
-
   @include mq-down(lg) {
     background-color: white;
   }
 
   & .l-header__siteTtl {
-
     opacity: 1;
 
     @include mq-down(lg) {
-      background-color: white;
       opacity: 1;
+
+      background-color: white;
     }
 
     &--hd {
