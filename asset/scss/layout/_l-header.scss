@@ -442,7 +442,7 @@
         }
 
         &:hover {
-          background-image: url(../../../asset/img/ダウンロード.svg);
+          background-image: url(https://raw.githubusercontent.com/hal40n/portfolio1/b43ec4751edfc9c645cf3d92fe58b9974ac55818/asset/img/li_bwaveMove_wt.svg);
           background-position: 0 100%;
           background-size: auto 6px;
           background-repeat: repeat-x;
@@ -512,7 +512,7 @@
       @include mq-down() {
         width: 4rem;
         height: 5rem;
-        background: url(../../../asset/img/il_seagull_wt.svg) 0 0 no-repeat;
+        background: url(https://raw.githubusercontent.com/hal40n/portfolio1/b43ec4751edfc9c645cf3d92fe58b9974ac55818/asset/img/il_seagull_wt.svg) 0 0 no-repeat;
         background-size: auto 100%;
         display: block;
         content: "";
@@ -748,7 +748,7 @@
 }
 
 .home a {
-  background-image: url(../../../asset/img/li_bwaveMove_wt.svg);
+  background-image: url(https://raw.githubusercontent.com/hal40n/portfolio1/b43ec4751edfc9c645cf3d92fe58b9974ac55818/asset/img/li_bwaveMove_wt.svg);
   background-position: 0 100%;
   background-size: auto 6px;
   background-repeat: repeat-x;
