@@ -54,6 +54,22 @@
   }
 }
 
+.fadeIn {
+  animation-name: fadeInFast;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+  opacity: 0;
+}
+
+@keyframes fadeInFast {
+  from {
+    opacity: 0;
+  } to {
+    opacity: 1;
+  }
+}
+
 .fadeDownOnLoad {
   opacity: 0;
   animation-name:fadeDown;
