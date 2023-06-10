@@ -364,6 +364,11 @@
       }
 
       &::after {
+
+        width: 7rem;
+        height: 7.5rem;
+        background: url(https://raw.githubusercontent.com/hal40n/portfolio1/f36bdfb73e2cb98e0c74ef81b08e2d7d22d626c0/asset/img/il_seagull_wt.svg) 0 0 no-repeat;
+        background-size: auto 100%;
         display: block;
 
         position: absolute;
@@ -373,7 +378,7 @@
         width: 7rem;
         height: 7.5rem;
 
-        background: url(../../../asset/img/il_seagull_wt.svg) 0 0 no-repeat;
+        background: url(https://raw.githubusercontent.com/hal40n/portfolio1/f36bdfb73e2cb98e0c74ef81b08e2d7d22d626c0/asset/img/il_seagull_wt.svg) 0 0 no-repeat;
         background-size: auto 100%;
 
         content: "";
@@ -450,8 +455,8 @@
         }
 
         &:hover {
-          background-image: url(../../../asset/img/ダウンロード.svg);
-          background-repeat: repeat-x;
+
+          background-image: url(https://raw.githubusercontent.com/hal40n/portfolio1/b43ec4751edfc9c645cf3d92fe58b9974ac55818/asset/img/li_bwaveMove_wt.svg);
           background-position: 0 100%;
           background-size: auto 6px;
 
@@ -529,7 +534,7 @@
         width: 4rem;
         height: 5rem;
 
-        background: url(../../../asset/img/il_seagull_wt.svg) 0 0 no-repeat;
+        background: url(https://raw.githubusercontent.com/hal40n/portfolio1/b43ec4751edfc9c645cf3d92fe58b9974ac55818/asset/img/il_seagull_wt.svg) 0 0 no-repeat;
         background-size: auto 100%;
 
         content: "";
@@ -641,15 +646,16 @@
     &1 {
       height: 100vh;
 
-        background: url(../../../asset/img/fv1.jpg);
+        background: url(https://github.com/hal40n/portfolio1/blob/main/asset/img/fv1.jpg?raw=true);
         background-repeat: no-repeat;
-        background-size: cover;
         background-size: cover;
 
         @include mq-down() {
           height: 100vh;
+          background-image: url(https://github.com/hal40n/portfolio1/blob/main/asset/img/fv1.jpg?raw=true);
+          background-position: center center;
 
-          background-image: url(../../../asset/img/fv1.jpg);
+
           background-repeat: no-repeat;
           background-position: center center;
           background-size: cover;
@@ -659,15 +665,17 @@
     &2 {
       height: 100vh;
 
-      background-image: url(../../../asset/img/fv2.jpg);
+
+      background-image: url(https://github.com/hal40n/portfolio1/blob/main/asset/img/fv2.jpg?raw=true);
+      background-size: cover;
       background-repeat: no-repeat;
-      background-size: cover;
-      background-size: cover;
 
       @include mq-down() {
         height: 100vh;
 
-        background-image: url(../../../asset/img/fv2.jpg);
+
+        background-image: url(https://github.com/hal40n/portfolio1/blob/main/asset/img/fv2.jpg?raw=true);
+
         background-repeat: no-repeat;
         background-position: center center;
         background-size: cover;
@@ -677,15 +685,19 @@
     &3 {
       height: 100vh;
 
-      background: url(../../../asset/img/fv3.jpg);
-      background-repeat: no-repeat;
+
+      background: url(https://github.com/hal40n/portfolio1/blob/main/asset/img/fv3.jpg?raw=true);
       background-size: cover;
+
+
+      background-repeat: no-repeat;
       background-size: cover;
 
       @include mq-down() {
         height: 100vh;
 
-        background-image: url(../../../asset/img/fv3.jpg);
+
+        background-image: url(https://github.com/hal40n/portfolio1/blob/main/asset/img/fv3.jpg?raw=true);
         background-repeat: no-repeat;
         background-position: center center;
         background-size: cover;
@@ -693,16 +705,15 @@
     }
 
   &4 {
-    height: 100vh;
-
-    background: url(../../../asset/img/fv4.jpg);
-    background-repeat: no-repeat;
+    height: 100vh
+    background: url(https://github.com/hal40n/portfolio1/blob/main/asset/img/fv4.jpg?raw=true);
     background-size: cover;
+    background-repeat: no-repeat;
 
     @include mq-down() {
       height: 100vh;
+      background-image: url(https://github.com/hal40n/portfolio1/blob/main/asset/img/fv4.jpg?raw=true);
 
-      background-image: url(../../../asset/img/fv4.jpg);
       background-repeat: no-repeat;
       background-position: center center;
       background-size: cover;
@@ -844,8 +855,8 @@
 }
 
 .home a {
-  background-image: url(../../../asset/img/li_bwaveMove_wt.svg);
-  background-repeat: repeat-x;
+  background-image: url(https://raw.githubusercontent.com/hal40n/portfolio1/b43ec4751edfc9c645cf3d92fe58b9974ac55818/asset/img/li_bwaveMove_wt.svg);
+
   background-position: 0 100%;
   background-size: auto 6px;
 
