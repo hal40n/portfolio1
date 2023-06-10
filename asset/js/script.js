@@ -7,58 +7,35 @@ $(function(){
   });
 });
 
-
-
-/* A slideshow where photos automatically switch at regular intervals. */
-const slideImages = [
-  'https://github.com/hal40n/portfolio1/blob/main/asset/img/fv1.jpg?raw=true',
-  'https://github.com/hal40n/portfolio1/blob/main/asset/img/fv2.jpg?raw=true',
-  'https://github.com/hal40n/portfolio1/blob/main/asset/img/fv3.jpg?raw=true',
-  'https://github.com/hal40n/portfolio1/blob/main/asset/img/fv4.jpg?raw=true'
-];
-
-let nowCnt = -1;
-let flg = 0;
-
-function changeImg() {
-  nowCnt = (nowCnt < slideImages.length - 1) ? nowCnt + 1 : 0;
-  flg = (flg === 0) ? 1 : 0;
-
-  const slideImg1 = document.getElementById('slide--img1');
-  const slideImg2 = document.getElementById('slide--img2');
-  const slideImg3 = document.getElementById('slide--img3');
-  const slideImg4 = document.getElementById('slide--img4');
-  const paginationCircles = document.querySelectorAll('.l-header__pagination--circle');
-
-  if (flg === 0) {
-    slideImg1.src = slideImages[nowCnt];
-    slideImg1.classList.add('fade-in');
-    slideImg1.classList.remove('fade-out');
-    slideImg2.classList.add('fade-out');
-    slideImg2.classList.remove('fade-in');
-    slideImg3.classList.add('fade-out');
-    slideImg3.classList.remove('fade-in');
-    slideImg4.classList.add('fade-out');
-    slideImg4.classList.remove('fade-in');
-  } else {
-    slideImg2.src = slideImages[nowCnt];
-    slideImg2.classList.add('fade-in');
-    slideImg2.classList.remove('fade-out');
-    slideImg1.classList.add('fade-out');
-    slideImg1.classList.remove('fade-in');
-    slideImg3.classList.add('fade-out');
-    slideImg3.classList.remove('fade-in');
-    slideImg4.classList.add('fade-out');
-    slideImg4.classList.remove('fade-in');
-  }
-
-  /* Updating of pagination */
-  paginationCircles.forEach((circle, index) => {
-    circle.classList.toggle('target', index === nowCnt);
-  });
-}
-
-setInterval(changeImg, 5000);
+/* slider of news contents */
+$(function() {
+  $('.autoplay__fv').slick({
+    slidesToShow:  1,
+    slidesToScroll: 1,
+    autoplay: true,
+    pauseOnHover: true,
+    arrows: false,
+    dots:true,
+    appendDots: $('.l-header__pagination'),
+    dotsClass: 'paginationFv c-flex',
+    autoplaySpeed: 10000,
+    infinite: true,
+    responsive: [
+      {
+          breakpoint: 950,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+          },
+        },
+        {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
 
 /* When scrolling, the reservation button will appear. */
 window.addEventListener('scroll', function() {

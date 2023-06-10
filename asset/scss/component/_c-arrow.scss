@@ -54,6 +54,65 @@
 
 .pagination {
 
+  &Fv {
+
+    position: absolute;
+    display: none;
+
+    @include mq-down() {
+      position: static;
+      display:flex;
+      margin-top: 2rem;
+    }
+
+    & li {
+      position: relative;
+
+      width: 0.75rem;
+      height: 0.75rem;
+      margin: 0 1rem;
+      border-radius: 50%;
+
+      background-color: $sub-title;
+
+      @include mq-down() {
+        width: 1rem;
+        height: 1rem;
+        margin: 0 0.5rem;
+      }
+
+
+      & button {
+        border: 0;
+
+        background: transparent;
+
+        font-size: 0;
+      }
+
+      &.slick-active button::before {
+        display: block;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: .75rem;
+        height: .75rem;
+        border-radius: 50%;
+
+        background-color: #ffffff;
+
+        content: "・";
+
+        @include mq-down() {
+          width: 1rem;
+          height: 1rem;
+        }
+      }
+    }
+  }
+
   &News {
 
     position: absolute;
