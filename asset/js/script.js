@@ -36,6 +36,8 @@ $(function() {
         },
       },
     ],
+  });
+})
 
 /* When scrolling, the reservation button will appear. */
 window.addEventListener('scroll', function() {
