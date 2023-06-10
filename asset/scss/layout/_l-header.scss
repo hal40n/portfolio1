@@ -619,14 +619,14 @@
 
     &1 {
       height: 100vh;
-        background: url(../../../asset/img/fv1.jpg);
+        background: url(https://github.com/hal40n/portfolio1/blob/main/asset/img/fv1.jpg?raw=true);
         background-size: cover;
         background-repeat: no-repeat;
         background-size: cover;
 
         @include mq-down() {
           height: 100vh;
-          background-image: url(../../../asset/img/fv1.jpg);
+          background-image: url(https://github.com/hal40n/portfolio1/blob/main/asset/img/fv1.jpg?raw=true);
           background-position: center center;
           background-repeat: no-repeat;
           background-size: cover;
@@ -635,14 +635,14 @@
 
     &2 {
       height: 100vh;
-      background-image: url(../../../asset/img/fv2.jpg);
+      background-image: url(https://github.com/hal40n/portfolio1/blob/main/asset/img/fv2.jpg?raw=true);
       background-size: cover;
       background-repeat: no-repeat;
       background-size: cover;
 
       @include mq-down() {
         height: 100vh;
-        background-image: url(../../../asset/img/fv2.jpg);
+        background-image: url(https://github.com/hal40n/portfolio1/blob/main/asset/img/fv2.jpg?raw=true);
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -650,7 +650,7 @@
     }
 
     &3 {
-      background: url(../../../asset/img/fv3.jpg);
+      background: url(https://github.com/hal40n/portfolio1/blob/main/asset/img/fv3.jpg?raw=true);
       background-size: cover;
       background-repeat: no-repeat;
       background-size: cover;
@@ -658,7 +658,7 @@
 
       @include mq-down() {
         height: 100vh;
-        background-image: url(../../../asset/img/fv3.jpg);
+        background-image: url(https://github.com/hal40n/portfolio1/blob/main/asset/img/fv3.jpg?raw=true);
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -667,14 +667,14 @@
 
   &4 {
     height: 100vh;
-    background: url(../../../asset/img/fv4.jpg);
+    background: url(https://github.com/hal40n/portfolio1/blob/main/asset/img/fv4.jpg?raw=true);
     background-size: cover;
     background-repeat: no-repeat;
     background-size: cover;
 
     @include mq-down() {
       height: 100vh;
-      background-image: url(../../../asset/img/fv4.jpg);
+      background-image: url(https://github.com/hal40n/portfolio1/blob/main/asset/img/fv4.jpg?raw=true);
       background-position: center center;
       background-repeat: no-repeat;
       background-size: cover;
