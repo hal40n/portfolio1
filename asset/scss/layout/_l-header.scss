@@ -908,8 +908,6 @@
     }
 
     &--hd {
-      opacity: 0;
-
       @include mq-down(lg) {
         opacity: 1;
       }
