@@ -738,7 +738,7 @@ th {
   left: -1%;
   width: 101%;
   height: 17rem;
-  background: url(.././../../asset/img/li_bwave.svg) 0 0 no-repeat;
+  background: url(.https://raw.githubusercontent.com/hal40n/portfolio1/43e4d6ea6488e852319bdc647acc2c613c62e468/asset/img/li_bwave.svg) 0 0 no-repeat;
   background-size: cover;
   content: "";
 }
@@ -748,7 +748,7 @@ th {
     left: -1%;
     width: 101%;
     height: 35rem;
-    background: url(../../../asset/img/li_bwave.svg) 0 0 no-repeat;
+    background: url(https://raw.githubusercontent.com/hal40n/portfolio1/43e4d6ea6488e852319bdc647acc2c613c62e468/asset/img/li_bwave.svg) 0 0 no-repeat;
     background-size: 100% auto;
   }
 }
@@ -758,7 +758,7 @@ th {
     left: -1%;
     width: 101%;
     height: 5rem;
-    background: url(../../../asset/img/li_bwave.svg) 0 0 no-repeat;
+    background: url(https://raw.githubusercontent.com/hal40n/portfolio1/43e4d6ea6488e852319bdc647acc2c613c62e468/asset/img/li_bwave.svg) 0 0 no-repeat;
     background-size: 100% auto;
   }
 }
@@ -1280,14 +1280,16 @@ th {
   }
 }
 .l-header__menu--ttl::after {
+  width: 7rem;
+  height: 7.5rem;
+  background: url("../../../asset/img/p-illust__img--3.png") 0 0 no-repeat;
+  background-size: auto 100%;
   display: block;
   position: absolute;
   bottom: 15rem;
   left: 10rem;
   width: 7rem;
   height: 7.5rem;
-  background: url(../../../asset/img/il_seagull_wt.svg) 0 0 no-repeat;
-  background-size: auto 100%;
   content: "";
 }
 .l-header__menu--ttl p {
@@ -1363,10 +1365,13 @@ th {
   }
 }
 .l-header__menu--content a:hover {
-  background-image: url(../../../asset/img/ダウンロード.svg);
-  background-repeat: repeat-x;
+  background-image: url("https://raw.githubusercontent.com/hal40n/portfolio1/b43ec4751edfc9c645cf3d92fe58b9974ac55818/asset/img/li_bwaveMove_wt.svg");
   background-position: 0 100%;
-  background-size: auto 6px;
+  background-size: auto 1rem;
+  background-repeat: repeat-x;
+  display: block;
+  width: -moz-fit-content;
+  width: fit-content;
   text-decoration: none;
   transition: 0;
   padding-bottom: 0.5rem;
@@ -1426,7 +1431,7 @@ th {
     transform: scale(-1, 1);
     width: 4rem;
     height: 5rem;
-    background: url(../../../asset/img/il_seagull_wt.svg) 0 0 no-repeat;
+    background: url("../../../asset/img/p-illust__img--3.png") 0 0 no-repeat;
     background-size: auto 100%;
     content: "";
   }
@@ -1526,15 +1531,15 @@ th {
 }
 .l-header__slider--img1 {
   height: 100vh;
-  background: url(../../../asset/img/fv1.jpg);
+  background: url("../../../asset/img/l-header__img--fv1.png");
   background-repeat: no-repeat;
-  background-size: cover;
   background-size: cover;
 }
 @media screen and (max-width: 767px) {
   .l-header__slider--img1 {
     height: 100vh;
-    background-image: url(../../../asset/img/fv1.jpg);
+    background-image: url("../../../asset/img/l-header__img--fv1.png");
+    background-position: center center;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -1542,15 +1547,14 @@ th {
 }
 .l-header__slider--img2 {
   height: 100vh;
-  background-image: url(../../../asset/img/fv2.jpg);
+  background-image: url("../../../asset/img/l-header__img--fv2.jpg");
+  background-size: cover;
   background-repeat: no-repeat;
-  background-size: cover;
-  background-size: cover;
 }
 @media screen and (max-width: 767px) {
   .l-header__slider--img2 {
     height: 100vh;
-    background-image: url(../../../asset/img/fv2.jpg);
+    background-image: url("../../../asset/img/l-header__img--fv2.jpg");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -1558,15 +1562,15 @@ th {
 }
 .l-header__slider--img3 {
   height: 100vh;
-  background: url(../../../asset/img/fv3.jpg);
-  background-repeat: no-repeat;
+  background: url("../../../asset/img/l-header__img--fv3.jpg");
   background-size: cover;
+  background-repeat: no-repeat;
   background-size: cover;
 }
 @media screen and (max-width: 767px) {
   .l-header__slider--img3 {
     height: 100vh;
-    background-image: url(../../../asset/img/fv3.jpg);
+    background-image: url("../../../asset/img/l-header__img--fv3.jpg");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -1574,15 +1578,14 @@ th {
 }
 .l-header__slider--img4 {
   height: 100vh;
-  background: url(../../../asset/img/fv4.jpg);
+  background-image: url("../../../asset/img/l-header__img--fv4.jpg");
+  background-size: cover;
   background-repeat: no-repeat;
-  background-size: cover;
-  background-size: cover;
 }
 @media screen and (max-width: 767px) {
   .l-header__slider--img4 {
     height: 100vh;
-    background-image: url(../../../asset/img/fv4.jpg);
+    background-image: url("../../../asset/img/l-header__img--fv4.jpg");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -1698,10 +1701,13 @@ th {
 }
 
 .home a {
-  background-image: url(../../../asset/img/li_bwaveMove_wt.svg);
-  background-repeat: repeat-x;
+  background-image: url(https://raw.githubusercontent.com/hal40n/portfolio1/b43ec4751edfc9c645cf3d92fe58b9974ac55818/asset/img/li_bwaveMove_wt.svg);
   background-position: 0 100%;
-  background-size: auto 6px;
+  background-size: auto 1rem;
+  background-repeat: repeat-x;
+  display: block;
+  width: -moz-fit-content;
+  width: fit-content;
   text-decoration: none;
   padding-bottom: 0.5rem;
 }
@@ -1753,11 +1759,11 @@ th {
 }
 
 .defaultColor {
-  background: url(../../../asset/img/line_menu_wt.svg) 0 0 no-repeat;
+  background: url(https://raw.githubusercontent.com/hal40n/portfolio1/b93a02004f0fd5b91956127521908a9a6c7b1742/asset/img/line_menu_wt.svg) 0 0 no-repeat;
 }
 
 .changeColor {
-  background: url(../../../asset/img/line_menu.svg) 0 0 no-repeat;
+  background: url(https://raw.githubusercontent.com/hal40n/portfolio1/7fae7a71321ac1ee59898245958bbfb55ad1d2b5/asset/img/line_menu.svg) 0 0 no-repeat;
 }
 
 .l-header__toggle--box.changeFntColor::after {
@@ -2352,13 +2358,13 @@ th {
   }
 }
 .p-concept__sec1--contTxt::before {
-  display: block;
   position: absolute;
   top: -10rem;
   right: -1rem;
   width: 7rem;
   height: 8rem;
-  background: url("../../../asset/img/li_boots.svg") 0 0 no-repeat;
+  background-image: url("../../../asset/img/p-illust__img--3.png");
+  background-repeat: no-repeat;
   background-size: 100% auto;
   content: "";
 }
@@ -2446,10 +2452,12 @@ th {
   position: absolute;
   top: -7rem;
   left: 4rem;
+  content: "";
+  background-image: url("../../../asset/img/p-illust__img--3.png");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
   width: 6rem;
   height: 7.5rem;
-  background: url(../../../asset/img/il_seagull.svg) 0 0 no-repeat;
-  background-size: 100% auto;
   content: "";
 }
 @media screen and (max-width: 950px) {
@@ -2547,10 +2555,12 @@ th {
   position: absolute;
   top: -10.5rem;
   left: 12rem;
+  content: "";
+  background-image: url("../../../asset/img/p-illust__img--3.png");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
   width: 5rem;
   height: 12rem;
-  background: url(../../../asset/img/il_lighthouse.svg) 0 0 no-repeat;
-  background-size: 100% auto;
   content: "";
 }
 @media screen and (max-width: 950px) {
@@ -2620,13 +2630,12 @@ th {
   }
 }
 .p-concept__sec3--detail::after {
+  background-image: url(https://raw.githubusercontent.com/hal40n/portfolio1/0b041aef3066717f157dab9714aeb4142f580b32/asset/img/li_bwaveMove.svg);
+  background-position: 0 0.5rem;
+  margin-top: 1rem;
   display: block;
   width: 100%;
   height: 0.5rem;
-  background-image: url(../../../asset/img/li_bwaveMove.svg);
-  background-position: 0 0.5rem;
-  background-position: 0 100%;
-  background-size: auto 0.5rem;
   text-decoration: none;
   content: "";
   margin-top: 1rem;
@@ -2875,7 +2884,7 @@ th {
   position: relative;
   width: 100%;
   height: auto;
-  background: url(../../../asset/img/illust1_sp.png) top center no-repeat;
+  background: url("../../../asset/img/p-illust__img--1.jpg") top center no-repeat;
   background-size: cover;
 }
 @media screen and (max-width: 767px) {
@@ -2910,7 +2919,7 @@ th {
   z-index: -1;
   width: 100%;
   height: 0;
-  background: url(../../../asset/img/illust2-ftr_bg.jpg) bottom left no-repeat;
+  background: url("../../../asset/img/p-illust__img--2.jpg") bottom left no-repeat;
   background-size: cover;
   margin-top: 20rem;
   padding-top: 60%;
@@ -2918,15 +2927,16 @@ th {
 @media screen and (max-width: 950px) {
   .p-illust2 {
     height: 45rem;
-    background: url(../../../asset/img/illust2-ftr_bg.jpg) -7rem top no-repeat;
+    background-image: url("../../../asset/img/p-illust__img--2") -7rem top no-repeat;
     background-size: 100rem auto;
+    margin-top: 10rem;
     padding-top: 60rem;
   }
 }
 @media screen and (max-width: 767px) {
   .p-illust2 {
     height: 45rem;
-    background: url(../../../asset/img/illust2-ftr_bg.jpg) -7rem top no-repeat;
+    background: url("../../../asset/img/p-illust__img--2.jpg") -7rem top no-repeat;
     background-size: 73rem auto;
     padding-top: 0;
   }
@@ -2936,10 +2946,10 @@ th {
   top: 37.5%;
   left: 5%;
   z-index: -1;
-  width: 40%;
-  height: 48%;
-  background: url(../../../asset/img/il_lure.svg) center no-repeat;
-  background-size: 100% auto;
+  width: 30%;
+  height: 30%;
+  background: url("../../../asset/img/p-illust__img--3.png") center no-repeat;
+  background-size: 20% auto;
 }
 @media screen and (max-width: 767px) {
   .p-illust2__lure {
@@ -2955,13 +2965,13 @@ th {
   z-index: -2;
   width: 50%;
   height: 50%;
-  background: url(../../../asset/img/il_fish.svg) center no-repeat;
-  background-size: 100% auto;
+  background: url("../../../asset/img/p-illust__img--3.png") center no-repeat;
+  background-size: 20% auto;
 }
 @media screen and (max-width: 767px) {
   .p-illust2__fish {
     top: 22.5rem;
-    left: 15rem;
+    left: 5rem;
     width: 37.5rem;
     height: 30rem;
   }
@@ -2972,10 +2982,10 @@ th {
   top: -8%;
   left: 23%;
   z-index: 2;
-  width: 6%;
-  height: 6%;
-  background: url(../../../asset/img/il_fish_foam1.svg) center no-repeat;
-  background-size: auto 100%;
+  width: 20%;
+  height: 20%;
+  background: url("../../../asset/img/p-illust__img--3.png") center no-repeat;
+  background-size: 20% auto;
   content: "";
 }
 @media screen and (max-width: 767px) {
@@ -2990,10 +3000,11 @@ th {
   top: 3%;
   left: 20%;
   z-index: 2;
-  width: 4%;
-  height: 4%;
-  background: url(../../../asset/img/il_fish_foam2.svg) center no-repeat;
-  background-size: auto 100%;
+  width: 10%;
+  height: 10%;
+  background-image: url("../../../asset/img/p-illust__img--3.jpg");
+  background-size: 20% auto;
+  background-repeat: no-repeat;
   content: "";
   animation: fadeUpBubble 2s infinite;
 }
@@ -3027,10 +3038,8 @@ th {
   position: absolute;
   top: -16rem;
   left: 0;
-  z-index: -2;
-  width: 100%;
-  height: 17rem;
-  background: url(../../../asset/img/li_bwave3.svg) top center no-repeat;
+  content: "";
+  background: url(https://raw.githubusercontent.com/hal40n/portfolio1/6ca75a29dfe95d83f158ae7398c65366e8fd1b30/asset/img/li_bwave3.svg) top center no-repeat;
   background-size: cover;
   content: "";
 }
@@ -3044,9 +3053,8 @@ th {
   position: absolute;
   bottom: -1rem;
   left: 0;
-  width: 100%;
-  height: 15rem;
-  background: url(../../../asset/img/li_bwave_wt2.svg) top center no-repeat;
+  content: "";
+  background: url(https://raw.githubusercontent.com/hal40n/portfolio1/6ca75a29dfe95d83f158ae7398c65366e8fd1b30/asset/img/li_bwave_wt2.svg) top center no-repeat;
   background-size: cover;
   content: "";
 }

@@ -148,7 +148,6 @@
         }
 
         &::before {
-          background: url('https://raw.githubusercontent.com/hal40n/portfolio1/a57a3b071d1af3061c6ebf4865e3d68483af9c1d/asset/img/li_boots.svg') 0 0 no-repeat;
           position: absolute;
           top: -10rem;
           right: -1rem;
@@ -156,7 +155,8 @@
           width: 7rem;
           height: 8rem;
 
-          background: url('../../../asset/img/li_boots.svg') 0 0 no-repeat;
+          background-image: url("../../../asset/img/p-illust__img--3.png");
+          background-repeat: no-repeat;
           background-size: 100% auto;
 
           content: "";
@@ -253,13 +253,13 @@
           top: -7rem;
           left: 4rem;
           content: "";
-          background: url(https://raw.githubusercontent.com/hal40n/portfolio1/a57a3b071d1af3061c6ebf4865e3d68483af9c1d/asset/img/il_seagull.svg) 0 0 no-repeat;
+          background-image: url("../../../asset/img/p-illust__img--3.png");
           background-size: 100% auto;
+          background-repeat: no-repeat;
           width: 6rem;
           height: 7.5rem;
 
-          background: url(../../../asset/img/il_seagull.svg) 0 0 no-repeat;
-          background-size: 100% auto;
+  
 
           content: "";
 
@@ -365,13 +365,11 @@
           top: -10.5rem;
           left: 12rem;
           content: "";
-          background: url(https://raw.githubusercontent.com/hal40n/portfolio1/a57a3b071d1af3061c6ebf4865e3d68483af9c1d/asset/img/il_lighthouse.svg) 0 0 no-repeat;
+          background-image: url("../../../asset/img/p-illust__img--3.png");
           background-size: 100% auto;
+          background-repeat: no-repeat;
           width: 5rem;
           height: 12rem;
-
-          background: url(../../../asset/img/il_lighthouse.svg) 0 0 no-repeat;
-          background-size: 100% auto;
 
           content: "";
 
@@ -452,10 +450,6 @@
         width: 100%;
         height: 0.5rem;
 
-        background-image: url(../../../asset/img/li_bwaveMove.svg);
-        background-position: 0 0.5rem;
-        background-position: 0 100%;
-        background-size: auto 0.5rem;
 
         text-decoration: none;
 
