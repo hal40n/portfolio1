@@ -370,6 +370,7 @@
 
         background: url("../../asset/img/p-illust__img--3.png") 0 0 no-repeat;
 
+
         background-size: auto 100%;
         display: block;
 
@@ -873,6 +874,7 @@
 
 .home a {
 
+
   background-image: url("../../asset/img/li_bwaveMove_wt.svg");
 
   background-position: 0 100%;
@@ -908,8 +910,6 @@
     }
 
     &--hd {
-      opacity: 0;
-
       @include mq-down(lg) {
         opacity: 1;
       }

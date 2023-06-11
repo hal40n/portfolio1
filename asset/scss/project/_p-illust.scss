@@ -63,7 +63,9 @@
     @include mq-down(lg) {
       height: 45rem;
 
-      background-image: url("../../asset/img/p-illust__img--2")  -7rem top no-repeat;
+
+      background-image: url("../../asset/img/p-illust__img--2.jpg")  -7rem top no-repeat;
+
 
       background-size: 100rem auto;
       margin-top: 10rem;
@@ -112,7 +114,7 @@
       height: 50%;
 
 
-      background: url("../../../asset/img/p-illust__img--3.png") center no-repeat;
+      background: url("../../asset/img/p-illust__img--3.png") center no-repeat;
       background-size: 20% auto;
 
 
@@ -161,7 +163,9 @@
         height: 10%;
 
 
-        background-image: url("../../asset/img/p-illust__img--3.jpg");
+
+        background-image: url("../../asset/img/p-illust__img--3.png");
+
         background-size: 20% auto;
         background-repeat: no-repeat;
 
