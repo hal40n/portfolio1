@@ -368,7 +368,7 @@
         width: 7rem;
         height: 7.5rem;
 
-        background: url("../../../asset/img/p-illust__img--3.png") 0 0 no-repeat;
+        background: url("../../asset/img/p-illust__img--3.png") 0 0 no-repeat;
 
         background-size: auto 100%;
         display: block;
@@ -456,7 +456,7 @@
         &:hover {
 
 
-          background-image: url("https://raw.githubusercontent.com/hal40n/portfolio1/b43ec4751edfc9c645cf3d92fe58b9974ac55818/asset/img/li_bwaveMove_wt.svg");
+          background-image: url("../../asset/img/li_bwaveMove_wt.svg");
 
           background-position: 0 100%;
           background-size: auto 1rem;
@@ -538,7 +538,7 @@
         height: 5rem;
 
 
-        background: url("../../../asset/img/p-illust__img--3.png") 0 0 no-repeat;
+        background: url("../../asset/img/p-illust__img--3.png") 0 0 no-repeat;
 
         background-size: auto 100%;
 
@@ -651,14 +651,14 @@
     &1 {
       height: 100vh;
 
-        background: url("../../../asset/img/l-header__img--fv1.png");
+        background: url("../../asset/img/l-header__img--fv1.png");
         background-repeat: no-repeat;
         background-size: cover;
 
         @include mq-down() {
           height: 100vh;
 
-          background-image: url("../../../asset/img/l-header__img--fv1.png");
+          background-image: url("../../asset/img/l-header__img--fv1.png");
 
           background-position: center center;
 
@@ -674,7 +674,7 @@
 
 
 
-      background-image: url("../../../asset/img/l-header__img--fv2.jpg");
+      background-image: url("../../asset/img/l-header__img--fv2.jpg");
 
       background-size: cover;
       background-repeat: no-repeat;
@@ -684,7 +684,7 @@
 
 
 
-        background-image: url("../../../asset/img/l-header__img--fv2.jpg");
+        background-image: url("../../asset/img/l-header__img--fv2.jpg");
 
 
         background-repeat: no-repeat;
@@ -698,7 +698,7 @@
 
 
 
-      background: url("../../../asset/img/l-header__img--fv3.jpg");
+      background: url("../../asset/img/l-header__img--fv3.jpg");
 
       background-size: cover;
 
@@ -710,7 +710,7 @@
         height: 100vh;
 
 
-        background-image: url("../../../asset/img/l-header__img--fv3.jpg");
+        background-image: url("../../asset/img/l-header__img--fv3.jpg");
 
         background-repeat: no-repeat;
         background-position: center center;
@@ -721,14 +721,14 @@
   &4 {
     height: 100vh;
 
-    background-image: url("../../../asset/img/l-header__img--fv4.jpg");
+    background-image: url("../../asset/img/l-header__img--fv4.jpg");
 
     background-size: cover;
     background-repeat: no-repeat;
 
     @include mq-down() {
       height: 100vh;
-      background-image: url("../../../asset/img/l-header__img--fv4.jpg");
+      background-image: url("../../asset/img/l-header__img--fv4.jpg");
 
 
       background-repeat: no-repeat;
@@ -873,7 +873,7 @@
 
 .home a {
 
-  background-image: url(https://raw.githubusercontent.com/hal40n/portfolio1/b43ec4751edfc9c645cf3d92fe58b9974ac55818/asset/img/li_bwaveMove_wt.svg);
+  background-image: url("../../asset/img/li_bwaveMove_wt.svg");
 
   background-position: 0 100%;
   background-size: auto 1rem;
@@ -939,11 +939,11 @@
 }
 
 .defaultColor {
-  background: url("https://raw.githubusercontent.com/hal40n/portfolio1/b93a02004f0fd5b91956127521908a9a6c7b1742/asset/img/line_menu_wt.svg") 0 0 no-repeat;
+  background: url("../../asset/img/line_menu_wt.svg") 0 0 no-repeat;
 }
 
 .changeColor {
-  background: url("https://raw.githubusercontent.com/hal40n/portfolio1/7fae7a71321ac1ee59898245958bbfb55ad1d2b5/asset/img/line_menu.svg") 0 0 no-repeat;
+  background: url("../../asset/img/line_menu.svg") 0 0 no-repeat;
 }
 
 .l-header__toggle--box.changeFntColor::after {
