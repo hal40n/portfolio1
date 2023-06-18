@@ -164,6 +164,7 @@
           color: map-get($colors, "c-white");
 
           content: "ご予約";
+          font-size: 1.4rem;
 
           margin-top: 0;
         }
@@ -196,10 +197,9 @@
       display: flex;
 
       top: 0;
-      right: 0;
-
-      width: 10rem;
-      height: 8rem;
+      right: 1rem;
+      width: 9rem;
+      height: 9rem;
 
       background: rgb(0, 0, 0, 0);
 
@@ -208,7 +208,7 @@
     }
     @include mq-down() {
       top: -0.5rem;
-
+      right: 0;
       width: 7rem;
       height: 7rem;
 
@@ -231,7 +231,7 @@
         display: block;
 
         position: absolute;
-
+        top: 4rem;
         width: 2rem;
         margin: 0 auto;
 
@@ -242,11 +242,16 @@
 
         content: "menu";
 
-        @include mq-down() {
-          top: 2rem;
-          right: 1.15rem;
+        @include  mq-down(lg) {
+          top: 3rem;
+          right: 1.85rem;
+          font-size: 2rem;
+        }
 
-          font-size: 1.75rem;
+        @include mq-down() {
+          top: 1.5rem;
+          right: 1rem;
+          font-size: 1.5rem;
         }
       }
     }
@@ -255,31 +260,42 @@
       display: block;
 
       width: 5rem;
-      height: 1rem;
+      height: 0.1rem;
       margin: 0 auto;
 
-      background-size: 100% 0.75rem;
 
       transition: ease .4s;
 
       @include mq-down(lg) {
         width: 4rem;
-        height: 1rem;
+        height: 0.1rem;
       }
       @include mq-down() {
         width: 3rem;
-        height: 1rem;
+        height: 0.1rem;
 
         background-size: 100% auto;
       }
 
+      &:nth-child(2) {
+        margin-top: 1.25rem;
 
+        @include mq-down() {
+          margin-top: 0.75rem;
+        }
+      }
 
+      &:nth-child(3) {
+        margin-top: 1.25rem;
+
+        @include mq-down() {
+          margin-top: 0.75rem;
+        }
+      }
     }
   }
 
   &__menu {
-    display: flex;
     overflow: auto;
     opacity: 0;
 
@@ -293,18 +309,14 @@
 
     width: 100%;
     height: 100vh;
-    margin: 0 auto;
-    padding: 0 5%;
 
     background-color: #1b2f5b;
 
     color: #ffffff;
-    text-align: center;
 
     transition: ease .5s;
-
-    justify-content: space-between;
     align-items: center;
+
     @include mq-down() {
       height: auto;
 
@@ -315,18 +327,12 @@
 
     }
 
-    &__nav {
-      @include mq-down() {
-        max-width: 100%;
-      }
-    }
-
 
     &--contents {
       display: flex;
 
       width: 100%;
-      height: 10%;
+      height: 100%;
       margin: 0 auto;
 
       text-align: left;
@@ -334,9 +340,8 @@
       max-width: calc(98rem + 12%);
       align-items: center;
       justify-content: space-between;
-      padding-top: 10rem;
-      padding-bottom: 10rem;
-      padding-left: 5%;
+      padding: 0 6%;
+
       @include mq-down(lg) {
         display: block;
 
@@ -354,9 +359,9 @@
     &--ttl {
       z-index: 990;
 
-      width: 32rem;
+      width: 100%;
 
-      max-width: 32rem;
+      max-width: 36rem;
       @include mq-down(lg) {
         display: none;
 
@@ -375,17 +380,46 @@
         display: block;
 
         position: absolute;
-        bottom: 15rem;
-        left: 10rem;
-
-        width: 7rem;
-        height: 7.5rem;
+        bottom: 5rem;
+        left: 5rem;
 
         content: "";
+
+        animation: jump 5s infinite;
+        animation-name: jump;
+        animation-duration: 5s;
+        animation-timing-function: ease;
+        animation-delay: 0s;
+        animation-iteration-count: infinite;
+        animation-direction: normal;
+        animation-fill-mode: none;
+        animation-play-state: running;
+      }
+
+      @keyframes jump {
+        0%,100% {
+            transform: translateY(0)
+        }
+    
+        5% {
+            transform: translateY(-1rem)
+        }
+    
+        7% {
+            transform: translateY(0)
+        }
+    
+        10% {
+            transform: translateY(-1rem)
+        }
+    
+        12% {
+            transform: translateY(0)
+        }
       }
 
       & p {
-        font-size: 1.5rem;
+        font-size: 2rem;
 
         @include mq-down() {
           font-size: 2rem;
@@ -394,7 +428,7 @@
 
       & h2 {
         font-family: $font-family__hiragino--proN;
-        font-size: 3.5rem;
+        font-size: 3.75rem;
 
         @include mq-down() {
           width: 100vw;
@@ -404,17 +438,19 @@
       }
     }
 
-    &--nav {
-      width: 50%;
-
-      margin-top: 10rem;
+    &--inner {
+      padding-top: 10rem;
       padding-bottom: 10rem;
+      padding-left: 5%;
+      box-sizing: border-box;
+      min-width: 42rem;
+      margin-left:15rem;
+
       @include mq-down(lg) {
         width: 100%;
         height: auto;
-
-        margin-top: -25rem;
-        padding-top: 2rem;
+        margin-left: 0;
+        padding-top: 12rem;
       }
       @include mq-down() {
         margin-top: -12rem;
@@ -431,24 +467,35 @@
     }
 
     &--content {
-      display: inline-block;
 
       width: 100%;
 
-      font-size: 1.6rem;
+      margin-top: 1rem;
 
-      margin-top: 5rem;
-      padding-bottom: 0.5rem;
+      line-height: 2;
+
       @include mq-down(lg) {
-        margin-top: 5rem;
+        margin-top: 2rem;
       }
       @include mq-down() {
         margin-top: 1rem;
       }
 
-      & a {
+      &:nth-child(1) {
+        margin-top: 0;
         @include mq-down(lg) {
-          font-size: 2rem;
+          margin-top: .5rem;
+        }
+      }
+
+      & a {
+
+        display: inline-block;
+        padding-bottom: 0.5rem;
+        font-size: 2rem;
+
+        @include mq-down(lg) {
+          font-size: 1.75rem;
         }
         @include mq-down() {
           font-size: 1.5rem;
@@ -456,39 +503,40 @@
 
         &:hover {
 
-
-          background-image: url("../../asset/img/li_bwaveMove_wt.svg");
-
-          background-position: 0 100%;
-          background-size: auto 1rem;
-          background-repeat: repeat-x;
-          display: block;
-          width: fit-content;
-          text-decoration: none;
-
-          transition: 0;
-
-          padding-bottom: 0.5rem;
+          &::after {
+            content: "";
+            margin-top: -1rem;
+            display: block;
+            width: 100%;
+            height: 0.6rem;
+            background-image: url(../../asset/img/li_bwaveMove_wt.svg);
+            background-position: 0 100%;
+            // background-size: auto 0.5rem;
+            background-repeat: repeat-x;
+            text-decoration: none;
+            transform: translateY(0rem);
+            transition: all .5s cubic-bezier(0.25, 1, 0.5, 1) 0s;
+          }
         }
       }
 
-      &:first-child {
-        margin-top: 0;
-        @include mq-down(lg) {
-          margin-top: .5rem;
-        }
-      }
 
       &.reserve {
         width: 100%;
-        padding: 1.5rem;
-        border: 1px solid #fff;
-
-        background: none;
-
-        text-align: center;
 
         margin-top: 3rem;
+
+        display: block;
+
+        & a {
+          width: 100%;
+          border: 1px solid #fff;
+          padding: 1rem;
+          box-sizing: border-box;
+          text-align: center;
+          transition: all .5s cubic-bezier(0.25, 1, 0.5, 1) 0s;
+        }
+
         @include mq-down(lg) {
           display: block;
 
@@ -499,32 +547,56 @@
   }
 
   &__sns {
-    margin-top: 5rem;
+    margin-top: 7rem;
+
+    @include mq-down(lg) {
+      margin-top: 6rem;
+    }
+
     @include mq-down() {
       margin-top: 7rem;
     }
 
 
     & li {
-    width: 3rem;
-    height: 3rem;
+      width: 2.6rem;
+      height: 2.6rem;
+      display: inline-block;
+
+      @include mq-down(lg) {
+        width: 3.5rem;
+        height: 3.5rem;
+      }
 
       &:before {
-        display: inline-block;
+        font-size: 1.8rem;
+        position: relative;
+        top: 4%;
+        left: 20%;
 
-        font-size: 2rem;
+        @include mq-down(lg) {
+          font-size: 2rem;
+          position: relative;
+          top: 10%;
+          left: 23.5%;
+        }
 
         @include mq-down() {
           width: 3.5rem;
           height: 3.5rem;
           border-radius: 4rem;
         }
-        padding-left: 0.5rem;
       }
     }
   }
 
   &__contact {
+
+    margin-top: 7rem;
+
+    @include mq-down(lg) {
+      margin-top: 6rem;
+    }
 
     &::after {
       @include mq-down() {
@@ -547,26 +619,43 @@
       }
     }
 
-    & h3 {
-      font-size: 2rem;
 
-      margin-top: 50px;
-      @include mq-down() {
-        font-size: 1.5rem;
+    &--tel {
+      & h3 {
+        font-size: 2.2rem;
+        margin-top: 50px;
+        @include mq-down() {
+          font-size: 1.5rem;
+        }
+      }
+
+      & span {
+        font-size: 1.6rem;
+        padding-right: 0.5rem;
       }
     }
 
-    & p {
-      font-size: 1.75rem;
 
-      margin-top: 2rem;
-      @include mq-down(lg) {
-        font-size: 1.5rem;
+    &--address {
+
+      margin-top: 5rem;
+
+      & span {
+        font-size: 1.6rem;
       }
-      @include mq-down() {
-        font-size: 1.2rem;
 
-        margin-top: 1rem;
+      & p {
+        font-size: 1.6rem;
+
+        margin-top: 1.5rem;
+        @include mq-down(lg) {
+          font-size: 1.5rem;
+        }
+        @include mq-down() {
+          font-size: 1.2rem;
+
+          margin-top: 1rem;
+        }
       }
     }
   }
@@ -811,10 +900,9 @@
 
     transform-origin: left;
     @include mq-down() {
-      top: 70%;
+      top: 67%;
       left: 2rem;
-
-      font-size: 2rem;
+      font-size: 1.8rem;
     }
   }
 
@@ -837,7 +925,7 @@
       @include mq-down() {
         display: block;
 
-        right: -6rem;
+        right: -6.5rem;
         bottom: 4rem;
 
         font-size: 3.5rem;
@@ -872,22 +960,21 @@
   }
 }
 
-.home a {
+.home::after {
 
-
-  background-image: url("../../asset/img/li_bwaveMove_wt.svg");
-
-  background-position: 0 100%;
-  background-size: auto 1rem;
-  background-repeat: repeat-x;
+  content: "";
+  margin-top: -0.5rem;
   display: block;
-  width: fit-content;
-
+  width: 100%;
+  height: 0.5rem;
+  background-image: url(../../asset/img/li_bwaveMove_wt.svg);
+  background-position: 0 100%;
+  background-size: auto 0.5rem;
+  background-repeat: repeat-x;
   text-decoration: none;
-
-  padding-bottom: 0.5rem;
+  transform: translateY(0.5rem);
+  transition: all .5s cubic-bezier(0.25, 1, 0.5, 1) 0s;
 }
-
 
 /* scroll */
 
@@ -939,13 +1026,12 @@
 }
 
 .defaultColor {
-  background: url("../../asset/img/line_menu_wt.svg") 0 0 no-repeat;
+  background-color: #fff;
 }
 
 .changeColor {
-  background: url("../../asset/img/line_menu.svg") 0 0 no-repeat;
+  background-color: $default-color;
 }
-
 .l-header__toggle--box.changeFntColor::after {
   color: $default-color;
 }
@@ -988,4 +1074,3 @@
     z-index: -1;
   }
 }
-

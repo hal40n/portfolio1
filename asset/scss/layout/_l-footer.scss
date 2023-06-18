@@ -109,13 +109,17 @@
 
     text-align: center;
 
-    padding-top: 10rem;
+    padding-top: 7rem;
     padding-bottom: 9rem;
 
     &--title {
       font-family: $font-family__tsuku;
 
       & p {
+        @include mq-down(lg) {
+          font-size: 1.5rem;
+        }
+
         @include mq-down() {
           font-size: 1.5rem;
         }
@@ -126,6 +130,11 @@
         font-size: 3.75rem;
 
         margin-top: 0.5rem;
+
+        @include mq-down(lg) {
+          font-size: 3rem;
+        }
+
         @include mq-down() {
           font-size: 3rem;
 
@@ -145,9 +154,8 @@
 
       & li {
         display: inline-block;
-
-        font-size: 1.35rem;
-        letter-spacing: .35rem;
+        font-size: 1.4rem;
+        letter-spacing: 0.08rem;
 
         @include mq-down() {
           display: block;
@@ -159,11 +167,21 @@
         }
 
         &+li {
-          margin-left: 3.5rem;
+          margin-left: 1rem;
+
+          @include mq-down(lg) {
+            margin-left: 3rem;
+          }
+
           @include mq-down() {
             margin-left: 0;
             margin-top: 1.35rem;
           }
+        }
+
+        &:hover {
+          opacity: 0.5;
+          transition: .3s ease-in-out;
         }
       }
     }
@@ -171,7 +189,7 @@
     &--reserve {
       width: fit-content;
       margin: 3.5rem auto 0 auto;
-      padding: 1rem 2rem;
+      padding: 1.5rem 2rem;
       border: 1px solid map-get($colors, "c-white");
 
       text-align: center;
@@ -179,16 +197,15 @@
       @include mq-down() {
         padding: 1.5rem 3rem;
 
-        font-size: 1.5rem;
+        font-size: 1.35rem;
 
-        margin-top: 5rem;
+        margin-top: 3rem;
       }
 
-      & p {
-        @include mq-down() {
-          font-size: 1.5rem;
-        }
-
+      &:hover {
+        background-color: #fff;
+        color: $default-color;
+        transition: .3s ease-in-out;
       }
     }
 
@@ -196,6 +213,13 @@
       font-size: 1.3rem;
 
       margin-top: 3rem;
+
+      @include mq-down(lg) {
+        font-size: 1.2rem;
+        margin-top: 3rem;
+        line-height: 2;
+      }
+
       @include mq-down() {
         font-size: 1.35rem;
 
@@ -207,8 +231,12 @@
         text-decoration: none;
         letter-spacing: 0.08rem;
 
+        @include mq-down(lg) {
+          font-size: 1.6rem;
+      }
+
         @include mq-down() {
-          font-size: 2rem;
+          font-size: 1.7rem;
         }
       }
     }
@@ -216,22 +244,24 @@
     &--sns {
       display: flex;
 
-      width: 15rem;
+      width: 11rem;
       margin: 4rem auto 0 auto;
 
       justify-content: space-between;
+
       @include mq-down(lg) {
         display: block;
 
         width: 100%;
 
-        margin-top: 5rem;
+        margin-top: 3rem;
       }
 
 
       & li {
         width: 3rem;
         height: 3rem;
+        position: relative;
 
         justify-content: space-between;
         margin-right: 0;
@@ -244,9 +274,11 @@
         }
 
         &::before {
-          font-size: 2rem;
+          font-size: 1.75rem;
 
-          margin-top: 4rem;
+          position: absolute;
+          top: 0.5rem;
+          right: 0.65rem;
         }
       }
     }
@@ -256,7 +288,7 @@
     position: relative;
 
     margin: 0 auto;
-    padding: 5rem 0;
+    padding: 3rem 0;
 
     background-color: #0a1a3c;
 
@@ -268,29 +300,34 @@
 
 
     & p {
-      font-size: 2rem;
+      font-size: 1.1rem;
 
       @include mq-down(lg) {
         font-size: 1rem;
       }
       @include mq-down() {
-        font-size: 1.35rem;
+        font-size: 1rem;
       }
 
       &::before {
         display: block;
 
         position: absolute;
-        top: -1rem;
+        top: -3rem;
         left: -1%;
 
         width: 100%;
-        height: 3rem;
+        height: 4rem;
 
         background-image: url("../../asset/img/li_bwave2.svg");
         background-size: 100% auto;
 
         content: "";
+
+        @include mq-down() {
+          top: -1rem;
+          background-repeat: no-repeat;
+        }
       }
     }
   }
