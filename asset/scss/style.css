@@ -2741,6 +2741,7 @@ th {
     top: -4.75rem;
     right: 110%;
     margin-top: 20rem;
+    content: "texttextte÷ \attexttexttexttexttexttexttexttexttexttexttexttext";
   }
 }
 @media screen and (max-width: 767px) {

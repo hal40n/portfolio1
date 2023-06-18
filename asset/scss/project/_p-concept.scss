@@ -345,6 +345,7 @@
               right: 110%;
 
               margin-top: 20rem;
+              content: "texttextte÷ \a ttexttexttexttexttexttexttexttexttexttexttexttext";
             }
             @include mq-down() {
               top: -21.5rem;
