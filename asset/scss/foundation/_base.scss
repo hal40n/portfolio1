@@ -30,6 +30,7 @@ body {
   min-width: 350px;
   width: 100vw;
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
 
   @include mq-down(){
     font-size: 1.35rem;
@@ -38,9 +39,7 @@ body {
   }
 }
 
-img,
-video,
-object {
+img {
   width: 100%;
   max-width: 100%;
   height: auto;
