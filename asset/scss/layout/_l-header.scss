@@ -100,7 +100,7 @@
 
     position: absolute;
     top: calc(50vh - 8rem);
-    right: 1rem;
+    right: 0rem;
     z-index: 1000;
 
     @include mq-down(lg) {
@@ -967,7 +967,7 @@
   display: block;
   width: 100%;
   height: 0.5rem;
-  background-image: url(../../asset/img/li_bwaveMove_wt.svg);
+  background-image: url("../../asset/img/li_bwaveMove_wt.svg");
   background-position: 0 100%;
   background-size: auto 0.5rem;
   background-repeat: repeat-x;
