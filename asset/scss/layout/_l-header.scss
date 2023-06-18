@@ -100,7 +100,7 @@
 
     position: absolute;
     top: calc(50vh - 8rem);
-    right: 0rem;
+    right: 1rem;
     z-index: 1000;
 
     @include mq-down(lg) {
