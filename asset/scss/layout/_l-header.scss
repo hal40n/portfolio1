@@ -100,7 +100,7 @@
 
     position: absolute;
     top: calc(50vh - 8rem);
-    right: 1rem;
+    right: 0rem;
     z-index: 1000;
 
     @include mq-down(lg) {
@@ -317,12 +317,16 @@
     transition: ease .5s;
     align-items: center;
 
+    @include mq-down(lg) {
+      height: 100%;
+    }
+
     @include mq-down() {
       height: auto;
 
       text-align: left;
 
-      padding-top: 5rem;
+      padding-top: 10rem;
       padding-bottom: 15rem;
 
     }
@@ -454,6 +458,8 @@
       }
       @include mq-down() {
         margin-top: -12rem;
+        padding-right: 6%;
+        min-width: 100%;
       }
     }
 
@@ -498,7 +504,7 @@
           font-size: 1.75rem;
         }
         @include mq-down() {
-          font-size: 1.5rem;
+          font-size: 1.6rem;
         }
 
         &:hover {
@@ -540,7 +546,7 @@
         @include mq-down(lg) {
           display: block;
 
-          margin-top: 5rem;
+          margin-top: 4rem;
         }
       }
     }
@@ -603,8 +609,8 @@
         display: block;
 
         position: absolute;
-        right: 3.5rem;
-        bottom: -22rem;
+        right: 2rem;
+        bottom: -23.5rem;
         transform: scale(-1, 1);
 
         width: 4rem;
@@ -625,13 +631,17 @@
         font-size: 2.2rem;
         margin-top: 50px;
         @include mq-down() {
-          font-size: 1.5rem;
+          font-size: 2.25rem;
         }
       }
 
       & span {
         font-size: 1.6rem;
         padding-right: 0.5rem;
+
+        @include mq-down() {
+          font-size: 1.7rem;
+        }
       }
     }
 
@@ -639,6 +649,10 @@
     &--address {
 
       margin-top: 5rem;
+
+      @include mq-down() {
+        margin-top: 2rem;
+      }
 
       & span {
         font-size: 1.6rem;
@@ -652,9 +666,9 @@
           font-size: 1.5rem;
         }
         @include mq-down() {
-          font-size: 1.2rem;
+          font-size: 1.5rem;
 
-          margin-top: 1rem;
+          margin-top: 0;
         }
       }
     }
