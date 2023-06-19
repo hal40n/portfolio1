@@ -985,8 +985,10 @@ th {
 .l-footer__contents--sns li::before {
   font-size: 1.75rem;
   position: absolute;
-  top: 0.5rem;
-  right: 0.65rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
 }
 .l-footer__cr {
   position: relative;
@@ -1117,7 +1119,7 @@ th {
   opacity: 0;
   position: absolute;
   top: calc(50vh - 8rem);
-  right: 1rem;
+  right: 0rem;
   z-index: 1000;
 }
 @media screen and (max-width: 950px) {
@@ -1311,11 +1313,16 @@ th {
   transition: ease 0.5s;
   align-items: center;
 }
+@media screen and (max-width: 950px) {
+  .l-header__menu {
+    height: 100%;
+  }
+}
 @media screen and (max-width: 767px) {
   .l-header__menu {
     height: auto;
     text-align: left;
-    padding-top: 5rem;
+    padding-top: 10rem;
     padding-bottom: 15rem;
   }
 }
@@ -1430,6 +1437,8 @@ th {
 @media screen and (max-width: 767px) {
   .l-header__menu--inner {
     margin-top: -12rem;
+    padding-right: 6%;
+    min-width: 100%;
   }
 }
 .l-header__menu--list {
@@ -1476,7 +1485,7 @@ th {
 }
 @media screen and (max-width: 767px) {
   .l-header__menu--content a {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
   }
 }
 .l-header__menu--content a:hover::after {
@@ -1508,7 +1517,7 @@ th {
 @media screen and (max-width: 950px) {
   .l-header__menu--content.reserve {
     display: block;
-    margin-top: 5rem;
+    margin-top: 4rem;
   }
 }
 .l-header__sns {
@@ -1568,8 +1577,8 @@ th {
   .l-header__contact::after {
     display: block;
     position: absolute;
-    right: 3.5rem;
-    bottom: -22rem;
+    right: 2rem;
+    bottom: -23.5rem;
     transform: scale(-1, 1);
     width: 4rem;
     height: 5rem;
@@ -1584,15 +1593,25 @@ th {
 }
 @media screen and (max-width: 767px) {
   .l-header__contact--tel h3 {
-    font-size: 1.5rem;
+    font-size: 2.25rem;
   }
 }
 .l-header__contact--tel span {
   font-size: 1.6rem;
   padding-right: 0.5rem;
 }
+@media screen and (max-width: 767px) {
+  .l-header__contact--tel span {
+    font-size: 1.7rem;
+  }
+}
 .l-header__contact--address {
   margin-top: 5rem;
+}
+@media screen and (max-width: 767px) {
+  .l-header__contact--address {
+    margin-top: 2rem;
+  }
 }
 .l-header__contact--address span {
   font-size: 1.6rem;
@@ -1608,8 +1627,8 @@ th {
 }
 @media screen and (max-width: 767px) {
   .l-header__contact--address p {
-    font-size: 1.2rem;
-    margin-top: 1rem;
+    font-size: 1.5rem;
+    margin-top: 0;
   }
 }
 .l-header__ttl {

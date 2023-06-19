@@ -277,8 +277,10 @@
           font-size: 1.75rem;
 
           position: absolute;
-          top: 0.5rem;
-          right: 0.65rem;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          -webkit-transform: translate(-50%, -50%);
         }
       }
     }
