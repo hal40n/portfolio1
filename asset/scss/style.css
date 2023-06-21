@@ -1401,7 +1401,7 @@ th {
   }
 }
 .l-header__menu--ttl p {
-  font-size: 2rem;
+  font-size: 1.75rem;
 }
 @media screen and (max-width: 767px) {
   .l-header__menu--ttl p {
@@ -1410,7 +1410,7 @@ th {
 }
 .l-header__menu--ttl h2 {
   font-family: "ヒラギノ明朝 ProN";
-  font-size: 3.75rem;
+  font-size: 3rem;
 }
 @media screen and (max-width: 767px) {
   .l-header__menu--ttl h2 {
@@ -2249,11 +2249,6 @@ th {
   width: 100%;
   height: 50rem;
 }
-@media screen and (max-width: 767px) {
-  .p-access__map {
-    height: 10rem;
-  }
-}
 .p-access__conts {
   display: flex;
   justify-content: space-between;
@@ -2267,7 +2262,6 @@ th {
 @media screen and (max-width: 767px) {
   .p-access__conts {
     display: block;
-    margin-top: 25rem;
   }
 }
 .p-access__ttl {
@@ -2554,7 +2548,7 @@ th {
   color: #1b2f5b;
   font-family: "Caveat", cursive;
   font-size: 1.5rem;
-  content: "exttexttexttexttexttexttexttexttexttexttexttexttexttexttexttex";
+  content: "Immerse yourself in the joy and laughter of the breathtaking nature";
   margin-top: 1rem;
 }
 @media screen and (max-width: 950px) {
@@ -2566,7 +2560,7 @@ th {
     font-size: 2rem;
     text-align: right;
     white-space: pre;
-    content: "texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttextte";
+    content: "Immerse yourself \ain the joy and laughter of \athe breathtaking nature";
   }
 }
 @media screen and (max-width: 767px) {
@@ -2751,16 +2745,17 @@ th {
   font-size: 1.5rem;
   line-height: 1.3;
   white-space: pre;
-  content: "texttexttexttexttexttexttexttexttexttexttexttexttexttexttext";
+  content: "Immerse yourself in the joy and laughter of the breathtaking nature";
   margin-top: 90%;
   transform-origin: top right;
 }
 @media screen and (max-width: 950px) {
   .p-concept__sec2--contPic2::after {
+    font-size: 1.35rem;
     top: -4.75rem;
     right: 110%;
     margin-top: 20rem;
-    content: "texttextte÷ \attexttexttexttexttexttexttexttexttexttexttexttext";
+    content: "Immerse yourself in the joy and \alaughter of the breathtaking nature";
   }
 }
 @media screen and (max-width: 767px) {
@@ -2911,24 +2906,62 @@ th {
 .p-concept__sec3--detail p::after {
   display: block;
   position: absolute;
-  top: 5%;
-  right: 0.3rem;
-  padding: 0.2rem;
-  border-radius: 1rem;
-  background-color: #1b2f5b;
-  color: #ffffff;
-  font-size: 0.1rem;
-  content: "▶";
+  top: 29%;
+  left: 16rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-top: -8px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  background: #1b2f5b;
+  content: "";
   margin-left: 3rem;
+}
+@media screen and (max-width: 950px) {
+  .p-concept__sec3--detail p::after {
+    top: 20%;
+    left: 16rem;
+    width: 2rem;
+    height: 2rem;
+  }
 }
 @media screen and (max-width: 767px) {
   .p-concept__sec3--detail p::after {
-    top: 0%;
-    right: 0.5rem;
-    padding: 0.25rem 0.5rem;
-    border-radius: 2rem;
-    margin-top: 0.5rem;
-    margin-left: 2rem;
+    top: 28%;
+    left: 14.5rem;
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+}
+.p-concept__sec3--detail p::before {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 34%;
+  left: 19.75rem;
+  width: 0;
+  height: 0px;
+  margin-top: -0.45rem;
+  border: 0.3rem solid transparent;
+  border-left: 0.3rem solid #fff;
+  z-index: 300;
+}
+@media screen and (max-width: 950px) {
+  .p-concept__sec3--detail p::before {
+    top: 25%;
+    left: 19.75rem;
+    border: 0.5rem solid transparent;
+    border-left: 0.5rem solid #fff;
+  }
+}
+@media screen and (max-width: 767px) {
+  .p-concept__sec3--detail p::before {
+    top: 40%;
+    left: 18rem;
+    z-index: 300;
+    border: 0.25rem solid transparent;
+    border-left: 0.35rem solid #fff;
   }
 }
 
@@ -3176,7 +3209,7 @@ th {
   bottom: -0.5rem;
   left: 0;
   z-index: 2;
-  width: 101%;
+  width: 100%;
   height: 15rem;
   background: url("../../asset/img/li_bwave_wt.svg") top center no-repeat;
   background-size: cover;
@@ -3386,6 +3419,11 @@ th {
 }
 .p-tour__slides {
   justify-content: space-between;
+}
+@media screen and (max-width: 767px) {
+  .p-tour__slides {
+    margin-bottom: 1.5rem;
+  }
 }
 .p-tour__slide {
   display: block;

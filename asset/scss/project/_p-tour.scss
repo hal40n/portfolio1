@@ -109,6 +109,10 @@
 
   &__slides {
     justify-content: space-between;
+
+    @include mq-down() {
+    
+  margin-bottom: 1.5rem;    }
   }
 
   &__slide {

@@ -423,7 +423,7 @@
       }
 
       & p {
-        font-size: 2rem;
+        font-size: 1.75rem;
 
         @include mq-down() {
           font-size: 2rem;
@@ -432,7 +432,7 @@
 
       & h2 {
         font-family: $font-family__hiragino--proN;
-        font-size: 3.75rem;
+        font-size: 3rem;
 
         @include mq-down() {
           width: 100vw;
