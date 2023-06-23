@@ -1,6 +1,7 @@
 @use "../global" as *;
 
 .p-tour {
+  opacity: 0;
 
   &__bg {
     position: relative;

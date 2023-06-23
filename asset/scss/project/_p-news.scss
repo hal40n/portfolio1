@@ -1,6 +1,7 @@
 @use "../global" as *;
 
 .p-news {
+  opacity: 0;
   margin-top: 10rem;
   @include mq-down(lg) {
     margin-top: 10rem;
@@ -41,7 +42,7 @@
 
     &--notice {
       line-height: 1.4;
-
+      padding-right: 3rem;
       padding-left: 3rem;
       @include mq-down() {
         display: none;
@@ -51,19 +52,33 @@
         padding-top: 3rem;
 
         &::after {
-          padding: 0.25rem;
-          border-radius: 1.2rem;
-
-          background-color: $default-color;
-
-          color: map-get($colors, "c-white");
-          font-size: 2.5rem;
-          font-size: .05rem;
-
-          content: "▶";
-
+          display: block;
+          position: absolute;
+          top: 5rem;
+          right: 3rem;
+          width: 1.5rem;
+          height: 1.5rem;
+          margin-top: -8px;
+          border-radius: 50%;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          background: #1b2f5b;
+          content: "";
           margin-left: 3rem;
+        }
 
+        &::before {
+          display: block;
+          content: "";
+          position: absolute;
+          top: 5rem;
+          right: 3.3rem;
+          width: 0;
+          height: 0px;
+          margin-top: -0.45rem;
+          border: 0.3rem solid transparent;
+          border-left: 0.3rem solid #fff;
+          z-index: 300;
         }
       }
     }
@@ -206,40 +221,76 @@
 
   &__select {
 
-      &More {
-        opacity: 0;
+    &More {
+      opacity: 0;
 
-        @include mq-down() {
-          opacity: 1;
-          position: relative;
+      @include mq-down() {
+        opacity: 1;
+        position: relative;
 
-          padding-top: 1rem;
-          padding-left: 1rem;
-        }
+        padding-top: 1rem;
+        padding-left: 1rem;
+      }
 
       & p {
 
         &::after {
-          padding: 0.25rem 0 0 0.5rem;
-          border-radius: 1.2rem;
-
-          background-color: $default-color;
-
-          color: map-get($colors, "c-white");
-          font-size: 2.5rem;
-          font-size: .05rem;
-
-          content: "▶";
-
+          display: block;
+          position: absolute;
+          top: 29%;
+          left: 16rem;
+          width: 1.5rem;
+          height: 1.5rem;
+          margin-top: -8px;
+          border-radius: 50%;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          background: #1b2f5b;
+          content: "";
           margin-left: 3rem;
+
+          @include mq-down(lg) {
+
+            top: 20%;
+            left: 16rem;
+            width: 2rem;
+            height: 2rem;
+          }
           @include mq-down() {
+            top: 55%;
+            left: 11rem;
+            width: 1.25rem;
+            height: 1.25rem;
+          }
+        }
+
+        &::before {
+            display: block;
+            content: "";
             position: absolute;
-            margin-left: 1rem;
-            height: 1.5rem;
-            width: 1.5rem;
-            bottom: 0.75rem;
+            top: 34%;
+            left: 19.75rem;
+            width: 0;
+            height: 0px;
+            margin-top: -0.45rem;
+            border: 0.3rem solid transparent;
+            border-left: 0.3rem solid #fff;
+            z-index: 300;
+
+          @include mq-down(lg) {
+            top: 25%;
+            left: 19.75rem;
+            border: 0.5rem solid transparent;
+            border-left: 0.5rem solid #fff;
           }
 
+          @include mq-down() {
+            top: 2.5rem;
+            left: 14.5rem;
+            z-index: 300;
+            border: 0.25rem solid transparent;
+            border-left: 0.35rem solid #fff;
+          }
         }
       }
     }
